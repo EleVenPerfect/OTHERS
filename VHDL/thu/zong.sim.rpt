@@ -1,0 +1,382 @@
+Simulator report for zong
+Tue Dec 23 15:51:06 2014
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 154 nodes    ;
+; Simulation Coverage         ;      61.01 % ;
+; Total Number of Transitions ; 2807         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Vector input source                                                                        ; zong.vwf   ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      61.01 % ;
+; Total nodes checked                                 ; 154          ;
+; Total output ports checked                          ; 159          ;
+; Total output ports with complete 1/0-value coverage ; 97           ;
+; Total output ports with no 1/0-value coverage       ; 62           ;
+; Total output ports with no 1-value coverage         ; 62           ;
+; Total output ports with no 0-value coverage         ; 62           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                 ;
++------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                ; Output Port Name                                                                              ; Output Port Type ;
++------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; |zong|r1                                                                                 ; |zong|r1                                                                                      ; pin_out          ;
+; |zong|clk                                                                                ; |zong|clk                                                                                     ; out              ;
+; |zong|y1                                                                                 ; |zong|y1                                                                                      ; pin_out          ;
+; |zong|g1                                                                                 ; |zong|g1                                                                                      ; pin_out          ;
+; |zong|r2                                                                                 ; |zong|r2                                                                                      ; pin_out          ;
+; |zong|y2                                                                                 ; |zong|y2                                                                                      ; pin_out          ;
+; |zong|g2                                                                                 ; |zong|g2                                                                                      ; pin_out          ;
+; |zong|fenpinqi:inst|q                                                                    ; |zong|fenpinqi:inst|q                                                                         ; regout           ;
+; |zong|fenpinqi:inst|counter~0                                                            ; |zong|fenpinqi:inst|counter~0                                                                 ; out              ;
+; |zong|fenpinqi:inst|counter~1                                                            ; |zong|fenpinqi:inst|counter~1                                                                 ; out              ;
+; |zong|fenpinqi:inst|counter~2                                                            ; |zong|fenpinqi:inst|counter~2                                                                 ; out              ;
+; |zong|fenpinqi:inst|counter~3                                                            ; |zong|fenpinqi:inst|counter~3                                                                 ; out              ;
+; |zong|fenpinqi:inst|q~0                                                                  ; |zong|fenpinqi:inst|q~0                                                                       ; out              ;
+; |zong|fenpinqi:inst|counter[0]                                                           ; |zong|fenpinqi:inst|counter[0]                                                                ; regout           ;
+; |zong|fenpinqi:inst|counter[1]                                                           ; |zong|fenpinqi:inst|counter[1]                                                                ; regout           ;
+; |zong|jiaotong:inst1|s~2                                                                 ; |zong|jiaotong:inst1|s~2                                                                      ; out              ;
+; |zong|jiaotong:inst1|s~3                                                                 ; |zong|jiaotong:inst1|s~3                                                                      ; out              ;
+; |zong|jiaotong:inst1|s~4                                                                 ; |zong|jiaotong:inst1|s~4                                                                      ; out              ;
+; |zong|jiaotong:inst1|s~7                                                                 ; |zong|jiaotong:inst1|s~7                                                                      ; out              ;
+; |zong|jiaotong:inst1|s~8                                                                 ; |zong|jiaotong:inst1|s~8                                                                      ; out              ;
+; |zong|jiaotong:inst1|s~9                                                                 ; |zong|jiaotong:inst1|s~9                                                                      ; out              ;
+; |zong|jiaotong:inst1|\cnt:s[1]                                                           ; |zong|jiaotong:inst1|\cnt:s[1]                                                                ; regout           ;
+; |zong|jiaotong:inst1|\cnt:s[0]                                                           ; |zong|jiaotong:inst1|\cnt:s[0]                                                                ; regout           ;
+; |zong|jiaotong:inst1|\cnt:nclr                                                           ; |zong|jiaotong:inst1|\cnt:nclr                                                                ; regout           ;
+; |zong|jiaotong:inst1|\cnt:en                                                             ; |zong|jiaotong:inst1|\cnt:en                                                                  ; regout           ;
+; |zong|jiaotong:inst1|rm                                                                  ; |zong|jiaotong:inst1|rm                                                                       ; regout           ;
+; |zong|jiaotong:inst1|ym                                                                  ; |zong|jiaotong:inst1|ym                                                                       ; regout           ;
+; |zong|jiaotong:inst1|gm                                                                  ; |zong|jiaotong:inst1|gm                                                                       ; regout           ;
+; |zong|jiaotong:inst1|rm~0                                                                ; |zong|jiaotong:inst1|rm~0                                                                     ; out0             ;
+; |zong|jiaotong:inst1|rf                                                                  ; |zong|jiaotong:inst1|rf                                                                       ; regout           ;
+; |zong|jiaotong:inst1|yf                                                                  ; |zong|jiaotong:inst1|yf                                                                       ; regout           ;
+; |zong|jiaotong:inst1|gf                                                                  ; |zong|jiaotong:inst1|gf                                                                       ; regout           ;
+; |zong|jiaotong:inst1|state.a                                                             ; |zong|jiaotong:inst1|state.a                                                                  ; regout           ;
+; |zong|jiaotong:inst1|state.b                                                             ; |zong|jiaotong:inst1|state.b                                                                  ; regout           ;
+; |zong|jiaotong:inst1|state.c                                                             ; |zong|jiaotong:inst1|state.c                                                                  ; regout           ;
+; |zong|jiaotong:inst1|state.d                                                             ; |zong|jiaotong:inst1|state.d                                                                  ; regout           ;
+; |zong|jiaotong:inst1|state~3                                                             ; |zong|jiaotong:inst1|state~3                                                                  ; out0             ;
+; |zong|jiaotong:inst1|rm~2                                                                ; |zong|jiaotong:inst1|rm~2                                                                     ; out0             ;
+; |zong|jiaotong:inst1|rm~4                                                                ; |zong|jiaotong:inst1|rm~4                                                                     ; out0             ;
+; |zong|jiaotong:inst1|state~5                                                             ; |zong|jiaotong:inst1|state~5                                                                  ; out0             ;
+; |zong|jiaotong:inst1|Selector0~0                                                         ; |zong|jiaotong:inst1|Selector0~0                                                              ; out0             ;
+; |zong|jiaotong:inst1|state~9                                                             ; |zong|jiaotong:inst1|state~9                                                                  ; out0             ;
+; |zong|jiaotong:inst1|Selector0~1                                                         ; |zong|jiaotong:inst1|Selector0~1                                                              ; out0             ;
+; |zong|jiaotong:inst1|Selector0~2                                                         ; |zong|jiaotong:inst1|Selector0~2                                                              ; out0             ;
+; |zong|jiaotong:inst1|Selector0~3                                                         ; |zong|jiaotong:inst1|Selector0~3                                                              ; out0             ;
+; |zong|jiaotong:inst1|Selector1~0                                                         ; |zong|jiaotong:inst1|Selector1~0                                                              ; out0             ;
+; |zong|jiaotong:inst1|Selector1~1                                                         ; |zong|jiaotong:inst1|Selector1~1                                                              ; out0             ;
+; |zong|jiaotong:inst1|Selector1~2                                                         ; |zong|jiaotong:inst1|Selector1~2                                                              ; out0             ;
+; |zong|jiaotong:inst1|Selector2~0                                                         ; |zong|jiaotong:inst1|Selector2~0                                                              ; out0             ;
+; |zong|jiaotong:inst1|Selector2~1                                                         ; |zong|jiaotong:inst1|Selector2~1                                                              ; out0             ;
+; |zong|jiaotong:inst1|Selector2~2                                                         ; |zong|jiaotong:inst1|Selector2~2                                                              ; out0             ;
+; |zong|jiaotong:inst1|Selector3~0                                                         ; |zong|jiaotong:inst1|Selector3~0                                                              ; out0             ;
+; |zong|jiaotong:inst1|Selector3~1                                                         ; |zong|jiaotong:inst1|Selector3~1                                                              ; out0             ;
+; |zong|jiaotong:inst1|Selector3~2                                                         ; |zong|jiaotong:inst1|Selector3~2                                                              ; out0             ;
+; |zong|jiaotong:inst1|Selector4~0                                                         ; |zong|jiaotong:inst1|Selector4~0                                                              ; out0             ;
+; |zong|jiaotong:inst1|Selector4~1                                                         ; |zong|jiaotong:inst1|Selector4~1                                                              ; out0             ;
+; |zong|jiaotong:inst1|Selector4~2                                                         ; |zong|jiaotong:inst1|Selector4~2                                                              ; out0             ;
+; |zong|jiaotong:inst1|Selector4~3                                                         ; |zong|jiaotong:inst1|Selector4~3                                                              ; out0             ;
+; |zong|jiaotong:inst1|Selector4~4                                                         ; |zong|jiaotong:inst1|Selector4~4                                                              ; out0             ;
+; |zong|fenpinqi:inst|Equal0~0                                                             ; |zong|fenpinqi:inst|Equal0~0                                                                  ; out0             ;
+; |zong|jiaotong:inst1|Equal0~0                                                            ; |zong|jiaotong:inst1|Equal0~0                                                                 ; out0             ;
+; |zong|jiaotong:inst1|Equal0~1                                                            ; |zong|jiaotong:inst1|Equal0~1                                                                 ; out0             ;
+; |zong|jiaotong:inst1|Equal0~2                                                            ; |zong|jiaotong:inst1|Equal0~2                                                                 ; out0             ;
+; |zong|jiaotong:inst1|Equal0~3                                                            ; |zong|jiaotong:inst1|Equal0~3                                                                 ; out0             ;
+; |zong|jiaotong:inst1|Equal1~0                                                            ; |zong|jiaotong:inst1|Equal1~0                                                                 ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|result_node[0]                                     ; |zong|jiaotong:inst1|lpm_add_sub:Add0|result_node[0]                                          ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|result_node[1]                                     ; |zong|jiaotong:inst1|lpm_add_sub:Add0|result_node[1]                                          ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|result_node[2]                                     ; |zong|jiaotong:inst1|lpm_add_sub:Add0|result_node[2]                                          ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]~0                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]                    ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~0                                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~0                                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~3                                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~3                                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]~4                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]~4                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]                    ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]                         ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]                    ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]                         ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~11                                 ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~11                                      ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~15                                 ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~15                                      ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~19                                 ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~19                                      ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]      ; sout             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; cout             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; sout             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]      ; sout             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|result_node[0]                                      ; |zong|fenpinqi:inst|lpm_add_sub:Add0|result_node[0]                                           ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|result_node[1]                                      ; |zong|fenpinqi:inst|lpm_add_sub:Add0|result_node[1]                                           ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]~0                   ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]~0                        ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]                     ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]                          ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~0                                   ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~0                                        ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~3                                   ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~3                                        ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]~1                   ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]~1                        ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]                     ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]                          ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~5                                   ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~5                                        ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~6                                   ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~6                                        ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~7                                   ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~7                                        ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]  ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]       ; sout             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]  ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT  ; cout             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]  ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]       ; sout             ;
++------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                    ;
++------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                ; Output Port Name                                                                              ; Output Port Type ;
++------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; |zong|clr                                                                                ; |zong|clr                                                                                     ; out              ;
+; |zong|i                                                                                  ; |zong|i                                                                                       ; out              ;
+; |zong|j                                                                                  ; |zong|j                                                                                       ; out              ;
+; |zong|k                                                                                  ; |zong|k                                                                                       ; out              ;
+; |zong|jiaotong:inst1|n~0                                                                 ; |zong|jiaotong:inst1|n~0                                                                      ; out              ;
+; |zong|jiaotong:inst1|\cnt:n[2]                                                           ; |zong|jiaotong:inst1|\cnt:n[2]                                                                ; out              ;
+; |zong|jiaotong:inst1|\cnt:n[1]                                                           ; |zong|jiaotong:inst1|\cnt:n[1]                                                                ; out              ;
+; |zong|jiaotong:inst1|\cnt:n[0]                                                           ; |zong|jiaotong:inst1|\cnt:n[0]                                                                ; out              ;
+; |zong|jiaotong:inst1|s~0                                                                 ; |zong|jiaotong:inst1|s~0                                                                      ; out              ;
+; |zong|jiaotong:inst1|s~1                                                                 ; |zong|jiaotong:inst1|s~1                                                                      ; out              ;
+; |zong|jiaotong:inst1|s~5                                                                 ; |zong|jiaotong:inst1|s~5                                                                      ; out              ;
+; |zong|jiaotong:inst1|s~6                                                                 ; |zong|jiaotong:inst1|s~6                                                                      ; out              ;
+; |zong|jiaotong:inst1|\cnt:s[2]                                                           ; |zong|jiaotong:inst1|\cnt:s[2]                                                                ; regout           ;
+; |zong|jiaotong:inst1|\cnt:s[3]                                                           ; |zong|jiaotong:inst1|\cnt:s[3]                                                                ; regout           ;
+; |zong|jiaotong:inst1|\cnt:s[4]                                                           ; |zong|jiaotong:inst1|\cnt:s[4]                                                                ; regout           ;
+; |zong|jiaotong:inst1|LessThan0~0                                                         ; |zong|jiaotong:inst1|LessThan0~0                                                              ; out0             ;
+; |zong|jiaotong:inst1|LessThan1~0                                                         ; |zong|jiaotong:inst1|LessThan1~0                                                              ; out0             ;
+; |zong|jiaotong:inst1|LessThan1~1                                                         ; |zong|jiaotong:inst1|LessThan1~1                                                              ; out0             ;
+; |zong|jiaotong:inst1|LessThan1~2                                                         ; |zong|jiaotong:inst1|LessThan1~2                                                              ; out0             ;
+; |zong|jiaotong:inst1|LessThan2~0                                                         ; |zong|jiaotong:inst1|LessThan2~0                                                              ; out0             ;
+; |zong|jiaotong:inst1|LessThan2~1                                                         ; |zong|jiaotong:inst1|LessThan2~1                                                              ; out0             ;
+; |zong|jiaotong:inst1|LessThan2~2                                                         ; |zong|jiaotong:inst1|LessThan2~2                                                              ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|result_node[3]                                     ; |zong|jiaotong:inst1|lpm_add_sub:Add0|result_node[3]                                          ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|result_node[4]                                     ; |zong|jiaotong:inst1|lpm_add_sub:Add0|result_node[4]                                          ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                      ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[0]                        ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[0]                             ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~1                                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~1                                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~2                                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~2                                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[4]~1                      ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[4]~1                           ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[4]                        ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[4]                             ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[3]                        ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[3]                             ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[2]                        ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[2]                             ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[1]                        ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[1]                             ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]~1                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]~1                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]~2                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]~2                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]~3                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]~3                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]                    ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]                         ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]                    ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]                         ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~4                                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~4                                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~5                                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~5                                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~6                                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~6                                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~7                                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~7                                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~8                                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~8                                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~9                                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~9                                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~10                                 ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~10                                      ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~12                                 ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~12                                      ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~13                                 ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~13                                      ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~14                                 ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~14                                      ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~16                                 ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~16                                      ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~17                                 ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~17                                      ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~18                                 ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~18                                      ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4] ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]      ; sout             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~COUT ; cout             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]      ; sout             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT ; cout             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                       ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                            ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|datab_node[0]                         ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|datab_node[0]                              ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~1                                   ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~1                                        ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~2                                   ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~2                                        ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|datab_node[1]~1                       ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|datab_node[1]~1                            ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|datab_node[1]                         ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|datab_node[1]                              ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~4                                   ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~4                                        ; out0             ;
++------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                    ;
++------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                ; Output Port Name                                                                              ; Output Port Type ;
++------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; |zong|clr                                                                                ; |zong|clr                                                                                     ; out              ;
+; |zong|i                                                                                  ; |zong|i                                                                                       ; out              ;
+; |zong|j                                                                                  ; |zong|j                                                                                       ; out              ;
+; |zong|k                                                                                  ; |zong|k                                                                                       ; out              ;
+; |zong|jiaotong:inst1|n~0                                                                 ; |zong|jiaotong:inst1|n~0                                                                      ; out              ;
+; |zong|jiaotong:inst1|\cnt:n[2]                                                           ; |zong|jiaotong:inst1|\cnt:n[2]                                                                ; out              ;
+; |zong|jiaotong:inst1|\cnt:n[1]                                                           ; |zong|jiaotong:inst1|\cnt:n[1]                                                                ; out              ;
+; |zong|jiaotong:inst1|\cnt:n[0]                                                           ; |zong|jiaotong:inst1|\cnt:n[0]                                                                ; out              ;
+; |zong|jiaotong:inst1|s~0                                                                 ; |zong|jiaotong:inst1|s~0                                                                      ; out              ;
+; |zong|jiaotong:inst1|s~1                                                                 ; |zong|jiaotong:inst1|s~1                                                                      ; out              ;
+; |zong|jiaotong:inst1|s~5                                                                 ; |zong|jiaotong:inst1|s~5                                                                      ; out              ;
+; |zong|jiaotong:inst1|s~6                                                                 ; |zong|jiaotong:inst1|s~6                                                                      ; out              ;
+; |zong|jiaotong:inst1|\cnt:s[2]                                                           ; |zong|jiaotong:inst1|\cnt:s[2]                                                                ; regout           ;
+; |zong|jiaotong:inst1|\cnt:s[3]                                                           ; |zong|jiaotong:inst1|\cnt:s[3]                                                                ; regout           ;
+; |zong|jiaotong:inst1|\cnt:s[4]                                                           ; |zong|jiaotong:inst1|\cnt:s[4]                                                                ; regout           ;
+; |zong|jiaotong:inst1|LessThan0~0                                                         ; |zong|jiaotong:inst1|LessThan0~0                                                              ; out0             ;
+; |zong|jiaotong:inst1|LessThan1~0                                                         ; |zong|jiaotong:inst1|LessThan1~0                                                              ; out0             ;
+; |zong|jiaotong:inst1|LessThan1~1                                                         ; |zong|jiaotong:inst1|LessThan1~1                                                              ; out0             ;
+; |zong|jiaotong:inst1|LessThan1~2                                                         ; |zong|jiaotong:inst1|LessThan1~2                                                              ; out0             ;
+; |zong|jiaotong:inst1|LessThan2~0                                                         ; |zong|jiaotong:inst1|LessThan2~0                                                              ; out0             ;
+; |zong|jiaotong:inst1|LessThan2~1                                                         ; |zong|jiaotong:inst1|LessThan2~1                                                              ; out0             ;
+; |zong|jiaotong:inst1|LessThan2~2                                                         ; |zong|jiaotong:inst1|LessThan2~2                                                              ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|result_node[3]                                     ; |zong|jiaotong:inst1|lpm_add_sub:Add0|result_node[3]                                          ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|result_node[4]                                     ; |zong|jiaotong:inst1|lpm_add_sub:Add0|result_node[4]                                          ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                      ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[0]                        ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[0]                             ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~1                                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~1                                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~2                                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~2                                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[4]~1                      ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[4]~1                           ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[4]                        ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[4]                             ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[3]                        ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[3]                             ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[2]                        ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[2]                             ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[1]                        ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|datab_node[1]                             ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]~1                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]~1                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]~2                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]~2                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]~3                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]~3                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]                    ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]                         ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]                    ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]                         ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~4                                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~4                                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~5                                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~5                                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~6                                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~6                                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~7                                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~7                                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~8                                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~8                                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~9                                  ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~9                                       ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~10                                 ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~10                                      ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~12                                 ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~12                                      ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~13                                 ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~13                                      ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~14                                 ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~14                                      ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~16                                 ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~16                                      ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~17                                 ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~17                                      ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~18                                 ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|_~18                                      ; out0             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4] ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]      ; sout             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~COUT ; cout             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]      ; sout             ;
+; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |zong|jiaotong:inst1|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT ; cout             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                       ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                            ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|datab_node[0]                         ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|datab_node[0]                              ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~1                                   ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~1                                        ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~2                                   ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~2                                        ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|datab_node[1]~1                       ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|datab_node[1]~1                            ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|datab_node[1]                         ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|datab_node[1]                              ; out0             ;
+; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~4                                   ; |zong|fenpinqi:inst|lpm_add_sub:Add0|addcore:adder|_~4                                        ; out0             ;
++------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Tue Dec 23 15:51:06 2014
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off zong -c zong
+Info: Using vector source file "E:/TEST/EDA/thu/zong.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      61.01 %
+Info: Number of transitions in simulation is 2807
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 138 megabytes
+    Info: Processing ended: Tue Dec 23 15:51:07 2014
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,32 @@
+|jiaotong
+clk => gf~reg0.CLK
+clk => yf~reg0.CLK
+clk => rf~reg0.CLK
+clk => gm~reg0.CLK
+clk => ym~reg0.CLK
+clk => rm~reg0.CLK
+clk => \cnt:en.CLK
+clk => \cnt:nclr.CLK
+clk => \cnt:s[0].CLK
+clk => \cnt:s[1].CLK
+clk => \cnt:s[2].CLK
+clk => \cnt:s[3].CLK
+clk => \cnt:s[4].CLK
+clk => state~2.DATAIN
+i => LessThan0.IN4
+i => LessThan1.IN4
+i => LessThan2.IN4
+j => LessThan0.IN5
+j => LessThan1.IN5
+j => LessThan2.IN5
+k => LessThan0.IN6
+k => LessThan1.IN6
+k => LessThan2.IN6
+rm <= rm~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ym <= ym~reg0.DB_MAX_OUTPUT_PORT_TYPE
+gm <= gm~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rf <= rf~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yf <= yf~reg0.DB_MAX_OUTPUT_PORT_TYPE
+gf <= gf~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

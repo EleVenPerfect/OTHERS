@@ -1,0 +1,12 @@
+Fitter Status : Successful - Tue Dec 23 15:49:00 2014
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : zong
+Top-level Entity Name : zong
+Family : Cyclone
+Device : EP1C20F400C8
+Timing Models : Final
+Total logic elements : 31 / 20,060 ( < 1 % )
+Total pins : 11 / 301 ( 4 % )
+Total virtual pins : 0
+Total memory bits : 0 / 294,912 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

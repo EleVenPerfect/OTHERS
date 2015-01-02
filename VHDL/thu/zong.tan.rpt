@@ -1,0 +1,350 @@
+Classic Timing Analyzer report for zong
+Tue Dec 23 15:49:05 2014
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                              ;
++------------------------------+-------+---------------+----------------------------------+--------------------------+--------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                     ; To                       ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+--------------------------+--------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 4.207 ns                         ; clr                      ; fenpinqi:inst|q          ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 14.647 ns                        ; jiaotong:inst1|rf        ; r2                       ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -0.520 ns                        ; j                        ; jiaotong:inst1|state.a   ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 153.23 MHz ( period = 6.526 ns ) ; jiaotong:inst1|\cnt:s[0] ; jiaotong:inst1|\cnt:nclr ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                          ;                          ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+--------------------------+--------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP1C20F400C8       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                       ;
++-------+------------------------------------------------+--------------------------+--------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                     ; To                       ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+--------------------------+--------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 153.23 MHz ( period = 6.526 ns )               ; jiaotong:inst1|\cnt:s[0] ; jiaotong:inst1|\cnt:nclr ; clk        ; clk      ; None                        ; None                      ; 6.265 ns                ;
+; N/A   ; 153.68 MHz ( period = 6.507 ns )               ; jiaotong:inst1|state.d   ; jiaotong:inst1|yf        ; clk        ; clk      ; None                        ; None                      ; 6.243 ns                ;
+; N/A   ; 157.93 MHz ( period = 6.332 ns )               ; jiaotong:inst1|\cnt:nclr ; jiaotong:inst1|\cnt:nclr ; clk        ; clk      ; None                        ; None                      ; 6.071 ns                ;
+; N/A   ; 161.79 MHz ( period = 6.181 ns )               ; jiaotong:inst1|\cnt:s[0] ; jiaotong:inst1|state.b   ; clk        ; clk      ; None                        ; None                      ; 5.920 ns                ;
+; N/A   ; 161.86 MHz ( period = 6.178 ns )               ; jiaotong:inst1|\cnt:s[0] ; jiaotong:inst1|state.c   ; clk        ; clk      ; None                        ; None                      ; 5.917 ns                ;
+; N/A   ; 161.86 MHz ( period = 6.178 ns )               ; jiaotong:inst1|\cnt:s[0] ; jiaotong:inst1|state.d   ; clk        ; clk      ; None                        ; None                      ; 5.917 ns                ;
+; N/A   ; 162.00 MHz ( period = 6.173 ns )               ; jiaotong:inst1|\cnt:s[0] ; jiaotong:inst1|state.a   ; clk        ; clk      ; None                        ; None                      ; 5.912 ns                ;
+; N/A   ; 164.77 MHz ( period = 6.069 ns )               ; jiaotong:inst1|\cnt:s[3] ; jiaotong:inst1|\cnt:nclr ; clk        ; clk      ; None                        ; None                      ; 5.808 ns                ;
+; N/A   ; 167.03 MHz ( period = 5.987 ns )               ; jiaotong:inst1|\cnt:nclr ; jiaotong:inst1|state.b   ; clk        ; clk      ; None                        ; None                      ; 5.726 ns                ;
+; N/A   ; 167.11 MHz ( period = 5.984 ns )               ; jiaotong:inst1|\cnt:nclr ; jiaotong:inst1|state.c   ; clk        ; clk      ; None                        ; None                      ; 5.723 ns                ;
+; N/A   ; 167.11 MHz ( period = 5.984 ns )               ; jiaotong:inst1|\cnt:nclr ; jiaotong:inst1|state.d   ; clk        ; clk      ; None                        ; None                      ; 5.723 ns                ;
+; N/A   ; 167.25 MHz ( period = 5.979 ns )               ; jiaotong:inst1|\cnt:nclr ; jiaotong:inst1|state.a   ; clk        ; clk      ; None                        ; None                      ; 5.718 ns                ;
+; N/A   ; 169.35 MHz ( period = 5.905 ns )               ; jiaotong:inst1|\cnt:s[2] ; jiaotong:inst1|\cnt:nclr ; clk        ; clk      ; None                        ; None                      ; 5.644 ns                ;
+; N/A   ; 174.70 MHz ( period = 5.724 ns )               ; jiaotong:inst1|\cnt:s[3] ; jiaotong:inst1|state.b   ; clk        ; clk      ; None                        ; None                      ; 5.463 ns                ;
+; N/A   ; 174.79 MHz ( period = 5.721 ns )               ; jiaotong:inst1|\cnt:s[3] ; jiaotong:inst1|state.c   ; clk        ; clk      ; None                        ; None                      ; 5.460 ns                ;
+; N/A   ; 174.79 MHz ( period = 5.721 ns )               ; jiaotong:inst1|\cnt:s[3] ; jiaotong:inst1|state.d   ; clk        ; clk      ; None                        ; None                      ; 5.460 ns                ;
+; N/A   ; 174.95 MHz ( period = 5.716 ns )               ; jiaotong:inst1|\cnt:s[3] ; jiaotong:inst1|state.a   ; clk        ; clk      ; None                        ; None                      ; 5.455 ns                ;
+; N/A   ; 179.86 MHz ( period = 5.560 ns )               ; jiaotong:inst1|\cnt:s[2] ; jiaotong:inst1|state.b   ; clk        ; clk      ; None                        ; None                      ; 5.299 ns                ;
+; N/A   ; 179.95 MHz ( period = 5.557 ns )               ; jiaotong:inst1|\cnt:s[2] ; jiaotong:inst1|state.c   ; clk        ; clk      ; None                        ; None                      ; 5.296 ns                ;
+; N/A   ; 179.95 MHz ( period = 5.557 ns )               ; jiaotong:inst1|\cnt:s[2] ; jiaotong:inst1|state.d   ; clk        ; clk      ; None                        ; None                      ; 5.296 ns                ;
+; N/A   ; 180.12 MHz ( period = 5.552 ns )               ; jiaotong:inst1|\cnt:s[2] ; jiaotong:inst1|state.a   ; clk        ; clk      ; None                        ; None                      ; 5.291 ns                ;
+; N/A   ; 180.28 MHz ( period = 5.547 ns )               ; jiaotong:inst1|\cnt:s[1] ; jiaotong:inst1|\cnt:nclr ; clk        ; clk      ; None                        ; None                      ; 5.286 ns                ;
+; N/A   ; 182.78 MHz ( period = 5.471 ns )               ; jiaotong:inst1|\cnt:s[1] ; jiaotong:inst1|state.b   ; clk        ; clk      ; None                        ; None                      ; 5.210 ns                ;
+; N/A   ; 182.88 MHz ( period = 5.468 ns )               ; jiaotong:inst1|\cnt:s[1] ; jiaotong:inst1|state.d   ; clk        ; clk      ; None                        ; None                      ; 5.207 ns                ;
+; N/A   ; 182.95 MHz ( period = 5.466 ns )               ; jiaotong:inst1|\cnt:s[1] ; jiaotong:inst1|state.c   ; clk        ; clk      ; None                        ; None                      ; 5.205 ns                ;
+; N/A   ; 183.08 MHz ( period = 5.462 ns )               ; jiaotong:inst1|\cnt:s[1] ; jiaotong:inst1|state.a   ; clk        ; clk      ; None                        ; None                      ; 5.201 ns                ;
+; N/A   ; 193.76 MHz ( period = 5.161 ns )               ; jiaotong:inst1|\cnt:s[4] ; jiaotong:inst1|\cnt:nclr ; clk        ; clk      ; None                        ; None                      ; 4.900 ns                ;
+; N/A   ; 206.44 MHz ( period = 4.844 ns )               ; jiaotong:inst1|\cnt:s[3] ; jiaotong:inst1|\cnt:s[4] ; clk        ; clk      ; None                        ; None                      ; 4.583 ns                ;
+; N/A   ; 207.64 MHz ( period = 4.816 ns )               ; jiaotong:inst1|\cnt:s[4] ; jiaotong:inst1|state.b   ; clk        ; clk      ; None                        ; None                      ; 4.555 ns                ;
+; N/A   ; 207.77 MHz ( period = 4.813 ns )               ; jiaotong:inst1|\cnt:s[4] ; jiaotong:inst1|state.c   ; clk        ; clk      ; None                        ; None                      ; 4.552 ns                ;
+; N/A   ; 207.77 MHz ( period = 4.813 ns )               ; jiaotong:inst1|state.a   ; jiaotong:inst1|rm        ; clk        ; clk      ; None                        ; None                      ; 4.451 ns                ;
+; N/A   ; 207.77 MHz ( period = 4.813 ns )               ; jiaotong:inst1|\cnt:s[4] ; jiaotong:inst1|state.d   ; clk        ; clk      ; None                        ; None                      ; 4.552 ns                ;
+; N/A   ; 207.99 MHz ( period = 4.808 ns )               ; jiaotong:inst1|\cnt:s[4] ; jiaotong:inst1|state.a   ; clk        ; clk      ; None                        ; None                      ; 4.547 ns                ;
+; N/A   ; 208.99 MHz ( period = 4.785 ns )               ; jiaotong:inst1|state.b   ; jiaotong:inst1|rm        ; clk        ; clk      ; None                        ; None                      ; 4.423 ns                ;
+; N/A   ; 213.68 MHz ( period = 4.680 ns )               ; jiaotong:inst1|\cnt:s[2] ; jiaotong:inst1|\cnt:s[4] ; clk        ; clk      ; None                        ; None                      ; 4.419 ns                ;
+; N/A   ; 214.22 MHz ( period = 4.668 ns )               ; jiaotong:inst1|\cnt:s[0] ; jiaotong:inst1|\cnt:s[4] ; clk        ; clk      ; None                        ; None                      ; 4.407 ns                ;
+; N/A   ; 217.82 MHz ( period = 4.591 ns )               ; jiaotong:inst1|\cnt:s[2] ; jiaotong:inst1|\cnt:s[3] ; clk        ; clk      ; None                        ; None                      ; 4.330 ns                ;
+; N/A   ; 218.39 MHz ( period = 4.579 ns )               ; jiaotong:inst1|\cnt:s[0] ; jiaotong:inst1|\cnt:s[3] ; clk        ; clk      ; None                        ; None                      ; 4.318 ns                ;
+; N/A   ; 223.51 MHz ( period = 4.474 ns )               ; jiaotong:inst1|\cnt:nclr ; jiaotong:inst1|\cnt:s[4] ; clk        ; clk      ; None                        ; None                      ; 4.213 ns                ;
+; N/A   ; 225.17 MHz ( period = 4.441 ns )               ; jiaotong:inst1|state.c   ; jiaotong:inst1|gf        ; clk        ; clk      ; None                        ; None                      ; 4.079 ns                ;
+; N/A   ; 228.05 MHz ( period = 4.385 ns )               ; jiaotong:inst1|\cnt:nclr ; jiaotong:inst1|\cnt:s[3] ; clk        ; clk      ; None                        ; None                      ; 4.124 ns                ;
+; N/A   ; 236.02 MHz ( period = 4.237 ns )               ; jiaotong:inst1|\cnt:s[3] ; jiaotong:inst1|\cnt:s[3] ; clk        ; clk      ; None                        ; None                      ; 3.976 ns                ;
+; N/A   ; 238.10 MHz ( period = 4.200 ns )               ; jiaotong:inst1|\cnt:s[1] ; jiaotong:inst1|\cnt:s[4] ; clk        ; clk      ; None                        ; None                      ; 3.939 ns                ;
+; N/A   ; 243.25 MHz ( period = 4.111 ns )               ; jiaotong:inst1|\cnt:s[1] ; jiaotong:inst1|\cnt:s[3] ; clk        ; clk      ; None                        ; None                      ; 3.850 ns                ;
+; N/A   ; 244.74 MHz ( period = 4.086 ns )               ; jiaotong:inst1|state.a   ; jiaotong:inst1|gm        ; clk        ; clk      ; None                        ; None                      ; 3.724 ns                ;
+; N/A   ; 244.92 MHz ( period = 4.083 ns )               ; jiaotong:inst1|state.a   ; jiaotong:inst1|rf        ; clk        ; clk      ; None                        ; None                      ; 3.721 ns                ;
+; N/A   ; 246.06 MHz ( period = 4.064 ns )               ; jiaotong:inst1|state.b   ; jiaotong:inst1|rf        ; clk        ; clk      ; None                        ; None                      ; 3.702 ns                ;
+; N/A   ; 246.24 MHz ( period = 4.061 ns )               ; jiaotong:inst1|state.b   ; jiaotong:inst1|ym        ; clk        ; clk      ; None                        ; None                      ; 3.699 ns                ;
+; N/A   ; 254.07 MHz ( period = 3.936 ns )               ; jiaotong:inst1|\cnt:s[4] ; jiaotong:inst1|\cnt:s[4] ; clk        ; clk      ; None                        ; None                      ; 3.675 ns                ;
+; N/A   ; 271.00 MHz ( period = 3.690 ns )               ; jiaotong:inst1|\cnt:s[0] ; jiaotong:inst1|\cnt:s[2] ; clk        ; clk      ; None                        ; None                      ; 3.429 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|\cnt:nclr ; jiaotong:inst1|\cnt:s[2] ; clk        ; clk      ; None                        ; None                      ; 3.235 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|\cnt:s[0] ; jiaotong:inst1|\cnt:s[1] ; clk        ; clk      ; None                        ; None                      ; 3.163 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|\cnt:nclr ; jiaotong:inst1|\cnt:s[1] ; clk        ; clk      ; None                        ; None                      ; 2.969 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|\cnt:s[1] ; jiaotong:inst1|\cnt:s[2] ; clk        ; clk      ; None                        ; None                      ; 2.961 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|\cnt:s[2] ; jiaotong:inst1|\cnt:s[2] ; clk        ; clk      ; None                        ; None                      ; 2.928 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|state.d   ; jiaotong:inst1|state.d   ; clk        ; clk      ; None                        ; None                      ; 2.767 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|state.d   ; jiaotong:inst1|\cnt:nclr ; clk        ; clk      ; None                        ; None                      ; 2.380 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|\cnt:s[0] ; jiaotong:inst1|\cnt:s[0] ; clk        ; clk      ; None                        ; None                      ; 2.305 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|state.b   ; jiaotong:inst1|\cnt:nclr ; clk        ; clk      ; None                        ; None                      ; 2.263 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|\cnt:s[1] ; jiaotong:inst1|\cnt:s[1] ; clk        ; clk      ; None                        ; None                      ; 2.177 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|\cnt:nclr ; jiaotong:inst1|\cnt:s[0] ; clk        ; clk      ; None                        ; None                      ; 2.116 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|state.c   ; jiaotong:inst1|state.c   ; clk        ; clk      ; None                        ; None                      ; 1.939 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|state.a   ; jiaotong:inst1|\cnt:nclr ; clk        ; clk      ; None                        ; None                      ; 1.745 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|state.c   ; jiaotong:inst1|state.d   ; clk        ; clk      ; None                        ; None                      ; 1.696 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|state.c   ; jiaotong:inst1|\cnt:nclr ; clk        ; clk      ; None                        ; None                      ; 1.496 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|state.a   ; jiaotong:inst1|state.b   ; clk        ; clk      ; None                        ; None                      ; 1.296 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|state.a   ; jiaotong:inst1|state.a   ; clk        ; clk      ; None                        ; None                      ; 1.289 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|state.b   ; jiaotong:inst1|state.c   ; clk        ; clk      ; None                        ; None                      ; 1.271 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|state.b   ; jiaotong:inst1|state.b   ; clk        ; clk      ; None                        ; None                      ; 1.268 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; fenpinqi:inst|q          ; fenpinqi:inst|q          ; clk        ; clk      ; None                        ; None                      ; 1.103 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; fenpinqi:inst|counter[1] ; fenpinqi:inst|q          ; clk        ; clk      ; None                        ; None                      ; 1.040 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; fenpinqi:inst|counter[1] ; fenpinqi:inst|counter[0] ; clk        ; clk      ; None                        ; None                      ; 1.039 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; fenpinqi:inst|counter[1] ; fenpinqi:inst|counter[1] ; clk        ; clk      ; None                        ; None                      ; 1.039 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jiaotong:inst1|state.d   ; jiaotong:inst1|state.a   ; clk        ; clk      ; None                        ; None                      ; 1.028 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; fenpinqi:inst|counter[0] ; fenpinqi:inst|counter[1] ; clk        ; clk      ; None                        ; None                      ; 0.855 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; fenpinqi:inst|counter[0] ; fenpinqi:inst|q          ; clk        ; clk      ; None                        ; None                      ; 0.854 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; fenpinqi:inst|counter[0] ; fenpinqi:inst|counter[0] ; clk        ; clk      ; None                        ; None                      ; 0.854 ns                ;
++-------+------------------------------------------------+--------------------------+--------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------+
+; tsu                                                                            ;
++-------+--------------+------------+------+--------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From ; To                       ; To Clock ;
++-------+--------------+------------+------+--------------------------+----------+
+; N/A   ; None         ; 4.207 ns   ; clr  ; fenpinqi:inst|q          ; clk      ;
+; N/A   ; None         ; 4.206 ns   ; clr  ; fenpinqi:inst|counter[0] ; clk      ;
+; N/A   ; None         ; 4.205 ns   ; clr  ; fenpinqi:inst|counter[1] ; clk      ;
+; N/A   ; None         ; 3.006 ns   ; k    ; jiaotong:inst1|\cnt:nclr ; clk      ;
+; N/A   ; None         ; 2.661 ns   ; k    ; jiaotong:inst1|state.b   ; clk      ;
+; N/A   ; None         ; 2.658 ns   ; k    ; jiaotong:inst1|state.c   ; clk      ;
+; N/A   ; None         ; 2.658 ns   ; k    ; jiaotong:inst1|state.d   ; clk      ;
+; N/A   ; None         ; 2.653 ns   ; k    ; jiaotong:inst1|state.a   ; clk      ;
+; N/A   ; None         ; 2.357 ns   ; i    ; jiaotong:inst1|\cnt:nclr ; clk      ;
+; N/A   ; None         ; 2.012 ns   ; i    ; jiaotong:inst1|state.b   ; clk      ;
+; N/A   ; None         ; 2.009 ns   ; i    ; jiaotong:inst1|state.c   ; clk      ;
+; N/A   ; None         ; 2.009 ns   ; i    ; jiaotong:inst1|state.d   ; clk      ;
+; N/A   ; None         ; 2.004 ns   ; i    ; jiaotong:inst1|state.a   ; clk      ;
+; N/A   ; None         ; 1.202 ns   ; j    ; jiaotong:inst1|\cnt:nclr ; clk      ;
+; N/A   ; None         ; 0.857 ns   ; j    ; jiaotong:inst1|state.b   ; clk      ;
+; N/A   ; None         ; 0.854 ns   ; j    ; jiaotong:inst1|state.c   ; clk      ;
+; N/A   ; None         ; 0.854 ns   ; j    ; jiaotong:inst1|state.d   ; clk      ;
+; N/A   ; None         ; 0.849 ns   ; j    ; jiaotong:inst1|state.a   ; clk      ;
++-------+--------------+------------+------+--------------------------+----------+
+
+
++-------------------------------------------------------------------------+
+; tco                                                                     ;
++-------+--------------+------------+-------------------+----+------------+
+; Slack ; Required tco ; Actual tco ; From              ; To ; From Clock ;
++-------+--------------+------------+-------------------+----+------------+
+; N/A   ; None         ; 14.647 ns  ; jiaotong:inst1|rf ; r2 ; clk        ;
+; N/A   ; None         ; 14.201 ns  ; jiaotong:inst1|gm ; g1 ; clk        ;
+; N/A   ; None         ; 13.915 ns  ; jiaotong:inst1|ym ; y1 ; clk        ;
+; N/A   ; None         ; 13.862 ns  ; jiaotong:inst1|rm ; r1 ; clk        ;
+; N/A   ; None         ; 13.591 ns  ; jiaotong:inst1|gf ; g2 ; clk        ;
+; N/A   ; None         ; 13.106 ns  ; jiaotong:inst1|yf ; y2 ; clk        ;
++-------+--------------+------------+-------------------+----+------------+
+
+
++--------------------------------------------------------------------------------------+
+; th                                                                                   ;
++---------------+-------------+-----------+------+--------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From ; To                       ; To Clock ;
++---------------+-------------+-----------+------+--------------------------+----------+
+; N/A           ; None        ; -0.520 ns ; j    ; jiaotong:inst1|state.a   ; clk      ;
+; N/A           ; None        ; -0.525 ns ; j    ; jiaotong:inst1|state.c   ; clk      ;
+; N/A           ; None        ; -0.525 ns ; j    ; jiaotong:inst1|state.d   ; clk      ;
+; N/A           ; None        ; -0.528 ns ; j    ; jiaotong:inst1|state.b   ; clk      ;
+; N/A           ; None        ; -0.873 ns ; j    ; jiaotong:inst1|\cnt:nclr ; clk      ;
+; N/A           ; None        ; -1.316 ns ; i    ; jiaotong:inst1|state.a   ; clk      ;
+; N/A           ; None        ; -1.321 ns ; i    ; jiaotong:inst1|state.c   ; clk      ;
+; N/A           ; None        ; -1.321 ns ; i    ; jiaotong:inst1|state.d   ; clk      ;
+; N/A           ; None        ; -1.324 ns ; i    ; jiaotong:inst1|state.b   ; clk      ;
+; N/A           ; None        ; -1.669 ns ; i    ; jiaotong:inst1|\cnt:nclr ; clk      ;
+; N/A           ; None        ; -2.321 ns ; k    ; jiaotong:inst1|state.a   ; clk      ;
+; N/A           ; None        ; -2.326 ns ; k    ; jiaotong:inst1|state.c   ; clk      ;
+; N/A           ; None        ; -2.326 ns ; k    ; jiaotong:inst1|state.d   ; clk      ;
+; N/A           ; None        ; -2.329 ns ; k    ; jiaotong:inst1|state.b   ; clk      ;
+; N/A           ; None        ; -2.674 ns ; k    ; jiaotong:inst1|\cnt:nclr ; clk      ;
+; N/A           ; None        ; -4.153 ns ; clr  ; fenpinqi:inst|counter[1] ; clk      ;
+; N/A           ; None        ; -4.154 ns ; clr  ; fenpinqi:inst|counter[0] ; clk      ;
+; N/A           ; None        ; -4.155 ns ; clr  ; fenpinqi:inst|q          ; clk      ;
++---------------+-------------+-----------+------+--------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Tue Dec 23 15:49:04 2014
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off zong -c zong --timing_analysis_only
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "fenpinqi:inst|q" as buffer
+Info: Clock "clk" has Internal fmax of 153.23 MHz between source register "jiaotong:inst1|\cnt:s[0]" and destination register "jiaotong:inst1|\cnt:nclr" (period= 6.526 ns)
+    Info: + Longest register to register delay is 6.265 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X54_Y23_N4; Fanout = 3; REG Node = 'jiaotong:inst1|\cnt:s[0]'
+        Info: 2: + IC(1.118 ns) + CELL(0.432 ns) = 1.550 ns; Loc. = LC_X54_Y23_N5; Fanout = 2; COMB Node = 'jiaotong:inst1|Add0~24COUT1_36'
+        Info: 3: + IC(0.000 ns) + CELL(0.608 ns) = 2.158 ns; Loc. = LC_X54_Y23_N6; Fanout = 2; COMB Node = 'jiaotong:inst1|Add0~10'
+        Info: 4: + IC(0.696 ns) + CELL(0.114 ns) = 2.968 ns; Loc. = LC_X53_Y23_N7; Fanout = 2; COMB Node = 'jiaotong:inst1|Add0~15'
+        Info: 5: + IC(0.433 ns) + CELL(0.590 ns) = 3.991 ns; Loc. = LC_X53_Y23_N5; Fanout = 1; COMB Node = 'jiaotong:inst1|Equal0~0'
+        Info: 6: + IC(0.432 ns) + CELL(0.442 ns) = 4.865 ns; Loc. = LC_X53_Y23_N0; Fanout = 5; COMB Node = 'jiaotong:inst1|Equal0~3'
+        Info: 7: + IC(1.091 ns) + CELL(0.309 ns) = 6.265 ns; Loc. = LC_X54_Y23_N0; Fanout = 12; REG Node = 'jiaotong:inst1|\cnt:nclr'
+        Info: Total cell delay = 2.495 ns ( 39.82 % )
+        Info: Total interconnect delay = 3.770 ns ( 60.18 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 9.483 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_K6; Fanout = 3; CLK Node = 'clk'
+            Info: 2: + IC(0.929 ns) + CELL(0.935 ns) = 3.333 ns; Loc. = LC_X8_Y3_N5; Fanout = 17; REG Node = 'fenpinqi:inst|q'
+            Info: 3: + IC(5.439 ns) + CELL(0.711 ns) = 9.483 ns; Loc. = LC_X54_Y23_N0; Fanout = 12; REG Node = 'jiaotong:inst1|\cnt:nclr'
+            Info: Total cell delay = 3.115 ns ( 32.85 % )
+            Info: Total interconnect delay = 6.368 ns ( 67.15 % )
+        Info: - Longest clock path from clock "clk" to source register is 9.483 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_K6; Fanout = 3; CLK Node = 'clk'
+            Info: 2: + IC(0.929 ns) + CELL(0.935 ns) = 3.333 ns; Loc. = LC_X8_Y3_N5; Fanout = 17; REG Node = 'fenpinqi:inst|q'
+            Info: 3: + IC(5.439 ns) + CELL(0.711 ns) = 9.483 ns; Loc. = LC_X54_Y23_N4; Fanout = 3; REG Node = 'jiaotong:inst1|\cnt:s[0]'
+            Info: Total cell delay = 3.115 ns ( 32.85 % )
+            Info: Total interconnect delay = 6.368 ns ( 67.15 % )
+    Info: + Micro clock to output delay of source is 0.224 ns
+    Info: + Micro setup delay of destination is 0.037 ns
+Info: tsu for register "fenpinqi:inst|q" (data pin = "clr", clock pin = "clk") is 4.207 ns
+    Info: + Longest pin to register delay is 7.279 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.475 ns) = 1.475 ns; Loc. = PIN_W5; Fanout = 3; PIN Node = 'clr'
+        Info: 2: + IC(5.066 ns) + CELL(0.738 ns) = 7.279 ns; Loc. = LC_X8_Y3_N5; Fanout = 17; REG Node = 'fenpinqi:inst|q'
+        Info: Total cell delay = 2.213 ns ( 30.40 % )
+        Info: Total interconnect delay = 5.066 ns ( 69.60 % )
+    Info: + Micro setup delay of destination is 0.037 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 3.109 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_K6; Fanout = 3; CLK Node = 'clk'
+        Info: 2: + IC(0.929 ns) + CELL(0.711 ns) = 3.109 ns; Loc. = LC_X8_Y3_N5; Fanout = 17; REG Node = 'fenpinqi:inst|q'
+        Info: Total cell delay = 2.180 ns ( 70.12 % )
+        Info: Total interconnect delay = 0.929 ns ( 29.88 % )
+Info: tco from clock "clk" to destination pin "r2" through register "jiaotong:inst1|rf" is 14.647 ns
+    Info: + Longest clock path from clock "clk" to source register is 9.382 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_K6; Fanout = 3; CLK Node = 'clk'
+        Info: 2: + IC(0.929 ns) + CELL(0.935 ns) = 3.333 ns; Loc. = LC_X8_Y3_N5; Fanout = 17; REG Node = 'fenpinqi:inst|q'
+        Info: 3: + IC(5.338 ns) + CELL(0.711 ns) = 9.382 ns; Loc. = LC_X59_Y7_N2; Fanout = 1; REG Node = 'jiaotong:inst1|rf'
+        Info: Total cell delay = 3.115 ns ( 33.20 % )
+        Info: Total interconnect delay = 6.267 ns ( 66.80 % )
+    Info: + Micro clock to output delay of source is 0.224 ns
+    Info: + Longest register to pin delay is 5.041 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X59_Y7_N2; Fanout = 1; REG Node = 'jiaotong:inst1|rf'
+        Info: 2: + IC(2.933 ns) + CELL(2.108 ns) = 5.041 ns; Loc. = PIN_U13; Fanout = 0; PIN Node = 'r2'
+        Info: Total cell delay = 2.108 ns ( 41.82 % )
+        Info: Total interconnect delay = 2.933 ns ( 58.18 % )
+Info: th for register "jiaotong:inst1|state.a" (data pin = "j", clock pin = "clk") is -0.520 ns
+    Info: + Longest clock path from clock "clk" to destination register is 9.483 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_K6; Fanout = 3; CLK Node = 'clk'
+        Info: 2: + IC(0.929 ns) + CELL(0.935 ns) = 3.333 ns; Loc. = LC_X8_Y3_N5; Fanout = 17; REG Node = 'fenpinqi:inst|q'
+        Info: 3: + IC(5.439 ns) + CELL(0.711 ns) = 9.483 ns; Loc. = LC_X53_Y23_N1; Fanout = 6; REG Node = 'jiaotong:inst1|state.a'
+        Info: Total cell delay = 3.115 ns ( 32.85 % )
+        Info: Total interconnect delay = 6.368 ns ( 67.15 % )
+    Info: + Micro hold delay of destination is 0.015 ns
+    Info: - Shortest pin to register delay is 10.018 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_J17; Fanout = 3; PIN Node = 'j'
+        Info: 2: + IC(6.466 ns) + CELL(0.292 ns) = 8.227 ns; Loc. = LC_X53_Y23_N9; Fanout = 1; COMB Node = 'jiaotong:inst1|Equal0~1'
+        Info: 3: + IC(0.452 ns) + CELL(0.292 ns) = 8.971 ns; Loc. = LC_X53_Y23_N0; Fanout = 5; COMB Node = 'jiaotong:inst1|Equal0~3'
+        Info: 4: + IC(0.440 ns) + CELL(0.607 ns) = 10.018 ns; Loc. = LC_X53_Y23_N1; Fanout = 6; REG Node = 'jiaotong:inst1|state.a'
+        Info: Total cell delay = 2.660 ns ( 26.55 % )
+        Info: Total interconnect delay = 7.358 ns ( 73.45 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 157 megabytes
+    Info: Processing ended: Tue Dec 23 15:49:05 2014
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,12 @@
+Fitter Status : Successful - Tue Dec 23 15:48:12 2014
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : fenpinqi
+Top-level Entity Name : fenpinqi
+Family : Cyclone
+Device : EP1C20F400C8
+Timing Models : Final
+Total logic elements : 3 / 20,060 ( < 1 % )
+Total pins : 3 / 301 ( < 1 % )
+Total virtual pins : 0
+Total memory bits : 0 / 294,912 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

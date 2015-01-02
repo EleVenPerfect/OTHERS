@@ -1,0 +1,27 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity fenpinqi is
+	port (clr,clk:in std_logic ;
+				q:buffer std_logic);
+end fenpinqi;
+
+architecture one of fenpinqi is
+	signal counter:integer range 0 to 624999;
+begin
+	process (clr,clk)
+	begin
+		if(clk'event and clk='1') then
+			if(clr='1') then
+				counter<=0;
+				elsif(counter =624999) 
+					then counter<=0;
+					q<=not q;
+				else
+					counter<=counter+1;
+			end if;
+		end if;
+	end process;
+end one;

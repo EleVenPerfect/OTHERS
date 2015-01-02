@@ -1,0 +1,12 @@
+Fitter Status : Successful - Wed Dec 24 09:45:58 2014
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : jiaotong
+Top-level Entity Name : jiaotong
+Family : Cyclone
+Device : EP1C20F400C8
+Timing Models : Final
+Total logic elements : 30 / 20,060 ( < 1 % )
+Total pins : 10 / 301 ( 3 % )
+Total virtual pins : 0
+Total memory bits : 0 / 294,912 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

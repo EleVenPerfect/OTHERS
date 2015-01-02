@@ -1,0 +1,10 @@
+|fenpinqi
+clr => counter.OUTPUTSELECT
+clr => counter.OUTPUTSELECT
+clr => q~reg0.ENA
+clk => q~reg0.CLK
+clk => counter[0].CLK
+clk => counter[1].CLK
+q << q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
