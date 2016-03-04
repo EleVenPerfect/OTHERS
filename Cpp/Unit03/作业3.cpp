@@ -5,10 +5,10 @@ using namespace std;
 int swap(int* x,int* y,int* z)
 {
 	int temp;
-	temp =*x;
-	*x =*y;
-	*y =*z;
-	*z =temp;
+	temp =*z;
+	*z =*y;
+	*y =*x;
+	*x =temp;
 	if(*x>*y)
 		temp =*x;
 	else
@@ -21,10 +21,10 @@ int swap(int* x,int* y,int* z)
 int swap(int& x,int& y,int& z)
 {
 	int temp;
-	temp =x;
-	x =y;
-	y =z;
-	z =temp;
+	temp =z;
+	z =y;
+	y =x;
+	x =temp;
 	if(x>y)
 		temp =x;
 	else
@@ -44,7 +44,7 @@ int main()
 	max =swap(a,b,c);
 	//cout <<max<<' '<<a<<' '<<b<<' '<<c; 
 	
-	//max =swap(&a,&b,&c);
+	max =swap(&a,&b,&c);
 	cout <<max<<' '<<a<<' '<<b<<' '<<c; 
 	
 	return 0;
