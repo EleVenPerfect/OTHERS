@@ -1,17 +1,17 @@
-# Project: egeTest
+# Project: TestCircle6
 # Makefile created by Dev-C++ 5.6.0
 
-CPP      = g++.exe
-CC       = gcc.exe
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = egeTest.o
-LINKOBJ  = egeTest.o
-LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/mingw32/lib" -static-libstdc++ -static-libgcc -mwindows -lgraphics -lgdi32 -limm32 -lmsimg32 -lole32 -loleaut32 -lwinmm -luuid -mwindows  -g3
+OBJ      = Circle6.o TestCircle6.o
+LINKOBJ  = Circle6.o TestCircle6.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/mingw32/lib" -static-libstdc++ -static-libgcc -g3
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include/c++"
-BIN      = egeTest.exe
-CXXFLAGS = $(CXXINCS) -g3
-CFLAGS   = $(INCS) -g3
+BIN      = TestCircle6.exe
+CXXFLAGS = $(CXXINCS) -Og -g3 -fverbose-asm
+CFLAGS   = $(INCS) -Og -g3 -fverbose-asm
 RM       = rm -f
 
 .PHONY: all all-before all-after clean clean-custom
@@ -24,5 +24,8 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-egeTest.o: egeTest.cpp
-	$(CPP) -c egeTest.cpp -o egeTest.o $(CXXFLAGS)
+Circle6.o: Circle6.cpp
+	$(CPP) -c Circle6.cpp -o Circle6.o $(CXXFLAGS)
+
+TestCircle6.o: TestCircle6.cpp
+	$(CPP) -c TestCircle6.cpp -o TestCircle6.o $(CXXFLAGS)
