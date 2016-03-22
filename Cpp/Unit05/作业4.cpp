@@ -250,8 +250,6 @@ int main() {
   Screen *screen = Screen::getInstance(width, height);
    
   MyRectangle myRectangle(leftX, leftY, rightX, rightY, screen);
-  
-  
   myRectangle.setColor(0, 0, 0xff);
   myRectangle.showScreen();
   myRectangle.Draw();
