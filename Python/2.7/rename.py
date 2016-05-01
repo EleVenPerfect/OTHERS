@@ -1,7 +1,7 @@
 import os
 
 def file_rename():
-    file_list = os.listdir(r"D:\test")
+    file_list = os.listdir(r"D:\STUDY\Github\OTHERS\Python")
     print(file_list)
     print(os.getcwd())
     
