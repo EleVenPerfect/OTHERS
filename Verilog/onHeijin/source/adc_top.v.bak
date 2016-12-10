@@ -1,0 +1,2 @@
+
+ad7606_control(db,first,busy,rd,cs,fpga_clk);

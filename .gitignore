@@ -1,7 +1,7 @@
 Verilog/文档/密/
 
-*/db
-*/incremental_db
-*/output_files
-*/simulation
-*/.qsys_edit
+Verilog/onHeijin/db
+Verilog/onHeijin/incremental_db
+Verilog/onHeijin/output_files
+Verilog/onHeijin/simulation
+Verilog/onHeijin/.qsys_edit

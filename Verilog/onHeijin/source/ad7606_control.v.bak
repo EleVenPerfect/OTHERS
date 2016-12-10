@@ -1,0 +1,147 @@
+module ad7606_control(cnv_start,ad_cnv_a,ad_cnv_b,ad_busy,ad_cs_n,ad_rd_sck,ad_douta,ad_doutb,mclk,
+                      ch1_data,ch2_data,ch3_data,ch4_data,ch5_data,ch6_data,ad_read_req,
+                      ch7_data,ch8_data,reset_n);
+input  cnv_start,mclk,reset_n;
+input ad_busy,ad_douta,ad_doutb;
+output ad_cnv_a,ad_cnv_b,ad_cs_n,ad_rd_sck,ad_read_req;
+output[15:0] ch1_data,ch2_data,ch3_data,ch4_data,ch5_data,ch6_data,ch7_data,ch8_data;
+ assign      ch2_data=ch2_data_reg;
+ assign      ch1_data=ch1_data_reg;
+ assign      ch3_data=ch3_data_reg;
+ assign      ch4_data=ch4_data_reg;
+ assign      ch5_data=ch5_data_reg;	
+ assign      ch6_data=ch6_data_reg;
+ assign      ch7_data=ch7_data_reg;
+ assign      ch8_data=ch8_data_reg;
+
+reg cnv_start_reg1,ad_cs_n_r,cnv_start_reg2,ch1_sample,ch2_sample,ch3_sample,ch4_sample,ch5_sample,ch6_sample,
+ch7_sample,ch8_sample,ad_cs_n_reg,cnv_flag_2,cnv_flag;
+wire w_mclk/*synthesis noprune*/;
+assign ad_cnv_a = !(cnv_start&(!cnv_start_reg2));
+assign ad_cnv_b =!(cnv_start&(!cnv_start_reg2));
+reg[8:0]  acq_cnt;
+reg   ad_rd_req,mclk_hold;
+reg[15:0] ch1_data_reg,ch2_data_reg,ch3_data_reg,ch4_data_reg,ch5_data_reg,ch6_data_reg,ch7_data_reg,ch8_data_reg;
+assign ad_read_req=ad_rd_req;
+assign ad_cs_n=ad_cs_n_reg;
+assign ad_rd_sck=(ad_cs_n_reg) || mclk;
+assign w_mclk=mclk||mclk_hold/*synthesis noprune*/;
+//assign mclk_hold=1'b0;
+/////////////////////////////////////////////////////////////////////////////////////////
+always @(posedge mclk)
+begin 
+    if(!reset_n)begin
+        //state_next<=init;
+	  
+	    ad_cs_n_reg<=1'b1;
+	    mclk_hold<=1'b1;
+	     acq_cnt=0;
+	    
+	    end
+	else begin
+      if (cnv_flag & ad_busy) begin
+                        // cnv_flag_2=1'b1;
+                         //cnv_flag=1'b0;
+                         acq_cnt<=0;
+                         end
+     if((!ad_busy)&(ad_cnv_a)&cnv_flag_2)
+               begin
+                acq_cnt<=acq_cnt+1;
+                // if(acq_cnt>9'd170) begin
+                if(acq_cnt>9'd100) begin
+                   //ad_rd_req<=1'b0;
+                   acq_cnt<=0;
+                   //cnv_flag_2<=1'b0;
+                   end
+                end
+        
+    mclk_hold<=1'b0;
+    //if(acq_cnt==9'd200) ad_cs_n_reg<=1'b0;
+     //if(acq_cnt==9'd266)
+     if(acq_cnt==9'd30) ad_cs_n_reg<=1'b0;
+     if(acq_cnt==9'd96)
+                  begin
+                  
+                  ad_cs_n_reg<=1'b1;
+                  
+                  end
+    end
+end
+//////////////////////////////////////////////////////////////////////////////////////////
+   always @(negedge w_mclk)/////////////////////////////////////////////////////////
+      begin
+        if(!reset_n)begin
+        //state_next<=init;
+	    //state<=init;
+	   
+	    //ad_cs_n_reg<=1'b1;
+	    cnv_flag_2<=1'b0;
+	    cnv_flag<=1'b0;
+	    ad_rd_req<=1'b0;
+	    end
+	     else begin
+           cnv_start_reg1<=cnv_start;
+           cnv_start_reg2<=cnv_start_reg1;
+           if (!ad_cnv_a) cnv_flag=1'b1;
+           if (cnv_flag & ad_busy) begin
+                         cnv_flag_2=1'b1;
+                         cnv_flag=1'b0;
+                         //acq_cnt<=0;
+                         end
+          if(cnv_flag_2)
+           begin
+           if((!ad_busy)&(ad_cnv_a))
+               begin
+               // acq_cnt<=acq_cnt+1;
+                //if(acq_cnt==9'd200) ad_cs_n_reg<=1'b0;
+                if((acq_cnt>9'd30)&(acq_cnt<=9'd47))
+                  begin
+                  //ch1_sample<=ad_douta;
+                  ch1_data_reg={ch1_data_reg[14:0],ad_douta};
+                  //ch5_sample<=ad_doutb;
+                  ch5_data_reg={ch5_data_reg[14:0],ad_doutb};
+                  end
+                 if((acq_cnt>9'd47)&(acq_cnt<=9'd63))
+                  begin
+                  //ch2_sample<=ad_douta;
+                  ch2_data_reg={ch2_data_reg[14:0],ad_douta};
+                  //ch6_sample<=ad_doutb;
+                  ch6_data_reg={ch6_data_reg[14:0],ad_doutb};
+                  end
+                 if((acq_cnt>9'd63)&(acq_cnt<=9'd79))
+                  begin
+                  //ch3_sample<=ad_douta;
+                  ch3_data_reg={ch3_data_reg[14:0],ad_douta};
+                  //ch7_sample<=ad_doutb;
+                  ch7_data_reg={ch7_data_reg[14:0],ad_doutb};
+                  end
+                 if((acq_cnt>9'd79)&(acq_cnt<=9'd95))
+                  begin
+                  //ch4_sample<=ad_douta;
+                  ch4_data_reg={ch4_data_reg[14:0],ad_douta};
+                  //ch8_sample<=ad_doutb;
+                  ch8_data_reg={ch8_data_reg[14:0],ad_doutb};
+                  
+                  end
+                 //if(acq_cnt==9'd266)
+                 if(acq_cnt==9'd97)
+                  begin
+                  ad_rd_req<=1'b1;
+                  //ad_cs_n_reg<=1'b1;
+                  
+                  end
+                 
+                 //if(acq_cnt==8'd67) ad_rd_req<=1'b1;
+                 if(acq_cnt>9'd100) begin
+                   ad_rd_req<=1'b0;
+                   //acq_cnt<=0;
+                   cnv_flag_2<=1'b0;
+                   end
+                     
+               end
+             end
+         end
+      
+      end
+
+   endmodule

@@ -1,0 +1,20 @@
+module ad7606_control(
+/*AD7606的输出*/
+	input [15:0]db,
+	input first,
+	input busy,
+/*AD7606的输入*/
+	output range,
+	output [2:0]os,
+	output cv_ab,
+	output rd,
+	output cs,
+	output rst,
+/*FPGA相关引脚*/	
+	input fpga_clk,
+   input fpga_reset
+);
+
+
+
+endmodule

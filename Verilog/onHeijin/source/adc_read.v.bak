@@ -1,0 +1,19 @@
+module ad7606_transdata(
+	input [15:0]db,
+	input first,
+	input busy,
+
+/*FPGA相关引脚*/	
+	input fpga_clk
+);
+
+reg [2:0] tongdao;
+
+always@(posedge fpga_clk)
+begin 
+	if（first==1）
+		tongdao <=0;
+	
+end
+
+endmodule
