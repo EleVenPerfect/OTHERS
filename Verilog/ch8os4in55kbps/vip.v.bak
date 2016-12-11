@@ -1,0 +1,51 @@
+`timescale 1ns / 1ps
+
+//VIP工程顶层模块
+module vip(
+			ext_clk,ext_rst_n,
+			led
+		);
+	//外部输入时钟和复位接口
+input ext_clk;		//外部25MHz输入时钟	
+input ext_rst_n;	//外部低电平复位信号输入	
+	//LED指示灯接口
+output led;		//用于测试的LED指示灯
+		
+
+////////////////////////////////////////////////////		
+//系统内部时钟和复位产生模块例化
+	//PLL输出复位和时钟，用于FPGA内部系统
+wire sys_rst_n;	//系统复位信号，低电平有效
+wire clk_25m;		//PLL输出25MHz	
+wire clk_33m;		//PLL输出33MHz
+wire clk_50m;		//PLL输出50MHz
+wire clk_65m;		//PLL输出65MHz
+wire clk_100m;	//PLL输出100MHz		
+
+sys_ctrl	uut_sys_ctrl(
+				.ext_clk(ext_clk),
+				.ext_rst_n(ext_rst_n),
+				.sys_rst_n(sys_rst_n),
+				.clk_25m(clk_25m),
+				.clk_33m(clk_33m),
+				.clk_50m(clk_50m),
+				.clk_65m(clk_65m),
+				.clk_100m(clk_100m)
+			);
+		
+////////////////////////////////////////////////////
+//LED闪烁逻辑产生模块例化
+
+led_controller		uut_led_controller(
+						.clk(clk_25m),
+						.rst_n(sys_rst_n),
+						.led(led)
+					);
+	
+
+
+		
+
+endmodule
+
+

@@ -1,0 +1,5 @@
+PLL_Name	sys_ctrl:uut_sys_ctrl|pll_controller:pll_controller_inst|altpll:altpll_component|pll_controller_altpll:auto_generated|pll1
+PLLJITTER	32
+PLLSPEmax	84
+PLLSPEmin	-53
+
