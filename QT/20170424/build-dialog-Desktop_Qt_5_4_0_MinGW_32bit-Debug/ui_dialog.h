@@ -43,7 +43,7 @@ public:
         label_2->setGeometry(QRect(70, 120, 54, 12));
         label_3 = new QLabel(Dialog);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(210, 120, 54, 12));
+        label_3->setGeometry(QRect(163, 120, 131, 20));
         pushButton = new QPushButton(Dialog);
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setGeometry(QRect(200, 180, 75, 23));
