@@ -45,7 +45,7 @@ I (..\..\User\bsp_stm32f4xx\inc\bsp_spi_flash.h)(0x511A52A6)
 I (..\..\User\bsp_stm32f4xx\inc\bsp_spi_bus.h)(0x563C52D6)
 I (..\..\User\bsp_stm32f4xx\inc\bsp_spi_ad7606.h)(0x563C5186)
 I (..\..\User\demo_spi_ad7606.h)(0x563C4408)
-F (..\..\User\demo_spi_ad7606.c)(0x59391F31)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --asm --interleave --asm_dir ".\\Flash\\List\\" -I..\..\Libraries\CMSIS\Include -I..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include -I..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc -I..\..\User\bsp_stm32f4xx\inc -I..\..\User\bsp_stm32f4xx -I..\..\User --diag_suppress=870 -D__UVISION_VERSION="514" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40XX-o .\flash\obj\demo_spi_ad7606.o --list_dir ".\\Flash\\List\\" --list --omf_browse .\flash\obj\demo_spi_ad7606.crf --depend .\flash\obj\demo_spi_ad7606.d)
+F (..\..\User\demo_spi_ad7606.c)(0x5939582A)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --asm --interleave --asm_dir ".\\Flash\\List\\" -I..\..\Libraries\CMSIS\Include -I..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include -I..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc -I..\..\User\bsp_stm32f4xx\inc -I..\..\User\bsp_stm32f4xx -I..\..\User --diag_suppress=870 -D__UVISION_VERSION="514" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40XX-o .\flash\obj\demo_spi_ad7606.o --list_dir ".\\Flash\\List\\" --list --omf_browse .\flash\obj\demo_spi_ad7606.crf --depend .\flash\obj\demo_spi_ad7606.d)
 I (..\..\User\bsp_stm32f4xx\bsp.h)(0x563C47CA)
 I (..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5938F780)
 I (..\..\Libraries\CMSIS\Include\core_cm4.h)(0x527B0EE8)

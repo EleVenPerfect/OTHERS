@@ -247,8 +247,8 @@
 ;;;46     	bsp_spi_InitAD7606();	/* 配置AD7606所用的GPIO */
 000008  f7fffffe          BL       bsp_spi_InitAD7606
 ;;;47     
-;;;48     	bsp_StartAutoTimer(0, 100);	/* 启动1个500ms的自动重装的定时器 */
-00000c  2164              MOVS     r1,#0x64
+;;;48     	bsp_StartAutoTimer(0, 50);	/* 启动1个500ms的自动重装的定时器 */
+00000c  2132              MOVS     r1,#0x32
 00000e  2000              MOVS     r0,#0
 000010  f7fffffe          BL       bsp_StartAutoTimer
 ;;;49     
