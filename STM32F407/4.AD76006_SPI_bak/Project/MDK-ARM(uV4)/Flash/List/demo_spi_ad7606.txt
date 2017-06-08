@@ -241,94 +241,94 @@
 ;;;43     	*/
 ;;;44     	g_tAD7606.Range = 1;	/* 10V */
 000002  2001              MOVS     r0,#1
-000004  491a              LDR      r1,|L3.112|
+000004  4919              LDR      r1,|L3.108|
 000006  7008              STRB     r0,[r1,#0]
 ;;;45     
 ;;;46     	bsp_spi_InitAD7606();	/* 配置AD7606所用的GPIO */
 000008  f7fffffe          BL       bsp_spi_InitAD7606
 ;;;47     
-;;;48     	bsp_StartAutoTimer(0, 500);	/* 启动1个500ms的自动重装的定时器 */
-00000c  f44f71fa          MOV      r1,#0x1f4
-000010  2000              MOVS     r0,#0
-000012  f7fffffe          BL       bsp_StartAutoTimer
+;;;48     	bsp_StartAutoTimer(0, 100);	/* 启动1个500ms的自动重装的定时器 */
+00000c  2164              MOVS     r1,#0x64
+00000e  2000              MOVS     r0,#0
+000010  f7fffffe          BL       bsp_StartAutoTimer
 ;;;49     
 ;;;50     	DispMenu();			/* 显示操作菜单 */	
-000016  f7fffffe          BL       DispMenu
+000014  f7fffffe          BL       DispMenu
 ;;;51     	while (1)
-00001a  e027              B        |L3.108|
-                  |L3.28|
+000018  e027              B        |L3.106|
+                  |L3.26|
 ;;;52     	{
 ;;;53     		bsp_Idle();		/* 空闲时执行的函数,比如喂狗. 在bsp.c中 */
-00001c  f7fffffe          BL       bsp_Idle
+00001a  f7fffffe          BL       bsp_Idle
 ;;;54     
 ;;;55     		if (bsp_CheckTimer(0))
-000020  2000              MOVS     r0,#0
-000022  f7fffffe          BL       bsp_CheckTimer
-000026  b128              CBZ      r0,|L3.52|
+00001e  2000              MOVS     r0,#0
+000020  f7fffffe          BL       bsp_CheckTimer
+000024  b128              CBZ      r0,|L3.50|
 ;;;56     		{	
-;;;57     			/* 每隔500ms 进来一次. 由软件启动转换 */
+;;;57     			/* 每隔100ms 进来一次. 由软件启动转换 */
 ;;;58     			AD7606_Scan();
-000028  f7fffffe          BL       AD7606_Scan
+000026  f7fffffe          BL       AD7606_Scan
 ;;;59     		
 ;;;60     			/* 处理数据 */
 ;;;61     			AD7606_Mak();
-00002c  f7fffffe          BL       AD7606_Mak
+00002a  f7fffffe          BL       AD7606_Mak
 ;;;62     										 
 ;;;63     			/* 打印ADC采样结果 */
 ;;;64     			AD7606_Disp();		
-000030  f7fffffe          BL       AD7606_Disp
-                  |L3.52|
+00002e  f7fffffe          BL       AD7606_Disp
+                  |L3.50|
 ;;;65     		}
 ;;;66     		
 ;;;67     		if (comGetChar(COM1, &cmd))	/* 从串口读入一个字符(非阻塞方式) */
-000034  4669              MOV      r1,sp
-000036  2000              MOVS     r0,#0
-000038  f7fffffe          BL       comGetChar
-00003c  b1b0              CBZ      r0,|L3.108|
+000032  4669              MOV      r1,sp
+000034  2000              MOVS     r0,#0
+000036  f7fffffe          BL       comGetChar
+00003a  b1b0              CBZ      r0,|L3.106|
 ;;;68     		{
 ;;;69     			switch (cmd)
-00003e  f89d0000          LDRB     r0,[sp,#0]
-000042  2831              CMP      r0,#0x31
-000044  d10e              BNE      |L3.100|
+00003c  f89d0000          LDRB     r0,[sp,#0]
+000040  2831              CMP      r0,#0x31
+000042  d10e              BNE      |L3.98|
 ;;;70     			{
 ;;;71     				case '1':
 ;;;72     					if (g_tAD7606.Range == 0)
-000046  480a              LDR      r0,|L3.112|
-000048  7800              LDRB     r0,[r0,#0]  ; g_tAD7606
-00004a  b918              CBNZ     r0,|L3.84|
+000044  4809              LDR      r0,|L3.108|
+000046  7800              LDRB     r0,[r0,#0]  ; g_tAD7606
+000048  b918              CBNZ     r0,|L3.82|
 ;;;73     					{
 ;;;74     						g_tAD7606.Range = 1;
-00004c  2001              MOVS     r0,#1
-00004e  4908              LDR      r1,|L3.112|
-000050  7008              STRB     r0,[r1,#0]
-000052  e002              B        |L3.90|
-                  |L3.84|
+00004a  2001              MOVS     r0,#1
+00004c  4907              LDR      r1,|L3.108|
+00004e  7008              STRB     r0,[r1,#0]
+000050  e002              B        |L3.88|
+                  |L3.82|
 ;;;75     					}
 ;;;76     					else
 ;;;77     					{
 ;;;78     						g_tAD7606.Range = 0;
-000054  2000              MOVS     r0,#0
-000056  4906              LDR      r1,|L3.112|
-000058  7008              STRB     r0,[r1,#0]
-                  |L3.90|
+000052  2000              MOVS     r0,#0
+000054  4905              LDR      r1,|L3.108|
+000056  7008              STRB     r0,[r1,#0]
+                  |L3.88|
 ;;;79     					}
 ;;;80     					AD7606_SetInputRange(g_tAD7606.Range);
-00005a  4905              LDR      r1,|L3.112|
-00005c  7808              LDRB     r0,[r1,#0]  ; g_tAD7606
-00005e  f7fffffe          BL       AD7606_SetInputRange
+000058  4904              LDR      r1,|L3.108|
+00005a  7808              LDRB     r0,[r1,#0]  ; g_tAD7606
+00005c  f7fffffe          BL       AD7606_SetInputRange
 ;;;81     					break;
-000062  e002              B        |L3.106|
-                  |L3.100|
+000060  e002              B        |L3.104|
+                  |L3.98|
 ;;;82     
 ;;;83     				default:
 ;;;84     					DispMenu();	/* 无效命令，重新打印命令提示 */
-000064  f7fffffe          BL       DispMenu
+000062  f7fffffe          BL       DispMenu
 ;;;85     					break;
-000068  bf00              NOP      
+000066  bf00              NOP      
+                  |L3.104|
+000068  bf00              NOP                            ;81
                   |L3.106|
-00006a  bf00              NOP                            ;81
-                  |L3.108|
-00006c  e7d6              B        |L3.28|
+00006a  e7d6              B        |L3.26|
 ;;;86     
 ;;;87     			}
 ;;;88     		}
@@ -337,8 +337,7 @@
 ;;;91     
                           ENDP
 
-00006e  0000              DCW      0x0000
-                  |L3.112|
+                  |L3.108|
                           DCD      g_tAD7606
 
                           AREA ||i.DispMenu||, CODE, READONLY, ALIGN=2

@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER,</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\Libraries\CMSIS\Include;..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include;..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc;..\..\User;..\..\User\APP;..\..\User\BSP;..\..\User\BSP\Key;..\..\User\BSP\led;..\..\User\BSP\usart;..\..\User\uC-CPU;..\..\User\uC-CPU\ARM-Cortex-M4\RealView;..\..\User\uC-LIB;..\..\User\uCOS-III\Source;..\..\User\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView;..\..\User\BSP\dac</IncludePath>
+              <IncludePath>..\..\Libraries\CMSIS\Include;..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include;..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc;..\..\User;..\..\User\APP;..\..\User\BSP;..\..\User\BSP\Key;..\..\User\BSP\led;..\..\User\BSP\usart;..\..\User\uC-CPU;..\..\User\uC-CPU\ARM-Cortex-M4\RealView;..\..\User\uC-LIB;..\..\User\uCOS-III\Source;..\..\User\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView;..\..\User\BSP\dac;..\..\User\BSP\adc;..\..\User\BSP\spi</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -861,6 +861,16 @@
               <FileName>bsp_dac.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\BSP\dac\bsp_dac.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_spi_ad7606.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\BSP\adc\bsp_spi_ad7606.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_spi_bus.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\BSP\spi\bsp_spi_bus.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -15,13 +15,13 @@
 ;;;89     	printf("AD7606模块       	spi模式 \r\n");
 000008  a019              ADR      r0,|L1.112|
 00000a  f7fffffe          BL       __2printf
-;;;90         printf("  +5V       <------   5.0V      5V供电\r\n");
+;;;90       printf("  +5V       <------   5.0V      5V供电\r\n");
 00000e  a020              ADR      r0,|L1.144|
 000010  f7fffffe          BL       __2printf
-;;;91         printf("  GND       -------   GND       地\r\n");
+;;;91       printf("  GND       -------   GND       地\r\n");
 000014  a029              ADR      r0,|L1.188|
 000016  f7fffffe          BL       __2printf
-;;;92     	printf("  CS        <------   PF7       SPI_CS\r\n");
+;;;92     	printf("  CS        <------   PD6       SPI_CS\r\n");
 00001a  a032              ADR      r0,|L1.228|
 00001c  f7fffffe          BL       __2printf
 ;;;93     	printf("  RD/SCLK   <------   PB3       SPI_SCLK\r\n");
@@ -110,13 +110,13 @@
 0000e2  00                DCB      0
 0000e3  00                DCB      0
                   |L1.228|
-0000e4  20204353          DCB      "  CS        <------   PF7       SPI_CS\r\n",0
+0000e4  20204353          DCB      "  CS        <------   PD6       SPI_CS\r\n",0
 0000e8  20202020
 0000ec  20202020
 0000f0  3c2d2d2d
 0000f4  2d2d2d20
-0000f8  20205046
-0000fc  37202020
+0000f8  20205044
+0000fc  36202020
 000100  20202020
 000104  5350495f
 000108  43530d0a

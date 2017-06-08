@@ -8,9 +8,11 @@
 *
 *********************************************************************************************************
 */
-#ifndef _BSP_SPI_AD7606_H
-#define _BSP_SPI_AD7606_H
+#ifndef _BSP_SPI_AD7606_UCOS_H
+#define _BSP_SPI_AD7606_UCOS_H
 
+#include "stm32f4xx.h"
+#include "bsp_spi_bus.h"
 /* 片选 */
 #define AD_CS_0()						GPIO_ResetBits(PORT_CS, PIN_CS)
 #define AD_CS_1()						GPIO_SetBits(PORT_CS, PIN_CS)
@@ -27,18 +29,31 @@
 #define	AD_CONVST_LOW()					GPIO_ResetBits(PORT_CONVST, PIN_CONVST)
 #define	AD_CONVST_HIGH()				GPIO_SetBits(PORT_CONVST, PIN_CONVST)
 
+
+/*开关中断的宏*/
+#define ENABLE_INT()	__set_PRIMASK(0)	/* 使能全局中断 */
+#define DISABLE_INT()	__set_PRIMASK(1)	/* 关闭全局中断 */
+
+
+
+#define CH_NUM			8				/* 采集2通道 */
+
+
 typedef struct
 {
-	uint8_t Range;
+	unsigned char Range;
 }AD7606_T;
 
 void AD7606_Reset(void);		
-void AD7606_SetInputRange(uint8_t _ucRange);	/* 设置AD7606量程 */
+void AD7606_SetInputRange(unsigned char _ucRange);	/* 设置AD7606量程 */
 void bsp_spi_InitAD7606(void);		/* 初始化AD7606 */
 void AD7606_Scan(void); 		/* 此函数代码按照时序编写 */
-int16_t AD7606_ReadAdc(uint8_t _ch);
-void AD7606_SetOS(uint8_t _ucMode);
-
+unsigned short int AD7606_ReadAdc(unsigned char _ch);
+void AD7606_SetOS(unsigned char _ucMode);
+void PrintfHardInfo(void);
+void AD7606_Mak(void);
+void AD7606_Disp(void);
+	
 extern AD7606_T g_tAD7606;
 
 #endif

@@ -65,6 +65,8 @@
 #define  APP_TASK_DAC1_PRIO                         3u
 #define  APP_TASK_DAC2_PRIO                         3u
 
+#define  APP_TASK_ADCE_PRIO                         3u
+
 /*
 *********************************************************************************************************
 *                                            TASK STACK SIZES
@@ -81,6 +83,8 @@
 
 #define  APP_TASK_DAC1_STK_SIZE                     512u
 #define  APP_TASK_DAC2_STK_SIZE                     512u
+
+#define  APP_TASK_ADCE_STK_SIZE                     512u
 
 
 /*

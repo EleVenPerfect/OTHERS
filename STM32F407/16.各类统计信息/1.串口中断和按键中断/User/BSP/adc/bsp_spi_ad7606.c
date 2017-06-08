@@ -15,8 +15,7 @@
 *
 *********************************************************************************************************
 */
-
-#include "bsp.h"
+#include "./adc/bsp_spi_ad7606.h" 
 
 /* SPI总线的SCK、MOSI、MISO 在 bsp_spi_bus.c中配置  */
 /* CSN片选 */
@@ -50,13 +49,15 @@
 
 static void AD7606_ConfigGPIO(void);
 void AD7606_Reset(void);	
-void AD7606_SetInputRange(uint8_t _ucRange);
+void AD7606_SetInputRange(unsigned char _ucRange);
 void AD7606_StartConv(void);
 void AD7606_CfgSpiHard(void);
 
-static int16_t s_adc_now[8];
+static unsigned short int s_adc_now[8];
 
 AD7606_T g_tAD7606;
+static signed short int s_volt[8];
+static signed short int s_dat[8];
 
 /*
 *********************************************************************************************************
@@ -169,7 +170,7 @@ void AD7606_CfgSpiHard(void)
 *********************************************************************************************************
 */
 #if 0
-void AD7606_SetOS(uint8_t _ucMode)
+void AD7606_SetOS(unsigned char _ucMode)
 {
 	if (_ucMode == 1)
 	{
@@ -224,7 +225,7 @@ void AD7606_SetOS(uint8_t _ucMode)
 *	返 回 值: 无
 *********************************************************************************************************
 */
-void AD7606_SetInputRange(uint8_t _ucRange)
+void AD7606_SetInputRange(unsigned char _ucRange)
 {
 	if (_ucRange == 0)
 	{
@@ -290,7 +291,7 @@ void AD7606_StartConv(void)
 */
 void AD7606_Scan(void) 		/* 此函数代码按照时序编写 */
 {
-	uint8_t i;			
+	unsigned char i;			
 
 	/* BUSY = 0 时.ad7606处于空闲状态ad转换结束 */	
 	if (BUSY_IS_LOW())	   
@@ -318,9 +319,9 @@ void AD7606_Scan(void) 		/* 此函数代码按照时序编写 */
 *	返 回 值: 1 表示OK，0表示暂无数据
 *********************************************************************************************************
 */
-int16_t AD7606_ReadAdc(uint8_t _ch)
+unsigned short int AD7606_ReadAdc(unsigned char _ch)
 {
-	int16_t sAdc;
+	unsigned short int sAdc;
 	
 	DISABLE_INT();	
 	sAdc = s_adc_now[_ch];
@@ -328,5 +329,91 @@ int16_t AD7606_ReadAdc(uint8_t _ch)
 
 	return sAdc;
 }
+
+
+/*
+*********************************************************************************************************
+*	函 数 名: PrintfHardInfo
+*	功能说明: 打印硬件接线信息
+*	形    参：无
+*	返 回 值: 无
+*********************************************************************************************************
+*/
+void PrintfHardInfo(void)
+{
+	printf("接线方法: \r\n");
+	printf("AD7606模块       	spi模式 \r\n");
+  printf("  +5V       <------   5.0V      5V供电\r\n");
+  printf("  GND       -------   GND       地\r\n");
+	printf("  CS        <------   PD6       SPI_CS\r\n");
+	printf("  RD/SCLK   <------   PB3       SPI_SCLK\r\n");
+	printf("  DB7/DOUT  ------>   PB4       SPI_MISO\r\n");
+	printf("  RAGE      <------   PB8       模拟信号输入量程\r\n");
+	printf("  RST       <------   PE0      复位信号\r\n");
+	printf("  CVA CVB   <------   PE13       启动AD转换\r\n");
+	printf("  OS0       <------   GND       过采样引脚0(默认接地)\r\n");
+	printf("  OS1       <------   GND       过采样引脚1(默认接地)\r\n");
+	printf("  OS2       <------   GND       过采样引脚2(默认接地)\r\n");
+	printf("  BUSY      ------>   PD7       BUSY信号\r\n");
+	printf("打印采集数据: \r\n");
+}
+
+void AD7606_Mak(void)
+{
+	unsigned char i;
+	unsigned short int adc;
+
+	for (i = 0;i < CH_NUM; i++)
+	{	
+		s_dat[i] = AD7606_ReadAdc(i);
+	/* 
+		32767 = 5V , 这是理论值，实际可以根据5V基准的实际值进行公式矫正 
+		volt[i] = ((int16_t)dat[i] * 5000) / 32767;	计算实际电压值（近似估算的），如需准确，请进行校准            
+		volt[i] = dat[i] * 0.3051850947599719
+	*/
+		
+		adc = s_dat[i];
+		if (g_tAD7606.Range == 0)
+		{
+			s_volt[i] = (adc * 5000) / 32767;
+		}
+		else
+		{
+			s_volt[i] = (adc * 10000) / 32767;
+		}
+	}
+}
+ 
+/*
+*********************************************************************************************************
+*	函 数 名: AD7606_Disp
+*	功能说明: 显示采样后的数据
+*	形    参：无
+*	返 回 值: 无
+*********************************************************************************************************
+*/
+void AD7606_Disp(void)
+{
+	unsigned short int i;	
+	unsigned short int iTemp;
+
+	/* 打印采集数据 */
+	for (i = 0; i < CH_NUM; i++)
+	{                
+   		iTemp = s_volt[i];	/* uV  */
+		
+		if (s_dat[i] < 0)
+		{
+			iTemp = -iTemp;
+            printf(" CH%d = %6d,0x%04X (-%d.%d%d%d V) \r\n", i+1, s_dat[i], (uint16_t)s_dat[i], iTemp /1000, (iTemp%1000)/100, (iTemp%100)/10,iTemp%10);
+		}
+		else
+		{
+         	printf(" CH%d = %6d,0x%04X ( %d.%d%d%d V) \r\n", i+1, s_dat[i], s_dat[i] , iTemp /1000, (iTemp%1000)/100, (iTemp%100)/10,iTemp%10);                    
+		}
+	}
+	printf("\33[%dA", (int)CH_NUM);  /* 光标上移n行 */		
+}
+
 
 /***************************** 安富莱电子 www.armfly.com (END OF FILE) *********************************/

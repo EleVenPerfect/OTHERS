@@ -14,7 +14,7 @@
 *********************************************************************************************************
 */
 
-#include "bsp.h"		/* 如果要用ST的固件库，必须包含这个文件 */
+#include "bsp_spi_ad7606.h"
 #include "demo_spi_ad7606.h"
 
 /* 仅允许本文件内调用的函数声明 */
@@ -23,8 +23,8 @@ static void DispMenu(void);
 static void AD7606_Mak(void);
 static void AD7606_Disp(void);
 
-static int16_t s_volt[8];
-static int16_t s_dat[8];
+static unsigned short int s_volt[8];
+static unsigned short int s_dat[8];
 /*
 *********************************************************************************************************
 *	函 数 名: Demo_spi_AD7606
@@ -35,7 +35,7 @@ static int16_t s_dat[8];
 */
 void Demo_spi_AD7606(void)
 {
-	uint8_t cmd;
+	unsigned char cmd;
 
 	/*
 		由于ST固件库的启动文件已经执行了CPU系统时钟的初始化，所以不必再次重复配置系统时钟。
@@ -45,7 +45,7 @@ void Demo_spi_AD7606(void)
 
 	bsp_spi_InitAD7606();	/* 配置AD7606所用的GPIO */
 
-	bsp_StartAutoTimer(0, 100);	/* 启动1个500ms的自动重装的定时器 */
+	bsp_StartAutoTimer(0, 500);	/* 启动1个500ms的自动重装的定时器 */
 
 	DispMenu();			/* 显示操作菜单 */	
 	while (1)
@@ -54,7 +54,7 @@ void Demo_spi_AD7606(void)
 
 		if (bsp_CheckTimer(0))
 		{	
-			/* 每隔100ms 进来一次. 由软件启动转换 */
+			/* 每隔500ms 进来一次. 由软件启动转换 */
 			AD7606_Scan();
 		
 			/* 处理数据 */
@@ -100,15 +100,15 @@ void Demo_spi_AD7606(void)
 */
 void AD7606_Mak(void)
 {
-	uint8_t i;
-	int16_t adc;
+	unsigned char i;
+	unsigned short int adc;
 
 	for (i = 0;i < CH_NUM; i++)
 	{	
 		s_dat[i] = AD7606_ReadAdc(i);
 	/* 
 		32767 = 5V , 这是理论值，实际可以根据5V基准的实际值进行公式矫正 
-		volt[i] = ((int16_t)dat[i] * 5000) / 32767;	计算实际电压值（近似估算的），如需准确，请进行校准            
+		volt[i] = ((unsigned short int)dat[i] * 5000) / 32767;	计算实际电压值（近似估算的），如需准确，请进行校准            
 		volt[i] = dat[i] * 0.3051850947599719
 	*/
 		
@@ -134,8 +134,8 @@ void AD7606_Mak(void)
 */
 void AD7606_Disp(void)
 {
-	int16_t i;	
-	int16_t iTemp;
+	unsigned short int i;	
+	unsigned short int iTemp;
 
 	/* 打印采集数据 */
 	for (i = 0; i < CH_NUM; i++)
@@ -145,7 +145,7 @@ void AD7606_Disp(void)
 		if (s_dat[i] < 0)
 		{
 			iTemp = -iTemp;
-            printf(" CH%d = %6d,0x%04X (-%d.%d%d%d V) \r\n", i+1, s_dat[i], (uint16_t)s_dat[i], iTemp /1000, (iTemp%1000)/100, (iTemp%100)/10,iTemp%10);
+            printf(" CH%d = %6d,0x%04X (-%d.%d%d%d V) \r\n", i+1, s_dat[i], (uunsigned short int)s_dat[i], iTemp /1000, (iTemp%1000)/100, (iTemp%100)/10,iTemp%10);
 		}
 		else
 		{

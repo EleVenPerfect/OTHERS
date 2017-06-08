@@ -65,6 +65,8 @@ static  OS_TCB   AppTaskLed2TCB;
 static  OS_TCB   AppTaskDac1TCB;
 static  OS_TCB   AppTaskDac2TCB;
 
+static  OS_TCB   AppTaskAdceTCB;
+
 /*
 *********************************************************************************************************
 *                                                STACKS
@@ -82,6 +84,8 @@ static  CPU_STK  AppTaskLed2Stk [ APP_TASK_LED2_STK_SIZE ];
 static  CPU_STK  AppTaskDac1Stk [ APP_TASK_DAC1_STK_SIZE ];
 static  CPU_STK  AppTaskDac2Stk [ APP_TASK_DAC2_STK_SIZE ];
 
+static  CPU_STK  AppTaskAdceStk [ APP_TASK_ADCE_STK_SIZE ];
+
 /*
 *********************************************************************************************************
 *                                         FUNCTION PROTOTYPES
@@ -98,6 +102,8 @@ static  void  AppTaskLed2  ( void * p_arg );
 
 static  void  AppTaskDac1  ( void * p_arg );
 static  void  AppTaskDac2  ( void * p_arg );
+
+static  void  AppTaskAdce  ( void * p_arg );
 
 
 /*
@@ -289,6 +295,20 @@ static  void  AppTaskStart (void *p_arg)
                  (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
                  (OS_ERR     *)&err);
 
+		/* 创建 ADC extern 任务 */								 
+    OSTaskCreate((OS_TCB     *)&AppTaskAdceTCB,                /* Create the Led2 task                                */
+                 (CPU_CHAR   *)"App Task Adce",
+                 (OS_TASK_PTR ) AppTaskAdce,
+                 (void       *) 0,
+                 (OS_PRIO     ) APP_TASK_ADCE_PRIO,
+                 (CPU_STK    *)&AppTaskAdceStk[0],
+                 (CPU_STK_SIZE) APP_TASK_ADCE_STK_SIZE / 10,
+                 (CPU_STK_SIZE) APP_TASK_ADCE_STK_SIZE,
+                 (OS_MSG_QTY  ) 5u,
+                 (OS_TICK     ) 0u,
+                 (void       *) 0,
+                 (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+                 (OS_ERR     *)&err);
 								 
 		OSTaskDel ( 0, & err );                     //删除起始任务本身，该任务不再运行
 		
@@ -412,6 +432,12 @@ static  void  AppTaskKey ( void * p_arg )
 		printf ( "DAC2任务的CPU最大使用率：%d.%d%%    \r\n", 
 		         AppTaskDac2TCB.CPUUsageMax / 100, AppTaskDac2TCB.CPUUsageMax % 100 ); 
 						 
+		printf ( "ADC ext任务的CPU使用率：%d.%d%%\r\n", 
+		         AppTaskAdceTCB.CPUUsage / 100, AppTaskAdceTCB.CPUUsage % 100 );  
+		
+		printf ( "ADC ext任务的CPU最大使用率：%d.%d%%    \r\n", 
+		         AppTaskAdceTCB.CPUUsageMax / 100, AppTaskAdceTCB.CPUUsageMax % 100 ); 				 
+						 
     printf ( "串口任务的已用和空闲堆栈大小分别为：%d,%d\r\n", 
 		         AppTaskUsartTCB.StkUsed, AppTaskUsartTCB.StkFree ); 
 		
@@ -420,7 +446,9 @@ static  void  AppTaskKey ( void * p_arg )
 						 
 		printf ( "DAC2任务的已用和空闲堆栈大小分别为：%d,%d\r\n", 
 		         AppTaskDac2TCB.StkUsed, AppTaskDac2TCB.StkFree ); 
-						 
+		
+		printf ( "ADC ext任务的已用和空闲堆栈大小分别为：%d,%d\r\n", 
+		         AppTaskAdceTCB.StkUsed, AppTaskAdceTCB.StkFree );		
 
 		
 		OS_CRITICAL_EXIT();                               //退出临界段
@@ -491,10 +519,10 @@ static  void  AppTaskDac1 ( void * p_arg )
 		while (DEF_TRUE) 
 		{                                          /* Task body, always written as an infinite loop.       */
 				Dac1_Set_Vol(i);
-				if(i>3290)
+				if(i>3200)
 						i = 0;
-				i+=5;
-				OSTimeDly ( 10, OS_OPT_TIME_DLY, & err );
+				i+=50;
+				OSTimeDly ( 100, OS_OPT_TIME_DLY, & err );
 		}
 }
 
@@ -507,7 +535,7 @@ static  void  AppTaskDac1 ( void * p_arg )
 static  void  AppTaskDac2 ( void * p_arg )
 {
     OS_ERR      err;
-		int i = 3290;
+		int i = 3200;
 		(void)p_arg;
 
 	
@@ -519,10 +547,42 @@ static  void  AppTaskDac2 ( void * p_arg )
 		{                                          /* Task body, always written as an infinite loop.       */
 				Dac2_Set_Vol(i);
 				if(i < 10)
-						i = 3290;
-				i-=5;
-				OSTimeDly ( 10, OS_OPT_TIME_DLY, & err );
+						i = 3200;
+				i-=50;
+				OSTimeDly ( 100, OS_OPT_TIME_DLY, & err );
 		}
 }
 
+/*
+*********************************************************************************************************
+*                                          ADC extern TASK
+*********************************************************************************************************
+*/
+static  void  AppTaskAdce ( void * p_arg )
+{
+    OS_ERR      err;
+		
+		CPU_SR_ALLOC();
+		(void)p_arg;
+		
+		PrintfHardInfo();	/* 打印硬件接线信息 */
+		bsp_InitSPIBus();	/* 初始化SPI总线 */
+		
+		while (DEF_TRUE) 
+		{                                          /* Task body, always written as an infinite loop.       */
+			OS_CRITICAL_ENTER();
+			/* 每隔820ms 进来一次. 由软件启动转换 */
+			AD7606_Scan();
+			OS_CRITICAL_EXIT();
+			/* 处理数据 */
+			AD7606_Mak();
+			OS_CRITICAL_ENTER();
+			/* 打印数据 */
+			AD7606_Disp();
+			OS_CRITICAL_EXIT();			
+			                               //退出临界段
+			
+			OSTimeDly ( 500, OS_OPT_TIME_DLY, & err );
+		}
+}
 

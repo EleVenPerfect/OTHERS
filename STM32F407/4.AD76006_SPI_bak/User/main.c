@@ -87,9 +87,9 @@ static void PrintfHardInfo(void)
 {
 	printf("接线方法: \r\n");
 	printf("AD7606模块       	spi模式 \r\n");
-    printf("  +5V       <------   5.0V      5V供电\r\n");
-    printf("  GND       -------   GND       地\r\n");
-	printf("  CS        <------   PF7       SPI_CS\r\n");
+  printf("  +5V       <------   5.0V      5V供电\r\n");
+  printf("  GND       -------   GND       地\r\n");
+	printf("  CS        <------   PD6       SPI_CS\r\n");
 	printf("  RD/SCLK   <------   PB3       SPI_SCLK\r\n");
 	printf("  DB7/DOUT  ------>   PB4       SPI_MISO\r\n");
 	printf("  RAGE      <------   PA4       模拟信号输入量程\r\n");

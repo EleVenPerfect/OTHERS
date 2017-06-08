@@ -79,6 +79,9 @@
 #include "bsp_led.h" 
 #include "bsp_usart.h"
 #include "bsp_dac.h"
+#include "bsp_spi_bus.h"
+#include "bsp_spi_ad7606.h"
+
 
 /*
 *********************************************************************************************************
