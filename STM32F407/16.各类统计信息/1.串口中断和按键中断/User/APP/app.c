@@ -63,6 +63,7 @@ static  OS_TCB   AppTaskLed1TCB;
 static  OS_TCB   AppTaskLed2TCB;
 
 static  OS_TCB   AppTaskDac1TCB;
+static  OS_TCB   AppTaskDac2TCB;
 
 /*
 *********************************************************************************************************
@@ -79,6 +80,7 @@ static  CPU_STK  AppTaskLed1Stk [ APP_TASK_LED1_STK_SIZE ];
 static  CPU_STK  AppTaskLed2Stk [ APP_TASK_LED2_STK_SIZE ];
 
 static  CPU_STK  AppTaskDac1Stk [ APP_TASK_DAC1_STK_SIZE ];
+static  CPU_STK  AppTaskDac2Stk [ APP_TASK_DAC2_STK_SIZE ];
 
 /*
 *********************************************************************************************************
@@ -95,6 +97,8 @@ static  void  AppTaskLed1  ( void * p_arg );
 static  void  AppTaskLed2  ( void * p_arg );
 
 static  void  AppTaskDac1  ( void * p_arg );
+static  void  AppTaskDac2  ( void * p_arg );
+
 
 /*
 *********************************************************************************************************
@@ -269,6 +273,21 @@ static  void  AppTaskStart (void *p_arg)
                  (void       *) 0,
                  (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
                  (OS_ERR     *)&err);
+								 
+		/* 创建 DAC2 任务 */								 
+    OSTaskCreate((OS_TCB     *)&AppTaskDac2TCB,                /* Create the Led2 task                                */
+                 (CPU_CHAR   *)"App Task Dac2",
+                 (OS_TASK_PTR ) AppTaskDac2,
+                 (void       *) 0,
+                 (OS_PRIO     ) APP_TASK_DAC2_PRIO,
+                 (CPU_STK    *)&AppTaskDac2Stk[0],
+                 (CPU_STK_SIZE) APP_TASK_DAC2_STK_SIZE / 10,
+                 (CPU_STK_SIZE) APP_TASK_DAC2_STK_SIZE,
+                 (OS_MSG_QTY  ) 5u,
+                 (OS_TICK     ) 0u,
+                 (void       *) 0,
+                 (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+                 (OS_ERR     *)&err);
 
 								 
 		OSTaskDel ( 0, & err );                     //删除起始任务本身，该任务不再运行
@@ -381,11 +400,28 @@ static  void  AppTaskKey ( void * p_arg )
 		printf ( "按键任务的CPU最大使用率：%d.%d%%    \r\n", 
 		         AppTaskKeyTCB.CPUUsageMax / 100, AppTaskKeyTCB.CPUUsageMax % 100 ); 
 		
+		printf ( "DAC1任务的CPU使用率：%d.%d%%\r\n", 
+		         AppTaskDac1TCB.CPUUsage / 100, AppTaskDac1TCB.CPUUsage % 100 );  
+						 
+		printf ( "DAC1任务的CPU最大使用率：%d.%d%%    \r\n", 
+		         AppTaskDac1TCB.CPUUsageMax / 100, AppTaskDac1TCB.CPUUsageMax % 100 ); 
+
+		printf ( "DAC2任务的CPU使用率：%d.%d%%\r\n", 
+		         AppTaskDac2TCB.CPUUsage / 100, AppTaskDac2TCB.CPUUsage % 100 );  
+						 
+		printf ( "DAC2任务的CPU最大使用率：%d.%d%%    \r\n", 
+		         AppTaskDac2TCB.CPUUsageMax / 100, AppTaskDac2TCB.CPUUsageMax % 100 ); 
+						 
     printf ( "串口任务的已用和空闲堆栈大小分别为：%d,%d\r\n", 
 		         AppTaskUsartTCB.StkUsed, AppTaskUsartTCB.StkFree ); 
 		
-    printf ( "按键任务的已用和空闲堆栈大小分别为：%d,%d\r\n", 
-		         AppTaskKeyTCB.StkUsed, AppTaskKeyTCB.StkFree ); 
+    printf ( "DAC1任务的已用和空闲堆栈大小分别为：%d,%d\r\n", 
+		         AppTaskDac1TCB.StkUsed, AppTaskDac1TCB.StkFree ); 
+						 
+		printf ( "DAC2任务的已用和空闲堆栈大小分别为：%d,%d\r\n", 
+		         AppTaskDac2TCB.StkUsed, AppTaskDac2TCB.StkFree ); 
+						 
+
 		
 		OS_CRITICAL_EXIT();                               //退出临界段
 		
@@ -463,5 +499,30 @@ static  void  AppTaskDac1 ( void * p_arg )
 }
 
 
+/*
+*********************************************************************************************************
+*                                          DAC2 TASK
+*********************************************************************************************************
+*/
+static  void  AppTaskDac2 ( void * p_arg )
+{
+    OS_ERR      err;
+		int i = 3290;
+		(void)p_arg;
+
+	
+		NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//设置系统中断优先级分组2
+		Dac2_Init();		 		//DAC通道1初始化	
+		DAC_SetChannel2Data(DAC_Align_12b_R,i);//初始值为0	
+		
+		while (DEF_TRUE) 
+		{                                          /* Task body, always written as an infinite loop.       */
+				Dac2_Set_Vol(i);
+				if(i < 10)
+						i = 3290;
+				i-=5;
+				OSTimeDly ( 10, OS_OPT_TIME_DLY, & err );
+		}
+}
 
 

@@ -33,3 +33,4 @@ Verilog/ch8os4in55kbps/.qsys_edit
 *.d
 *.crf
 *.TMP
+*.lst

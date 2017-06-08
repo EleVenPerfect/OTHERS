@@ -17,6 +17,10 @@
 
 void Dac1_Init(void);		//DAC通道1初始化	 	 
 void Dac1_Set_Vol(unsigned int vol);	//设置通道1输出电压
+
+void Dac2_Init(void);		//DAC通道1初始化	 	 
+void Dac2_Set_Vol(unsigned int vol);	//设置通道1输出电压
+
 #endif
 
 

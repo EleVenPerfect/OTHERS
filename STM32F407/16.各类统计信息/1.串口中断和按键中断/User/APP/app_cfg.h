@@ -63,6 +63,7 @@
 #define  APP_TASK_LED2_PRIO                         3u
 
 #define  APP_TASK_DAC1_PRIO                         3u
+#define  APP_TASK_DAC2_PRIO                         3u
 
 /*
 *********************************************************************************************************
@@ -79,6 +80,7 @@
 #define  APP_TASK_LED2_STK_SIZE                     512u
 
 #define  APP_TASK_DAC1_STK_SIZE                     512u
+#define  APP_TASK_DAC2_STK_SIZE                     512u
 
 
 /*
