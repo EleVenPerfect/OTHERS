@@ -572,7 +572,6 @@ static  void  AppTaskAdce ( void * p_arg )
 		{                                          /* Task body, always written as an infinite loop.       */
 			
 			OS_CRITICAL_ENTER();
-			/*
 			AD7606_Scan();
 			OS_CRITICAL_EXIT();
 			
@@ -580,7 +579,6 @@ static  void  AppTaskAdce ( void * p_arg )
 			OS_CRITICAL_ENTER();
 			
 			AD7606_Disp();
-			*/
 			OS_CRITICAL_EXIT();			
 			                               //ÍË³öÁÙ½ç¶Î
 			
