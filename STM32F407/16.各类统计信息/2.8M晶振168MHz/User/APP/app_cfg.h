@@ -59,8 +59,8 @@
 #define  APP_TASK_USART_PRIO                        3u
 #define  APP_TASK_KEY_PRIO                          3u
 
-#define  APP_TASK_LED1_PRIO                         3u
-#define  APP_TASK_LED2_PRIO                         3u
+#define  APP_TASK_LED1_PRIO                         10u
+#define  APP_TASK_LED2_PRIO                         10u
 
 #define  APP_TASK_DAC1_PRIO                         3u
 #define  APP_TASK_DAC2_PRIO                         3u
@@ -76,13 +76,13 @@
 #define  APP_TASK_START_STK_SIZE                    128u          //任务堆栈空间（单位：sizeof(CPU_STK)）
 
 #define  APP_TASK_USART_STK_SIZE                    512u 
-#define  APP_TASK_KEY_STK_SIZE                      512u 
+#define  APP_TASK_KEY_STK_SIZE                      256u 
 
-#define  APP_TASK_LED1_STK_SIZE                     512u
-#define  APP_TASK_LED2_STK_SIZE                     512u
+#define  APP_TASK_LED1_STK_SIZE                     128u
+#define  APP_TASK_LED2_STK_SIZE                     128u
 
-#define  APP_TASK_DAC1_STK_SIZE                     512u
-#define  APP_TASK_DAC2_STK_SIZE                     512u
+#define  APP_TASK_DAC1_STK_SIZE                     256u
+#define  APP_TASK_DAC2_STK_SIZE                     256u
 
 #define  APP_TASK_ADCE_STK_SIZE                     512u
 

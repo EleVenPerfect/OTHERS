@@ -418,7 +418,19 @@ static  void  AppTaskKey ( void * p_arg )
 		         AppTaskKeyTCB.CPUUsage / 100, AppTaskKeyTCB.CPUUsage % 100 );  
 						 
 		printf ( "按键任务的CPU最大使用率：%d.%d%%    \r\n", 
-		         AppTaskKeyTCB.CPUUsageMax / 100, AppTaskKeyTCB.CPUUsageMax % 100 ); 
+		         AppTaskKeyTCB.CPUUsageMax / 100, AppTaskKeyTCB.CPUUsageMax % 100 );
+
+		printf ( "LED1任务的CPU使用率：%d.%d%%\r\n", 
+		         AppTaskLed1TCB.CPUUsage / 100, AppTaskLed1TCB.CPUUsage % 100 );  
+						 
+		printf ( "LED1任务的CPU最大使用率：%d.%d%%    \r\n", 
+		         AppTaskLed1TCB.CPUUsageMax / 100, AppTaskLed1TCB.CPUUsageMax % 100 ); 
+		
+		printf ( "LED2任务的CPU使用率：%d.%d%%\r\n", 
+		         AppTaskLed2TCB.CPUUsage / 100, AppTaskLed2TCB.CPUUsage % 100 );  
+						 
+		printf ( "LED2任务的CPU最大使用率：%d.%d%%    \r\n", 
+		         AppTaskLed2TCB.CPUUsageMax / 100, AppTaskLed2TCB.CPUUsageMax % 100 ); 
 		
 		printf ( "DAC1任务的CPU使用率：%d.%d%%\r\n", 
 		         AppTaskDac1TCB.CPUUsage / 100, AppTaskDac1TCB.CPUUsage % 100 );  
@@ -440,6 +452,15 @@ static  void  AppTaskKey ( void * p_arg )
 						 
     printf ( "串口任务的已用和空闲堆栈大小分别为：%d,%d\r\n", 
 		         AppTaskUsartTCB.StkUsed, AppTaskUsartTCB.StkFree ); 
+						 
+		printf ( "按键任务的已用和空闲堆栈大小分别为：%d,%d\r\n", 
+		         AppTaskKeyTCB.StkUsed, AppTaskKeyTCB.StkFree ); 				 
+		
+		printf ( "LED1任务的已用和空闲堆栈大小分别为：%d,%d\r\n", 
+		         AppTaskLed1TCB.StkUsed, AppTaskLed1TCB.StkFree );
+		
+		printf ( "LED2任务的已用和空闲堆栈大小分别为：%d,%d\r\n", 
+		         AppTaskLed2TCB.StkUsed, AppTaskLed2TCB.StkFree );
 		
     printf ( "DAC1任务的已用和空闲堆栈大小分别为：%d,%d\r\n", 
 		         AppTaskDac1TCB.StkUsed, AppTaskDac1TCB.StkFree ); 
