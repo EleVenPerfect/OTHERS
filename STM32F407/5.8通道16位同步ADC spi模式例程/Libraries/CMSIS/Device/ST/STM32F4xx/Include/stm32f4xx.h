@@ -85,7 +85,7 @@
 
 /* Old STM32F40XX definition, maintained for legacy purpose */
 #ifdef STM32F40XX
-  #define STM32F40_41xxx  
+  #define STM32F40_41xxx 1
 #endif /* STM32F40XX */
 
 /* Old STM32F427X definition, maintained for legacy purpose */
@@ -119,7 +119,7 @@
   */           
 
 #if !defined  (HSE_VALUE) 
-  #define HSE_VALUE    ((uint32_t)25000000) /*!< Value of the External oscillator in Hz */
+  #define HSE_VALUE    ((uint32_t)8000000) /*!< Value of the External oscillator in Hz */
   
 #endif /* HSE_VALUE */
 

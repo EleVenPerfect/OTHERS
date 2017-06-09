@@ -20,9 +20,9 @@
 
 /* SPI总线的SCK、MOSI、MISO 在 bsp_spi_bus.c中配置  */
 /* CSN片选 */
-#define RCC_CS 		RCC_AHB1Periph_GPIOD
-#define PORT_CS		GPIOD
-#define PIN_CS		GPIO_Pin_6
+#define RCC_CS 		RCC_AHB1Periph_GPIOE
+#define PORT_CS		GPIOE
+#define PIN_CS		GPIO_Pin_1
 
 /* RESET */
 #define RCC_RESET 	RCC_AHB1Periph_GPIOE
@@ -31,22 +31,38 @@
 /* RANGE */		
 #define RCC_RANGE 	RCC_AHB1Periph_GPIOB
 #define PORT_RANGE 	GPIOB
-#define PIN_RANGE 	GPIO_Pin_8
+#define PIN_RANGE 	GPIO_Pin_5
 
 #define RESET_0()	GPIO_ResetBits(PORT_RESET, PIN_RESET)
 #define RESET_1()	GPIO_SetBits(PORT_RESET, PIN_RESET)
 
 /* CONVST */		
-#define RCC_CONVST 	RCC_AHB1Periph_GPIOE
-#define PORT_CONVST	GPIOE
-#define PIN_CONVST 	GPIO_Pin_13
+#define RCC_CONVST 	RCC_AHB1Periph_GPIOB
+#define PORT_CONVST	GPIOB
+#define PIN_CONVST 	GPIO_Pin_3
 
 /* BUSY */
 #define RCC_BUSY 	RCC_AHB1Periph_GPIOD
 #define PORT_BUSY 	GPIOD
-#define PIN_BUSY 	GPIO_Pin_7
+#define PIN_BUSY 	GPIO_Pin_6
 
 #define BUSY_IS_LOW()				(GPIO_ReadInputDataBit(PORT_BUSY, PIN_BUSY) == Bit_RESET)
+
+
+/* OS0 */
+#define RCC_OS0 	RCC_AHB1Periph_GPIOD
+#define PORT_OS0 	GPIOD
+#define PIN_OS0 	GPIO_Pin_7
+
+/* OS1 */
+#define RCC_OS1 	RCC_AHB1Periph_GPIOE
+#define PORT_OS1 	GPIOE
+#define PIN_OS1 	GPIO_Pin_2
+
+/* OS2 */
+#define RCC_OS2 	RCC_AHB1Periph_GPIOG
+#define PORT_OS2 	GPIOG
+#define PIN_OS2 	GPIO_Pin_15
 
 static void AD7606_ConfigGPIO(void);
 void AD7606_Reset(void);	
@@ -58,6 +74,25 @@ static int16_t s_adc_now[8];
 
 AD7606_T g_tAD7606;
 
+
+
+/* 直接操作寄存器的方法控制IO */
+#define	digitalHi(p,i)			 {p->BSRRL=i;}		//设置为高电平
+#define digitalLo(p,i)			 {p->BSRRH=i;}		//输出低电平
+#define digitalToggle(p,i)	 {p->ODR ^=i;}		//输出反转状态
+
+/* 定义控制IO的宏 */
+#define ADC_OS0_TOGGLE		digitalToggle(PORT_OS0,PIN_OS0)
+#define ADC_OS0_OFF				digitalHi(PORT_OS0,PIN_OS0)
+#define ADC_OS0_ON				digitalLo(PORT_OS0,PIN_OS0)
+
+#define ADC_OS1_TOGGLE		digitalToggle(PORT_OS1,PIN_OS1)
+#define ADC_OS1_OFF				digitalHi(PORT_OS1,PIN_OS1)
+#define ADC_OS1_ON				digitalLo(PORT_OS1,PIN_OS1)
+
+#define ADC_OS2_TOGGLE		digitalToggle(PORT_OS2,PIN_OS2)
+#define ADC_OS2_OFF				digitalHi(PORT_OS2,PIN_OS2)
+#define ADC_OS2_ON				digitalLo(PORT_OS2,PIN_OS2)
 /*
 *********************************************************************************************************
 *	函 数 名: bsp_InitAD7606
@@ -96,7 +131,7 @@ static void AD7606_ConfigGPIO(void)
 	GPIO_InitTypeDef GPIO_InitStructure;
 
 	/* 打开GPIO时钟 */
-	RCC_AHB1PeriphClockCmd(RCC_CS | RCC_RANGE | RCC_BUSY | RCC_RESET | RCC_CONVST, ENABLE);
+	RCC_AHB1PeriphClockCmd(RCC_CS | RCC_RANGE | RCC_BUSY | RCC_RESET | RCC_CONVST | RCC_OS0 | RCC_OS1 | RCC_OS2 , ENABLE);
 
 	/* 配置几个推完输出IO */
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;		/* 设为输出口 */
@@ -115,7 +150,20 @@ static void AD7606_ConfigGPIO(void)
 	
 	GPIO_InitStructure.GPIO_Pin = PIN_CS;
 	GPIO_Init(PORT_CS, &GPIO_InitStructure);
+	
+	GPIO_InitStructure.GPIO_Pin = PIN_OS0;
+	GPIO_Init(PORT_OS0, &GPIO_InitStructure);
+	
+	GPIO_InitStructure.GPIO_Pin = PIN_OS1;
+	GPIO_Init(PORT_OS1, &GPIO_InitStructure);
+	
+	GPIO_InitStructure.GPIO_Pin = PIN_OS2;
+	GPIO_Init(PORT_OS2, &GPIO_InitStructure);
 
+
+	ADC_OS0_OFF	;
+	ADC_OS1_ON	;
+	ADC_OS2_ON	;
 	/* 配置GPIO为浮动输入模式(实际上CPU复位后就是输入状态) */
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;		/* 设为输入口 */
 	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;		/* 设为推挽模式 */

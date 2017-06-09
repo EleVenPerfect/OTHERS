@@ -45,7 +45,7 @@ void Demo_spi_AD7606(void)
 
 	bsp_spi_InitAD7606();	/* 配置AD7606所用的GPIO */
 
-	bsp_StartAutoTimer(0, 500);	/* 启动1个500ms的自动重装的定时器 */
+	bsp_StartAutoTimer(0, 1);	/* 启动1个500ms的自动重装的定时器 */
 
 	DispMenu();			/* 显示操作菜单 */	
 	while (1)
@@ -54,7 +54,7 @@ void Demo_spi_AD7606(void)
 
 		if (bsp_CheckTimer(0))
 		{	
-			/* 每隔500ms 进来一次. 由软件启动转换 */
+			/* 每隔100ms 进来一次. 由软件启动转换 */
 			AD7606_Scan();
 		
 			/* 处理数据 */

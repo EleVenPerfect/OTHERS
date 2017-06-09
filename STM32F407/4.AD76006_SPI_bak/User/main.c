@@ -92,7 +92,7 @@ static void PrintfHardInfo(void)
 	printf("  CS        <------   PD6       SPI_CS\r\n");
 	printf("  RD/SCLK   <------   PB3       SPI_SCLK\r\n");
 	printf("  DB7/DOUT  ------>   PB4       SPI_MISO\r\n");
-	printf("  RAGE      <------   PA4       模拟信号输入量程\r\n");
+	printf("  RAGE      <------   PB5       模拟信号输入量程\r\n");
 	printf("  RST       <------   PH10      复位信号\r\n");
 	printf("  CVA CVB   <------   PH9       启动AD转换\r\n");
 	printf("  OS0       <------   GND       过采样引脚0(默认接地)\r\n");

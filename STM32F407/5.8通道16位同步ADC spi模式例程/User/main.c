@@ -87,18 +87,18 @@ static void PrintfHardInfo(void)
 {
 	printf("接线方法: \r\n");
 	printf("AD7606模块       	spi模式 \r\n");
-    printf("  +5V       <------   5.0V      5V供电\r\n");
-    printf("  GND       -------   GND       地\r\n");
+  printf("  +5V       <------   5.0V      5V供电\r\n");
+  printf("  GND       -------   GND       地\r\n");
 	printf("  CS        <------   PD6       SPI_CS\r\n");
 	printf("  RD/SCLK   <------   PB3       SPI_SCLK\r\n");
 	printf("  DB7/DOUT  ------>   PB4       SPI_MISO\r\n");
-	printf("  RAGE      <------   PB8       模拟信号输入量程\r\n");
-	printf("  RST       <------   PE0      复位信号\r\n");
-	printf("  CVA CVB   <------   PH13       启动AD转换\r\n");
+	printf("  RAGE      <------   PB5       模拟信号输入量程\r\n");
+	printf("  RST       <------   PH10      复位信号\r\n");
+	printf("  CVA CVB   <------   PH9       启动AD转换\r\n");
 	printf("  OS0       <------   GND       过采样引脚0(默认接地)\r\n");
 	printf("  OS1       <------   GND       过采样引脚1(默认接地)\r\n");
 	printf("  OS2       <------   GND       过采样引脚2(默认接地)\r\n");
-	printf("  BUSY      ------>   PD7       BUSY信号\r\n");
+	printf("  BUSY      ------>   PH7       BUSY信号\r\n");
 	printf("打印采集数据: \r\n");
 }
 

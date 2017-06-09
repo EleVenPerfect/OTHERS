@@ -56,8 +56,8 @@
 
 #define  APP_TASK_START_PRIO                        2u            //任务优先级
 
-#define  APP_TASK_USART_PRIO                        3u
-#define  APP_TASK_KEY_PRIO                          3u
+#define  APP_TASK_USART_PRIO                        4u
+#define  APP_TASK_KEY_PRIO                          4u
 
 #define  APP_TASK_LED1_PRIO                         10u
 #define  APP_TASK_LED2_PRIO                         10u
@@ -65,7 +65,7 @@
 #define  APP_TASK_DAC1_PRIO                         3u
 #define  APP_TASK_DAC2_PRIO                         3u
 
-#define  APP_TASK_ADCE_PRIO                         3u
+#define  APP_TASK_ADCE_PRIO                         5u
 
 /*
 *********************************************************************************************************
