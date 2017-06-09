@@ -22,17 +22,17 @@
 
 #ifdef SOFT_SPI		/* 软件SPI */
 	/* 定义GPIO端口 */
-	#define RCC_SCK 	RCC_AHB1Periph_GPIOB
-	#define PORT_SCK	GPIOB
-	#define PIN_SCK		GPIO_Pin_3
+	#define RCC_SCK 	RCC_AHB1Periph_GPIOG
+	#define PORT_SCK	GPIOG
+	#define PIN_SCK		GPIO_Pin_12
 
-	#define RCC_MOSI 	RCC_AHB1Periph_GPIOB
-	#define PORT_MOSI	GPIOB
-	#define PIN_MOSI	GPIO_Pin_5
+	#define RCC_MOSI 	RCC_AHB1Periph_GPIOD
+	#define PORT_MOSI	GPIOD
+	#define PIN_MOSI	GPIO_Pin_2
 
-	#define RCC_MISO 	RCC_AHB1Periph_GPIOB
-	#define PORT_MISO	GPIOB
-	#define PIN_MISO	GPIO_Pin_4
+	#define RCC_MISO 	RCC_AHB1Periph_GPIOD
+	#define PORT_MISO	GPIOD
+	#define PIN_MISO	GPIO_Pin_5
 
 	#define SCK_0()		GPIO_ResetBits(PORT_SCK, PIN_SCK)
 	#define SCK_1()		GPIO_SetBits(PORT_SCK, PIN_SCK)
@@ -45,7 +45,6 @@
 
 
 #define CH_NUM			8				/* 采集2通道 */
-
 /*
 	【SPI时钟最快是2分频，不支持不分频】
 	如果是SPI1，2分频时SCK时钟 = 42M，4分频时SCK时钟 = 21M

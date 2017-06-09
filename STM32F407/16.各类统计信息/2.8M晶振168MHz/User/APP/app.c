@@ -543,7 +543,7 @@ static  void  AppTaskDac1 ( void * p_arg )
 				if(i>3200)
 						i = 0;
 				i+=50;
-				OSTimeDly ( 100, OS_OPT_TIME_DLY, & err );
+				OSTimeDly ( 10, OS_OPT_TIME_DLY, & err );
 		}
 }
 
@@ -570,7 +570,7 @@ static  void  AppTaskDac2 ( void * p_arg )
 				if(i < 10)
 						i = 3200;
 				i-=50;
-				OSTimeDly ( 100, OS_OPT_TIME_DLY, & err );
+				OSTimeDly ( 10, OS_OPT_TIME_DLY, & err );
 		}
 }
 
@@ -588,22 +588,20 @@ static  void  AppTaskAdce ( void * p_arg )
 		
 		PrintfHardInfo();	/* 打印硬件接线信息 */
 		bsp_InitSPIBus();	/* 初始化SPI总线 */
-		
+		g_tAD7606.Range = 1;	/* 10V */
+		bsp_spi_InitAD7606();	/* 配置AD7606所用的GPIO */
+	
 		while (DEF_TRUE) 
 		{                                          /* Task body, always written as an infinite loop.       */
 			
 			OS_CRITICAL_ENTER();
 			AD7606_Scan();
-			OS_CRITICAL_EXIT();
-			
 			AD7606_Mak();
-			OS_CRITICAL_ENTER();
-			
 			AD7606_Disp();
 			OS_CRITICAL_EXIT();			
 			                               //退出临界段
 			
-			OSTimeDly ( 500, OS_OPT_TIME_DLY, & err );
+			OSTimeDly ( 10, OS_OPT_TIME_DLY, & err );
 		}
 }
 
