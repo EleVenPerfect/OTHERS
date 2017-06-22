@@ -751,7 +751,7 @@ static  void  AppTaskCmd ( void * p_arg )
 	
 		CPU_SR_ALLOC();
 		(void)p_arg;
-		
+		printf("");
 
 	
 		while (DEF_TRUE) 
