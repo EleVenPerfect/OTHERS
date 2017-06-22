@@ -1,0 +1,1 @@
+<DrawPage name="boot" bk_transparent="0" bk_color="0;0;0" bk_image=""><item name="Animation1" id="1" type="animation" icon="0" play_finish_notify="0" press_notify="3" step="20" frame_list="banner_tips_loading.gif" auto_play="1" visible="1" interval="35" repeat_count="10" xOffset="188" yOffset="92" width="438" height="265" bind_variant=""/></DrawPage>
