@@ -19,6 +19,16 @@ unsigned char TFT480800STOP[4]	= {0xFF,0xFC,0xFF,0xFF};
 unsigned char TFT480800STOPUSER[4]	= {0xFF,0xFC,0xFF,0xAE};
 										//发送终止标志printf("%c%c%c%c",TFT480800STOP[0],TFT480800STOP[1],TFT480800STOP[2],TFT480800STOP[3] );
 
+/*自定义指令格式：
+起始标志： TFT480800START
+结束标志：	TFT480800STOPUSER
+中间分别为：屏幕号；控件类型；控件编号；空间状态0；控件状态1...
+unsigned char TFT480800___[4]	= {0xEE,0xxx,0xFF,0xFC,0xFF,0xAE};
+*/
+
+unsigned char TFT480800GOTOOFFLINE[9]	= {0xEE,0x01,0x01,0x00,0x01,0xFF,0xFC,0xFF,0xAE};
+unsigned char TFT480800GOTOONLINE[9]	= {0xEE,0x01,0x01,0x01,0x01,0xFF,0xFC,0xFF,0xAE};
+
 void LCD_valtage_show(void)
 {
 	unsigned short int i;	
@@ -57,9 +67,28 @@ void LCD_valtage_show(void)
 //切换画面
 void LCD_screen_show(unsigned char num)
 {
-		unsigned char a[3] = { 0xB1, 0x00, 0x00};
+		unsigned char a[4] = { 0xB1, 0x00, 0x00};
 		printf("%c",TFT480800START);
-		a[2] += num;
-		printf("%c%c%c", a[0],a[1],a[2]);
+		a[3] += num;
+		printf("%c%c%c%c", a[0],a[1],a[2],a[3]);
 		printf("%c%c%c%c",TFT480800STOP[0],TFT480800STOP[1],TFT480800STOP[2],TFT480800STOP[3] );
+}
+
+
+/*****************************************
+对比字符串
+返回0不同
+返回1相同
+******************************************/
+unsigned char str_compare(char a[], unsigned char b[], unsigned char num)
+{
+		unsigned char i;
+		for( i=0; i<num; i++)
+		{
+				if(a[i]==b[i])
+					continue;
+				else
+					return 0;
+		}
+		return 1;
 }

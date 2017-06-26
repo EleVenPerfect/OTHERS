@@ -119,6 +119,16 @@ void bsp_spi_InitAD7606(void)
 	AD7606_Reset();				/* 硬件复位复AD7606 */
 	
 	AD_CONVST_HIGH();			/* CONVST脚设置为高电平 */	
+	
+	RESET_1();
+	RESET_1();
+	RESET_1();
+	RESET_1();
+	RESET_1();
+	RESET_0();
+	RESET_0();
+	RESET_0();
+	RESET_0();
 }
 
 /*

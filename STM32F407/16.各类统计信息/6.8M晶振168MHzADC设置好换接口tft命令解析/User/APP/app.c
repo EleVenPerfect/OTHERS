@@ -69,6 +69,8 @@ static  OS_TCB   AppTaskAdceTCB;
 
 static  OS_TCB   AppTaskCmdTCB;
 
+static  OS_TCB   AppTaskTestTCB;
+
 /*
 *********************************************************************************************************
 *                                                STACKS
@@ -90,6 +92,8 @@ static  CPU_STK  AppTaskAdceStk [ APP_TASK_ADCE_STK_SIZE ];
 
 static  CPU_STK  AppTaskCmdStk [ APP_TASK_CMD_STK_SIZE ];
 
+static  CPU_STK  AppTaskTestStk [ APP_TASK_TEST_STK_SIZE ];
+
 /*
 *********************************************************************************************************
 *                                         FUNCTION PROTOTYPES
@@ -110,6 +114,8 @@ static  void  AppTaskDac2  ( void * p_arg );
 static  void  AppTaskAdce  ( void * p_arg );
 
 static  void  AppTaskCmd	 ( void * p_arg );
+
+static  void  AppTaskTest	 ( void * p_arg );
 
 
 /*
@@ -331,6 +337,22 @@ static  void  AppTaskStart (void *p_arg)
                  (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
                  (OS_ERR     *)&err);
 								 								 
+								 
+		/* 创建 TEST 任务 */								 
+    OSTaskCreate((OS_TCB     *)&AppTaskTestTCB,                /* Create the Led2 task                                */
+                 (CPU_CHAR   *)"App Task TEST",
+                 (OS_TASK_PTR ) AppTaskTest,
+                 (void       *) 0,
+                 (OS_PRIO     ) APP_TASK_TEST_PRIO,
+                 (CPU_STK    *)&AppTaskTestStk[0],
+                 (CPU_STK_SIZE) APP_TASK_TEST_STK_SIZE / 10,
+                 (CPU_STK_SIZE) APP_TASK_TEST_STK_SIZE,
+                 (OS_MSG_QTY  ) 5u,
+                 (OS_TICK     ) 0u,
+                 (void       *) 0,
+                 (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+                 (OS_ERR     *)&err);
+								 
 		OSTaskDel ( 0, & err );                     //删除起始任务本身，该任务不再运行
 		
 		
@@ -715,7 +737,7 @@ static  void  AppTaskAdce ( void * p_arg )
 		CPU_SR_ALLOC();
 		(void)p_arg;
 		
-		PrintfHardInfo();	/* 打印硬件接线信息 */
+		//PrintfHardInfo();	/* 打印硬件接线信息 */
 		bsp_InitSPIBus();	/* 初始化SPI总线 */
 		g_tAD7606.Range = 1;	/* 10V */
 		bsp_spi_InitAD7606();	/* 配置AD7606所用的GPIO */
@@ -727,7 +749,7 @@ static  void  AppTaskAdce ( void * p_arg )
 			g_tAD7606.Range = 1;	/* 10V */
 			AD7606_Scan();
 			AD7606_Mak();
-			AD7606_Disp();//LCD_valtage_show();
+			//AD7606_Disp();//LCD_valtage_show();
   		OS_CRITICAL_EXIT();			
 			                               //退出临界段
 
@@ -751,9 +773,8 @@ static  void  AppTaskCmd ( void * p_arg )
 	
 		CPU_SR_ALLOC();
 		(void)p_arg;
-		printf("");
-
-	
+		
+		LCD_screen_show(1);
 		while (DEF_TRUE) 
 		{
                                          // Task body, always written as an infinite loop.       
@@ -764,15 +785,51 @@ static  void  AppTaskCmd ( void * p_arg )
 											  (CPU_TS        *)0,                    //返回消息被发布的时间戳
 											  (OS_ERR        *)&err);                //返回错误类型
 			
-			OS_CRITICAL_ENTER();
-			printf("%s",pMsg);
-			OS_CRITICAL_EXIT();			
-			                               //退出临界段
+			
+			if(str_compare(pMsg,TFT480800GOTOOFFLINE,9))
+			{
+					OS_CRITICAL_ENTER();
+					LCD_screen_show(3);
+					OS_CRITICAL_EXIT();			 //退出临界段
+			}  
+
+			if(str_compare(pMsg,TFT480800GOTOONLINE,9))
+			{
+					OS_CRITICAL_ENTER();
+					LCD_screen_show(2);
+					OS_CRITICAL_EXIT();			 //退出临界段
+			}  
+			if(str_compare(pMsg,TFT480800GOTOONLINE,9))
+			{
+					OS_CRITICAL_ENTER();
+					LCD_screen_show(2);
+					OS_CRITICAL_EXIT();			 //退出临界段
+			} 
+                          
 
 			/* 退还内存块 */
 			OSMemPut ((OS_MEM  *)&mem,                                 //指向内存管理对象
 							(void    *)pMsg,                                 //内存块的首地址
 							(OS_ERR  *)&err);		                             //返回错误类型
+		}
+}
+
+
+/*
+*********************************************************************************************************
+*                                          Command  TASK
+*********************************************************************************************************
+*/
+static  void  AppTaskTest ( void * p_arg )
+{
+    OS_ERR      err;
+
+		(void)p_arg;
+	
+		while (DEF_TRUE) 
+		{
+				
+				OSTimeDly ( 1000, OS_OPT_TIME_DLY, & err );
 		}
 }
 

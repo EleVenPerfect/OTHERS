@@ -18,10 +18,13 @@
 extern unsigned char TFT480800START;
 extern unsigned char TFT480800STOP[4];
 extern unsigned char TFT480800STOPUSER[4];
+extern unsigned char TFT480800GOTOONLINE[9];
+extern unsigned char TFT480800GOTOOFFLINE[9];
 
 
 void LCD_valtage_show(void);
 void LCD_screen_show(unsigned char num);
+unsigned char str_compare( char a[], unsigned char b[], unsigned char num);
 
 
 

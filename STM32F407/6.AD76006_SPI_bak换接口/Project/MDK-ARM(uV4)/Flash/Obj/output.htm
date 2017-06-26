@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Flash\Obj\output.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Flash\Obj\output.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Wed Jun 21 10:43:56 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Mon Jun 26 20:58:58 2017
 <BR><P>
 <H3>Maximum Stack Usage =        124 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -514,7 +514,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[7b]"></a>GPIO_ResetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(i.GPIO_ResetBits))
-<BR><BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD7606_SetInputRange
+<BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_spi_InitAD7606
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD7606_SetInputRange
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD7606_Scan
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD7606_StartConv
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD7606_Reset
@@ -799,13 +800,14 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD7606_Scan
 </UL>
 
-<P><STRONG><a name="[85]"></a>bsp_spi_InitAD7606</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, bsp_spi_ad7606.o(i.bsp_spi_InitAD7606))
+<P><STRONG><a name="[85]"></a>bsp_spi_InitAD7606</STRONG> (Thumb, 120 bytes, Stack size 8 bytes, bsp_spi_ad7606.o(i.bsp_spi_InitAD7606))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = bsp_spi_InitAD7606 &rArr; AD7606_ConfigGPIO &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD7606_SetInputRange
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD7606_Reset
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD7606_ConfigGPIO
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 </UL>
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Demo_spi_AD7606
 </UL>
@@ -1053,9 +1055,9 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[a3]"></a>_printf_core</STRONG> (Thumb, 996 bytes, Stack size 104 bytes, printf8.o(i._printf_core), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
+<BR><BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf$8
 </UL>
