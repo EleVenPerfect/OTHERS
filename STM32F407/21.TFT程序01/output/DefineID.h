@@ -58,6 +58,18 @@
 //»­ÃæofflinesetnumberµÄ±³¾°Í¼Æ¬
 #define  _IMG_OFFLINESETNUMBER                                                 6
 
+#define  _SLIDER_OFFLINESETNUMBER_SLIDER1                                      1
+
+#define  _SLIDER_OFFLINESETNUMBER_SLIDER2                                      2
+
+#define  _SLIDER_OFFLINESETNUMBER_SLIDER3                                      3
+
+#define  _SLIDER_OFFLINESETNUMBER_SLIDER4                                      4
+
+#define  _SLIDER_OFFLINESETNUMBER_SLIDER5                                      5
+
+#define  _SLIDER_OFFLINESETNUMBER_SLIDER6                                      6
+
 //»­ÃæofflinecontrlµÄ±³¾°Í¼Æ¬
-#define  _IMG_OFFLINECONTRL                                                    7
+#define  _IMG_OFFLINECONTRL                                                   19
 

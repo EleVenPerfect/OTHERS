@@ -1405,8 +1405,8 @@ I (..\..\User\BSP\usart\bsp_usart.h)(0x591C0B8F)
 I (..\..\User\BSP\dac\bsp_dac.h)(0x5938BDE9)
 I (..\..\User\BSP\spi\bsp_spi_bus.h)(0x5949C8E5)
 I (..\..\User\BSP\adc\bsp_spi_ad7606.h)(0x594A25A7)
-I (..\..\User\BSP\lcd\bsp_lcd.h)(0x5951114D)
-F (..\..\User\APP\app.c)(0x59511140)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\..\Libraries\CMSIS\Include -I..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include -I..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc -I..\..\User -I..\..\User\APP -I..\..\User\BSP -I..\..\User\BSP\Key -I..\..\User\BSP\led -I..\..\User\BSP\usart -I..\..\User\uC-CPU -I..\..\User\uC-CPU\ARM-Cortex-M4\RealView -I..\..\User\uC-LIB -I..\..\User\uCOS-III\Source -I..\..\User\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I..\..\User\BSP\dac -I..\..\User\BSP\adc -I..\..\User\BSP\spi -I..\..\User\BSP\lcd-I D:\ATIME\docs\GitHub\OTHERS\STM32F407\16.各类统计信息\6.8M晶振168MHzADC设置好换接口tft命令解析\Project\RVMDK(uv5)\RTE-I "C:\Program Files (x86)\Keil\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include"-I "C:\Program Files (x86)\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="514" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\output\app.o --omf_browse .\output\app.crf --depend .\output\app.d)
+I (..\..\User\BSP\lcd\bsp_lcd.h)(0x5951323B)
+F (..\..\User\APP\app.c)(0x59513269)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\..\Libraries\CMSIS\Include -I..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include -I..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc -I..\..\User -I..\..\User\APP -I..\..\User\BSP -I..\..\User\BSP\Key -I..\..\User\BSP\led -I..\..\User\BSP\usart -I..\..\User\uC-CPU -I..\..\User\uC-CPU\ARM-Cortex-M4\RealView -I..\..\User\uC-LIB -I..\..\User\uCOS-III\Source -I..\..\User\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I..\..\User\BSP\dac -I..\..\User\BSP\adc -I..\..\User\BSP\spi -I..\..\User\BSP\lcd-I D:\ATIME\docs\GitHub\OTHERS\STM32F407\16.各类统计信息\6.8M晶振168MHzADC设置好换接口tft命令解析\Project\RVMDK(uv5)\RTE-I "C:\Program Files (x86)\Keil\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include"-I "C:\Program Files (x86)\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="514" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\output\app.o --omf_browse .\output\app.crf --depend .\output\app.d)
 I (..\..\User\APP\includes.h)(0x58CE0C84)
 I (C:\Program Files (x86)\Keil\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Program Files (x86)\Keil\ARM\ARMCC\include\string.h)(0x5475F300)
@@ -1470,7 +1470,7 @@ I (..\..\User\BSP\usart\bsp_usart.h)(0x591C0B8F)
 I (..\..\User\BSP\dac\bsp_dac.h)(0x5938BDE9)
 I (..\..\User\BSP\spi\bsp_spi_bus.h)(0x5949C8E5)
 I (..\..\User\BSP\adc\bsp_spi_ad7606.h)(0x594A25A7)
-I (..\..\User\BSP\lcd\bsp_lcd.h)(0x5951114D)
+I (..\..\User\BSP\lcd\bsp_lcd.h)(0x5951323B)
 F (..\..\User\APP\app_cfg.h)(0x5950FE81)()
 F (..\..\User\APP\cpu_cfg.h)(0x58CE0C84)()
 F (..\..\User\APP\includes.h)(0x58CE0C84)()
@@ -1546,7 +1546,7 @@ I (..\..\User\BSP\usart\bsp_usart.h)(0x591C0B8F)
 I (..\..\User\BSP\dac\bsp_dac.h)(0x5938BDE9)
 I (..\..\User\BSP\spi\bsp_spi_bus.h)(0x5949C8E5)
 I (..\..\User\BSP\adc\bsp_spi_ad7606.h)(0x594A25A7)
-I (..\..\User\BSP\lcd\bsp_lcd.h)(0x5951114D)
+I (..\..\User\BSP\lcd\bsp_lcd.h)(0x5951323B)
 I (..\..\User\uCOS-III\Source\os.h)(0x58CE0C84)
 I (..\..\User\APP\os_cfg.h)(0x58CE0C84)
 I (..\..\User\uCOS-III\Source\os_type.h)(0x58CE0C84)
@@ -1774,8 +1774,8 @@ I (..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x58CE0C83)
 I (..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x58CE0C83)
 I (..\..\User\BSP\usart\bsp_usart.h)(0x591C0B8F)
 I (C:\Program Files (x86)\Keil\ARM\ARMCC\include\stdio.h)(0x5475F300)
-F (..\..\User\BSP\lcd\bsp_lcd.c)(0x59511294)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\..\Libraries\CMSIS\Include -I..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include -I..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc -I..\..\User -I..\..\User\APP -I..\..\User\BSP -I..\..\User\BSP\Key -I..\..\User\BSP\led -I..\..\User\BSP\usart -I..\..\User\uC-CPU -I..\..\User\uC-CPU\ARM-Cortex-M4\RealView -I..\..\User\uC-LIB -I..\..\User\uCOS-III\Source -I..\..\User\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I..\..\User\BSP\dac -I..\..\User\BSP\adc -I..\..\User\BSP\spi -I..\..\User\BSP\lcd-I D:\ATIME\docs\GitHub\OTHERS\STM32F407\16.各类统计信息\6.8M晶振168MHzADC设置好换接口tft命令解析\Project\RVMDK(uv5)\RTE-I "C:\Program Files (x86)\Keil\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include"-I "C:\Program Files (x86)\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="514" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\output\bsp_lcd.o --omf_browse .\output\bsp_lcd.crf --depend .\output\bsp_lcd.d)
-I (..\..\User\BSP\./lcd/bsp_lcd.h)(0x5951114D)
+F (..\..\User\BSP\lcd\bsp_lcd.c)(0x59513432)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\..\Libraries\CMSIS\Include -I..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include -I..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc -I..\..\User -I..\..\User\APP -I..\..\User\BSP -I..\..\User\BSP\Key -I..\..\User\BSP\led -I..\..\User\BSP\usart -I..\..\User\uC-CPU -I..\..\User\uC-CPU\ARM-Cortex-M4\RealView -I..\..\User\uC-LIB -I..\..\User\uCOS-III\Source -I..\..\User\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I..\..\User\BSP\dac -I..\..\User\BSP\adc -I..\..\User\BSP\spi -I..\..\User\BSP\lcd-I D:\ATIME\docs\GitHub\OTHERS\STM32F407\16.各类统计信息\6.8M晶振168MHzADC设置好换接口tft命令解析\Project\RVMDK(uv5)\RTE-I "C:\Program Files (x86)\Keil\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include"-I "C:\Program Files (x86)\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="514" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\output\bsp_lcd.o --omf_browse .\output\bsp_lcd.crf --depend .\output\bsp_lcd.d)
+I (..\..\User\BSP\./lcd/bsp_lcd.h)(0x5951323B)
 I (..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x591C0BED)
 I (..\..\Libraries\CMSIS\Include\core_cm4.h)(0x58CE0C83)
 I (C:\Program Files (x86)\Keil\ARM\ARMCC\include\stdint.h)(0x5475F300)

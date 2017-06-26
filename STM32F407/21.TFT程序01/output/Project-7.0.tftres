@@ -15,7 +15,19 @@
         <image id="4" url="d:\atime\docs\github\others\stm32f407\21.tft程序01\离线模式选择测量模式1.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
         <image id="5" url="d:\atime\docs\github\others\stm32f407\21.tft程序01\离线模式选择测量模式2.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
         <image id="6" url="d:\atime\docs\github\others\stm32f407\21.tft程序01\状态设置1.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
-        <image id="7" url="d:\atime\docs\github\others\stm32f407\21.tft程序01\v2-fbbb97b977b5cebc66dc3cefab0ac981_r.png" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
+        <image id="7" url="" width="409" height="48" crop="0" effect_left="0" effect_top="0" effect_width="409" effect_height="48" size="39264" />
+        <image id="8" url="" width="24" height="24" crop="0" effect_left="0" effect_top="0" effect_width="24" effect_height="24" size="1152" />
+        <image id="9" url="" width="409" height="48" crop="0" effect_left="0" effect_top="0" effect_width="409" effect_height="48" size="39264" />
+        <image id="10" url="" width="24" height="24" crop="0" effect_left="0" effect_top="0" effect_width="24" effect_height="24" size="1152" />
+        <image id="11" url="" width="409" height="48" crop="0" effect_left="0" effect_top="0" effect_width="409" effect_height="48" size="39264" />
+        <image id="12" url="" width="24" height="24" crop="0" effect_left="0" effect_top="0" effect_width="24" effect_height="24" size="1152" />
+        <image id="13" url="" width="409" height="48" crop="0" effect_left="0" effect_top="0" effect_width="409" effect_height="48" size="39264" />
+        <image id="14" url="" width="24" height="24" crop="0" effect_left="0" effect_top="0" effect_width="24" effect_height="24" size="1152" />
+        <image id="15" url="" width="409" height="48" crop="0" effect_left="0" effect_top="0" effect_width="409" effect_height="48" size="39264" />
+        <image id="16" url="" width="24" height="24" crop="0" effect_left="0" effect_top="0" effect_width="24" effect_height="24" size="1152" />
+        <image id="17" url="" width="409" height="48" crop="0" effect_left="0" effect_top="0" effect_width="409" effect_height="48" size="39264" />
+        <image id="18" url="" width="24" height="24" crop="0" effect_left="0" effect_top="0" effect_width="24" effect_height="24" size="1152" />
+        <image id="19" url="d:\atime\docs\github\others\stm32f407\21.tft程序01\v2-fbbb97b977b5cebc66dc3cefab0ac981_r.png" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
     </images>
     <waves />
 </Resource>

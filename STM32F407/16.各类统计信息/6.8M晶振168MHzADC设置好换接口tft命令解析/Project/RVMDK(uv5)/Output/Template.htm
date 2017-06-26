@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Output\Template.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Output\Template.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Mon Jun 26 21:56:38 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Tue Jun 27 00:20:12 2017
 <BR><P>
 <H3>Maximum Stack Usage =        272 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -432,15 +432,15 @@ Global Symbols
 <P><STRONG><a name="[8c]"></a>CPU_SR_Save</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatTaskCPUUsageInit
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedRoundRobinCfg
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemPut
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemPut
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemCreate
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxGet
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxGet
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurReset
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskKey
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskCmd
@@ -481,15 +481,15 @@ Global Symbols
 <P><STRONG><a name="[90]"></a>CPU_SR_Restore</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatTaskCPUUsageInit
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedRoundRobinCfg
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemPut
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemPut
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemCreate
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxGet
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxGet
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurReset
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskKey
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskCmd
@@ -551,8 +551,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Set_Vol
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Set_Vol
+<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Set_Vol
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Set_Vol
 </UL>
 
 <P><STRONG><a name="[77]"></a>__aeabi_ddiv</STRONG> (Thumb, 222 bytes, Stack size 32 bytes, ddiv.o(.text))
@@ -560,8 +560,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Set_Vol
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Set_Vol
+<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Set_Vol
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Set_Vol
 </UL>
 
 <P><STRONG><a name="[79]"></a>__aeabi_ui2d</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, dfltui.o(.text))
@@ -569,8 +569,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Set_Vol
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Set_Vol
+<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Set_Vol
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Set_Vol
 </UL>
 
 <P><STRONG><a name="[7a]"></a>__aeabi_d2uiz</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, dfixui.o(.text))
@@ -578,8 +578,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Set_Vol
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Set_Vol
+<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Set_Vol
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Set_Vol
 </UL>
 
 <P><STRONG><a name="[74]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text))
@@ -709,7 +709,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD7606_Scan
 </UL>
 
-<P><STRONG><a name="[a0]"></a>BSP_CPU_ClkFreq</STRONG> (Thumb, 14 bytes, Stack size 24 bytes, bsp.o(i.BSP_CPU_ClkFreq))
+<P><STRONG><a name="[9f]"></a>BSP_CPU_ClkFreq</STRONG> (Thumb, 14 bytes, Stack size 24 bytes, bsp.o(i.BSP_CPU_ClkFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = BSP_CPU_ClkFreq &rArr; RCC_GetClocksFreq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetClocksFreq
@@ -766,7 +766,7 @@ Global Symbols
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSwHook
 </UL>
 
-<P><STRONG><a name="[a2]"></a>CPU_IntDisMeasMaxGet</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, cpu_core.o(i.CPU_IntDisMeasMaxGet))
+<P><STRONG><a name="[a1]"></a>CPU_IntDisMeasMaxGet</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, cpu_core.o(i.CPU_IntDisMeasMaxGet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
 <LI>Call Chain = CPU_IntDisMeasMaxGet
 </UL>
@@ -784,13 +784,13 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatTaskCPUUsageInit
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedRoundRobinCfg
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemPut
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemPut
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemCreate
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskKey
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskCmd
@@ -831,13 +831,13 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatTaskCPUUsageInit
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedRoundRobinCfg
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemPut
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemPut
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemCreate
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskKey
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskCmd
@@ -897,7 +897,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = CPU_TS_TmrInit &rArr; BSP_CPU_ClkFreq &rArr; RCC_GetClocksFreq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrFreqSet
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_CPU_ClkFreq
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_CPU_ClkFreq
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_Init
 </UL>
@@ -905,7 +905,7 @@ Global Symbols
 <P><STRONG><a name="[b8]"></a>CPU_TS_TmrRd</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, bsp.o(i.CPU_TS_TmrRd))
 <BR><BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
@@ -926,37 +926,37 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[bf]"></a>DAC_Cmd</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, stm32f4xx_dac.o(i.DAC_Cmd))
-<BR><BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Init
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Init
+<BR><BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Init
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Init
 </UL>
 
 <P><STRONG><a name="[be]"></a>DAC_Init</STRONG> (Thumb, 46 bytes, Stack size 12 bytes, stm32f4xx_dac.o(i.DAC_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = DAC_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Init
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Init
+<BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Init
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Init
 </UL>
 
-<P><STRONG><a name="[9a]"></a>DAC_SetChannel1Data</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, stm32f4xx_dac.o(i.DAC_SetChannel1Data))
+<P><STRONG><a name="[99]"></a>DAC_SetChannel1Data</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, stm32f4xx_dac.o(i.DAC_SetChannel1Data))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DAC_SetChannel1Data
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Set_Vol
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Init
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Set_Vol
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Init
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskDac1
 </UL>
 
-<P><STRONG><a name="[9d]"></a>DAC_SetChannel2Data</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, stm32f4xx_dac.o(i.DAC_SetChannel2Data))
+<P><STRONG><a name="[9c]"></a>DAC_SetChannel2Data</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, stm32f4xx_dac.o(i.DAC_SetChannel2Data))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DAC_SetChannel2Data
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Set_Vol
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Init
+<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Set_Vol
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Init
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskDac2
 </UL>
 
-<P><STRONG><a name="[99]"></a>Dac1_Init</STRONG> (Thumb, 84 bytes, Stack size 32 bytes, bsp_dac.o(i.Dac1_Init))
+<P><STRONG><a name="[98]"></a>Dac1_Init</STRONG> (Thumb, 84 bytes, Stack size 32 bytes, bsp_dac.o(i.Dac1_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = Dac1_Init &rArr; GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_SetChannel1Data
+<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_SetChannel1Data
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_Init
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_Cmd
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
@@ -966,10 +966,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskDac1
 </UL>
 
-<P><STRONG><a name="[9b]"></a>Dac1_Set_Vol</STRONG> (Thumb, 98 bytes, Stack size 32 bytes, bsp_dac.o(i.Dac1_Set_Vol))
+<P><STRONG><a name="[9a]"></a>Dac1_Set_Vol</STRONG> (Thumb, 98 bytes, Stack size 32 bytes, bsp_dac.o(i.Dac1_Set_Vol))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = Dac1_Set_Vol &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_SetChannel1Data
+<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_SetChannel1Data
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
@@ -978,10 +978,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskDac1
 </UL>
 
-<P><STRONG><a name="[9c]"></a>Dac2_Init</STRONG> (Thumb, 84 bytes, Stack size 32 bytes, bsp_dac.o(i.Dac2_Init))
+<P><STRONG><a name="[9b]"></a>Dac2_Init</STRONG> (Thumb, 84 bytes, Stack size 32 bytes, bsp_dac.o(i.Dac2_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = Dac2_Init &rArr; GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_SetChannel2Data
+<BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_SetChannel2Data
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_Init
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_Cmd
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
@@ -991,10 +991,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskDac2
 </UL>
 
-<P><STRONG><a name="[9e]"></a>Dac2_Set_Vol</STRONG> (Thumb, 98 bytes, Stack size 32 bytes, bsp_dac.o(i.Dac2_Set_Vol))
+<P><STRONG><a name="[9d]"></a>Dac2_Set_Vol</STRONG> (Thumb, 98 bytes, Stack size 32 bytes, bsp_dac.o(i.Dac2_Set_Vol))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = Dac2_Set_Vol &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_SetChannel2Data
+<BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_SetChannel2Data
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
@@ -1050,8 +1050,8 @@ Global Symbols
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_GPIO_Config
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Pxy_Config
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_InitSPIBus
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Init
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Init
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Init
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Init
 </UL>
 
 <P><STRONG><a name="[136]"></a>GPIO_PinAFConfig</STRONG> (Thumb, 70 bytes, Stack size 20 bytes, stm32f4xx_gpio.o(i.GPIO_PinAFConfig))
@@ -1089,7 +1089,7 @@ Global Symbols
 <P><STRONG><a name="[94]"></a>LCD_screen_show</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, bsp_lcd.o(i.LCD_screen_show))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = LCD_screen_show &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskCmd
 </UL>
@@ -1153,7 +1153,7 @@ Global Symbols
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Configuration
 </UL>
 
-<P><STRONG><a name="[98]"></a>NVIC_PriorityGroupConfig</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, misc.o(i.NVIC_PriorityGroupConfig))
+<P><STRONG><a name="[97]"></a>NVIC_PriorityGroupConfig</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, misc.o(i.NVIC_PriorityGroupConfig))
 <BR><BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Configuration
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Configuration
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskDac2
@@ -1245,7 +1245,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[97]"></a>OSMemPut</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, os_mem.o(i.OSMemPut))
+<P><STRONG><a name="[96]"></a>OSMemPut</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, os_mem.o(i.OSMemPut))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
 <LI>Call Chain = OSMemPut &rArr; CPU_IntDisMeasStop
 </UL>
@@ -1326,7 +1326,7 @@ Global Symbols
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSCtxSw
 </UL>
 <BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
@@ -1547,7 +1547,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskReturn
 </UL>
 
-<P><STRONG><a name="[a1]"></a>OSTaskSemPend</STRONG> (Thumb, 560 bytes, Stack size 32 bytes, os_task.o(i.OSTaskSemPend))
+<P><STRONG><a name="[a0]"></a>OSTaskSemPend</STRONG> (Thumb, 560 bytes, Stack size 32 bytes, os_task.o(i.OSTaskSemPend))
 <BR><BR>[Stack]<UL><LI>Max Depth = 108 + Unknown Stack Size
 <LI>Call Chain = OSTaskSemPend &rArr; OS_Pend &rArr; OS_TaskBlock &rArr; OS_RdyListRemove &rArr; OS_PrioRemove
 </UL>
@@ -1658,7 +1658,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeTick
 </UL>
 
-<P><STRONG><a name="[9f]"></a>OSVersion</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, os_core.o(i.OSVersion))
+<P><STRONG><a name="[9e]"></a>OSVersion</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, os_core.o(i.OSVersion))
 <BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskKey
 </UL>
 
@@ -1878,7 +1878,7 @@ Global Symbols
 <LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendDbgNameAdd
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendDataInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPend
 </UL>
@@ -2099,7 +2099,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
@@ -2130,7 +2130,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
@@ -2201,7 +2201,7 @@ Global Symbols
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxGet
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxGet
 <LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskStkChk
 <LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatTaskHook
 <LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
@@ -2377,7 +2377,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
@@ -2415,7 +2415,7 @@ Global Symbols
 <LI>Call Chain = OS_TmrTask &rArr; OS_TmrLock &rArr; OSMutexPend &rArr; OS_Pend &rArr; OS_TaskBlock &rArr; OS_RdyListRemove &rArr; OS_PrioRemove
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
 <LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrUnlink
@@ -2436,13 +2436,13 @@ Global Symbols
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_GPIO_Config
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Pxy_Config
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_InitSPIBus
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Init
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Init
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Init
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Init
 </UL>
 
 <P><STRONG><a name="[bd]"></a>RCC_APB1PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f4xx_rcc.o(i.RCC_APB1PeriphClockCmd))
-<BR><BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Init
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Init
+<BR><BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Init
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Init
 </UL>
 
 <P><STRONG><a name="[135]"></a>RCC_APB2PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f4xx_rcc.o(i.RCC_APB2PeriphClockCmd))
@@ -2452,7 +2452,7 @@ Global Symbols
 <P><STRONG><a name="[af]"></a>RCC_GetClocksFreq</STRONG> (Thumb, 214 bytes, Stack size 20 bytes, stm32f4xx_rcc.o(i.RCC_GetClocksFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = RCC_GetClocksFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_CPU_ClkFreq
+<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_CPU_ClkFreq
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
 </UL>
 
@@ -2545,10 +2545,11 @@ Global Symbols
 
 <P><STRONG><a name="[152]"></a>__1printf$8</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8), UNUSED)
 
-<P><STRONG><a name="[a3]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8))
+<P><STRONG><a name="[a2]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_screen_show
+<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;struct_print
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_screen_show
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskKey
 </UL>
 
@@ -2612,10 +2613,12 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[96]"></a>str_compare</STRONG> (Thumb, 36 bytes, Stack size 12 bytes, bsp_lcd.o(i.str_compare))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = str_compare
+<P><STRONG><a name="[a3]"></a>struct_print</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, bsp_lcd.o(i.struct_print))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = struct_print &rArr; __2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskCmd
+<BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskKey
 </UL>
 <P>
 <H3>
@@ -2646,16 +2649,15 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> app.o(i.AppTaskStart)
 </UL>
-<P><STRONG><a name="[66]"></a>AppTaskCmd</STRONG> (Thumb, 426 bytes, Stack size 16 bytes, app.o(i.AppTaskCmd))
+<P><STRONG><a name="[66]"></a>AppTaskCmd</STRONG> (Thumb, 734 bytes, Stack size 16 bytes, app.o(i.AppTaskCmd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 132 + Unknown Stack Size
 <LI>Call Chain = AppTaskCmd &rArr; OSTaskQPend &rArr; OS_Pend &rArr; OS_TaskBlock &rArr; OS_RdyListRemove &rArr; OS_PrioRemove
 </UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;str_compare
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemPut
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemPut
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_screen_show
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
@@ -2668,11 +2670,11 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 128 + Unknown Stack Size
 <LI>Call Chain = AppTaskDac1 &rArr; Dac1_Set_Vol &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_SetChannel1Data
+<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_SetChannel1Data
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Set_Vol
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Init
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Set_Vol
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac1_Init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> app.o(i.AppTaskStart)
 </UL>
@@ -2680,30 +2682,31 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 128 + Unknown Stack Size
 <LI>Call Chain = AppTaskDac2 &rArr; Dac2_Set_Vol &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_SetChannel2Data
+<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_SetChannel2Data
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Set_Vol
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Init
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Set_Vol
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dac2_Init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> app.o(i.AppTaskStart)
 </UL>
-<P><STRONG><a name="[60]"></a>AppTaskKey</STRONG> (Thumb, 2098 bytes, Stack size 8 bytes, app.o(i.AppTaskKey))
+<P><STRONG><a name="[60]"></a>AppTaskKey</STRONG> (Thumb, 2104 bytes, Stack size 8 bytes, app.o(i.AppTaskKey))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116 + Unknown Stack Size
 <LI>Call Chain = AppTaskKey &rArr; OSTaskSemPend &rArr; OS_Pend &rArr; OS_TaskBlock &rArr; OS_RdyListRemove &rArr; OS_PrioRemove
 </UL>
-<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;struct_print
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSVersion
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSVersion
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxGet
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_CPU_ClkFreq
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxGet
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_CPU_ClkFreq
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> app.o(i.AppTaskStart)
 </UL>
@@ -2737,7 +2740,7 @@ Local Symbols
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurReset
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_Init
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_Init
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_CPU_ClkFreq
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_CPU_ClkFreq
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> app.o(i.main)
 </UL>
@@ -2754,7 +2757,7 @@ Local Symbols
 <LI>Call Chain = AppTaskUsart &rArr; OSTaskQPost &rArr; OS_TaskQPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
 <BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemPut
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemPut
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPost
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> app.o(i.AppTaskStart)
@@ -2762,7 +2765,7 @@ Local Symbols
 <P><STRONG><a name="[c7]"></a>NVIC_Configuration</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, bsp_exti.o(i.NVIC_Configuration))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = NVIC_Configuration &rArr; NVIC_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
+<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Pxy_Config
@@ -2771,7 +2774,7 @@ Local Symbols
 <P><STRONG><a name="[cd]"></a>NVIC_Configuration</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, bsp_usart.o(i.NVIC_Configuration))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = NVIC_Configuration &rArr; NVIC_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
+<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USARTx_Config
@@ -2799,7 +2802,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[b7]"></a>CPU_IntDisMeasMaxCalc</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, cpu_core.o(i.CPU_IntDisMeasMaxCalc))
-<BR><BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxGet
+<BR><BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxGet
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurGet
 </UL>
 

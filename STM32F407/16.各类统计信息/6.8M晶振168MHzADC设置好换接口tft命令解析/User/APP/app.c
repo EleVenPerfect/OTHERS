@@ -622,7 +622,8 @@ static  void  AppTaskKey ( void * p_arg )
 		
 		printf ( "CMD解析任务的已用和空闲堆栈大小分别为：%d,%d\r\n", 
 		         AppTaskCmdTCB.StkUsed, AppTaskCmdTCB.StkFree );	
-						 
+							
+		struct_print(&adc_sys_cfg);
 		OS_CRITICAL_EXIT();                               //退出临界段
 		
 	}
@@ -785,27 +786,58 @@ static  void  AppTaskCmd ( void * p_arg )
 											  (CPU_TS        *)0,                    //返回消息被发布的时间戳
 											  (OS_ERR        *)&err);                //返回错误类型
 			
-			
-			if(str_compare(pMsg,TFT480800GOTOOFFLINE,9))
+			adc_sys_cfg.screen_id = 01*pMsg[3] + pMsg[4];
+			switch(adc_sys_cfg.screen_id)
 			{
-					OS_CRITICAL_ENTER();
-					LCD_screen_show(3);
-					OS_CRITICAL_EXIT();			 //退出临界段
-			}  
-
-			if(str_compare(pMsg,TFT480800GOTOONLINE,9))
-			{
-					OS_CRITICAL_ENTER();
-					LCD_screen_show(2);
-					OS_CRITICAL_EXIT();			 //退出临界段
-			}  
-			if(str_compare(pMsg,TFT480800GOTOONLINE,9))
-			{
-					OS_CRITICAL_ENTER();
-					LCD_screen_show(2);
-					OS_CRITICAL_EXIT();			 //退出临界段
-			} 
-                          
+					case 1:
+					{
+								if(pMsg[6]==0)
+								{
+											OS_CRITICAL_ENTER();
+											LCD_screen_show(3);
+											OS_CRITICAL_EXIT();			
+											adc_sys_cfg.sys_connect_mode = 1;
+								}
+								if(pMsg[6]==1)
+								{
+											OS_CRITICAL_ENTER();
+											LCD_screen_show(2);
+											OS_CRITICAL_EXIT();			
+											adc_sys_cfg.sys_connect_mode = 0;
+								}
+								
+								break;
+					}
+					case 2:{break;}
+					case 3:
+					{
+								adc_sys_cfg.sys_sampling_mode = pMsg[6];
+								
+								OS_CRITICAL_ENTER();
+								LCD_screen_show(4);
+								OS_CRITICAL_EXIT();			
+							
+								break;
+					}
+					case 4:
+					{
+								if(pMsg[6] == 1)
+										adc_sys_cfg.sys_sampling_analyze_time =pMsg[11];
+								if(pMsg[6] == 2)
+										adc_sys_cfg.sys_sampling_space =pMsg[11];
+								if(pMsg[6] == 3)
+										adc_sys_cfg.sys_sampling_mercury_delay =pMsg[11];
+								if(pMsg[6] == 4)
+										adc_sys_cfg.sys_sampling_analyze_space_time =pMsg[11];
+								if(pMsg[6] == 5)
+										adc_sys_cfg.sys_sorption_time =pMsg[11];
+								if(pMsg[6] == 6)
+										adc_sys_cfg.sys_sorption_flux =pMsg[11];
+								break;
+					}
+					case 5:{}
+					default:{}
+			}
 
 			/* 退还内存块 */
 			OSMemPut ((OS_MEM  *)&mem,                                 //指向内存管理对象
@@ -817,7 +849,7 @@ static  void  AppTaskCmd ( void * p_arg )
 
 /*
 *********************************************************************************************************
-*                                          Command  TASK
+*                                         TEST  TASK
 *********************************************************************************************************
 */
 static  void  AppTaskTest ( void * p_arg )

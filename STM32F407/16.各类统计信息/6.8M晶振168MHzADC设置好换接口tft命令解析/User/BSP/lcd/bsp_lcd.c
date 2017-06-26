@@ -19,15 +19,21 @@ unsigned char TFT480800STOP[4]	= {0xFF,0xFC,0xFF,0xFF};
 unsigned char TFT480800STOPUSER[4]	= {0xFF,0xFC,0xFF,0xAE};
 										//发送终止标志printf("%c%c%c%c",TFT480800STOP[0],TFT480800STOP[1],TFT480800STOP[2],TFT480800STOP[3] );
 
+
+ADC_SYS_CFG adc_sys_cfg;
+
+
 /*自定义指令格式：
 起始标志： TFT480800START
 结束标志：	TFT480800STOPUSER
-中间分别为：屏幕号；控件类型；控件编号；空间状态0；控件状态1...
+中间分别为：指令类型2；屏幕号2；控件编号2；空间状态0；控件状态1...
+指令类型分:B1 10:组态指令；A1 10：用户指令；
+屏幕编号分 十位，个位
+空间ID分	十位，个位
 unsigned char TFT480800___[4]	= {0xEE,0xxx,0xFF,0xFC,0xFF,0xAE};
 */
 
-unsigned char TFT480800GOTOOFFLINE[9]	= {0xEE,0x01,0x01,0x00,0x01,0xFF,0xFC,0xFF,0xAE};
-unsigned char TFT480800GOTOONLINE[9]	= {0xEE,0x01,0x01,0x01,0x01,0xFF,0xFC,0xFF,0xAE};
+
 
 void LCD_valtage_show(void)
 {
@@ -92,3 +98,21 @@ unsigned char str_compare(char a[], unsigned char b[], unsigned char num)
 		}
 		return 1;
 }
+
+
+/*****************************************
+打印结构体
+******************************************/
+void struct_print(ADC_SYS_CFG *adc)
+{
+	printf("Connect mode: %d\r\n",adc->sys_connect_mode);
+	printf("Screen ID: %d\r\n",adc->screen_id);
+	printf("Scmpling mode: %d\r\n",adc->sys_sampling_mode);
+	printf("Sampling space time: %d\r\n",adc->sys_sampling_analyze_space_time);
+	printf("Sampling time： %d\r\n",adc->sys_sampling_analyze_time);
+	printf("Sampling mercury delay: %d\r\n",adc->sys_sampling_mercury_delay);
+	printf("Samplinganalyse space time: %d\r\n",adc->sys_sampling_analyze_space_time);
+	printf("Sorption time: %d\r\n",adc->sys_sorption_time);
+	printf("Sorption flux: %d\r\n",adc->sys_sorption_flux);
+}
+
