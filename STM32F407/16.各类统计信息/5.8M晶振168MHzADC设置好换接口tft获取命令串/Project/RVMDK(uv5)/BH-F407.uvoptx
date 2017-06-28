@@ -208,16 +208,16 @@
           <Type>0</Type>
           <LineNumber>363</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134223272</Address>
+          <Address>134223504</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>D:\ATIME\docs\GitHub\OTHERS\STM32F407\16.鍚勭被缁熻淇℃伅\5.8M鏅舵尟168MHzADC璁剧疆濂芥崲鎺ュ彛tft\User\APP\app.c</Filename>
+          <Filename>D:\ATIME\docs\GitHub\OTHERS\STM32F407\16.鍚勭被缁熻淇℃伅\User\APP\app.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression></Expression>
+          <Expression>\\Template\../../User/APP/app.c\363</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>

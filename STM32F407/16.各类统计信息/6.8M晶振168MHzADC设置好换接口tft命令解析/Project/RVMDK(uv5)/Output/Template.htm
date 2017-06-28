@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Output\Template.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Output\Template.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Wed Jun 28 16:11:42 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Wed Jun 28 21:15:06 2017
 <BR><P>
 <H3>Maximum Stack Usage =        272 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -2589,6 +2589,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;struct_print
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_screen_show
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD7606_Disp
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskUsart
 <LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskKey1
 </UL>
 
@@ -2642,7 +2643,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> printf8.o(i.__0printf$8)
 </UL>
-<P><STRONG><a name="[5c]"></a>main</STRONG> (Thumb, 68 bytes, Stack size 48 bytes, app.o(i.main))
+<P><STRONG><a name="[5c]"></a>main</STRONG> (Thumb, 70 bytes, Stack size 48 bytes, app.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224 + Unknown Stack Size
 <LI>Call Chain = main &rArr; OSInit &rArr; OS_IntQTaskInit &rArr; OSTaskCreate &rArr; OSSched &rArr; OS_PrioGetHighest
 </UL>
@@ -2792,13 +2793,14 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> app.o(i.AppTaskStart)
 </UL>
-<P><STRONG><a name="[60]"></a>AppTaskUsart</STRONG> (Thumb, 346 bytes, Stack size 120 bytes, app.o(i.AppTaskUsart))
+<P><STRONG><a name="[60]"></a>AppTaskUsart</STRONG> (Thumb, 354 bytes, Stack size 120 bytes, app.o(i.AppTaskUsart))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272 + Unknown Stack Size
 <LI>Call Chain = AppTaskUsart &rArr; OSTaskQPost &rArr; OS_TaskQPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemPut
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPost
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> app.o(i.AppTaskStart)
 </UL>

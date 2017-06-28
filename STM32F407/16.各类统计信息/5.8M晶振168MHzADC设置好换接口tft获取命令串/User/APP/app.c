@@ -715,7 +715,7 @@ static  void  AppTaskAdce ( void * p_arg )
 		CPU_SR_ALLOC();
 		(void)p_arg;
 		
-		PrintfHardInfo();	/* 打印硬件接线信息 */
+		//PrintfHardInfo();	/* 打印硬件接线信息 */
 		bsp_InitSPIBus();	/* 初始化SPI总线 */
 		g_tAD7606.Range = 1;	/* 10V */
 		bsp_spi_InitAD7606();	/* 配置AD7606所用的GPIO */

@@ -37,6 +37,8 @@
 //»­ÃæconnectedµÄ±³¾°Í¼Æ¬
 #define  _IMG_CONNECTED                                                        3
 
+#define  _BTN_CONNECTED_BUTTON1                                                1
+
 //»­ÃæofflinesetmodeµÄ±³¾°Í¼Æ¬
 #define  _IMG_OFFLINESETMODE                                                   4
 
