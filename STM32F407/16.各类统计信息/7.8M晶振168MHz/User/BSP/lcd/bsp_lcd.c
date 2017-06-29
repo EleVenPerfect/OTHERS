@@ -1,17 +1,5 @@
 #include "./lcd/bsp_lcd.h"  
 
-//////////////////////////////////////////////////////////////////////////////////	 
-//本程序只供学习使用，未经作者许可，不得用于其它任何用途
-//ALIENTEK STM32F407开发板
-//DAC 驱动代码	   
-//正点原子@ALIENTEK
-//技术论坛:www.openedv.com
-//创建日期:2014/5/6
-//版本：V1.0
-//版权所有，盗版必究。
-//Copyright(C) 广州市星翼电子科技有限公司 2014-2024
-//All rights reserved 
-////////////////////////////////////////////////////////////////////////////////// 	
 
 unsigned char TFT480800START   = 0xEE;
 										//发送起始标志printf("%c",TFT480800START);
@@ -105,14 +93,35 @@ unsigned char str_compare(char a[], unsigned char b[], unsigned char num)
 ******************************************/
 void struct_print(ADC_SYS_CFG *adc)
 {
-	printf("Connect mode: %d\r\n",adc->sys_connect_mode);
-	printf("Screen ID: %d\r\n",adc->screen_id);
-	printf("Scmpling mode: %d\r\n",adc->sys_sampling_mode);
-	printf("Sampling space time: %d\r\n",adc->sys_sampling_analyze_space_time);
-	printf("Sampling time： %d\r\n",adc->sys_sampling_analyze_time);
-	printf("Sampling mercury delay: %d\r\n",adc->sys_sampling_mercury_delay);
-	printf("Samplinganalyse space time: %d\r\n",adc->sys_sampling_analyze_space_time);
-	printf("Sorption time: %d\r\n",adc->sys_sorption_time);
-	printf("Sorption flux: %d\r\n",adc->sys_sorption_flux);
+		printf("Connect mode: %d\r\n",adc->sys_connect_mode);
+		printf("Screen ID: %d\r\n",adc->screen_id);
+		printf("Scmpling mode: %d\r\n",adc->sys_sampling_mode);
+		printf("Sampling space time: %d\r\n",adc->sys_sampling_analyze_space_time);
+		printf("Sampling time： %d\r\n",adc->sys_sampling_analyze_time);
+		printf("Sampling mercury delay: %d\r\n",adc->sys_sampling_mercury_delay);
+		printf("Samplinganalyse space time: %d\r\n",adc->sys_sampling_analyze_space_time);
+		printf("Sorption time: %d\r\n",adc->sys_sorption_time);
+		printf("Sorption flux: %d\r\n",adc->sys_sorption_flux);
+	}
+
+	
+	
+	//更新画面id文字画面
+void LCD_refresh_text( unsigned char screen, unsigned char id, unsigned char data[])
+{
+		unsigned char a[6] = { 0xB1, 0x10, 0x00, 0x00, 0x00, 0x00};
+		printf("%c",TFT480800START);
+		a[3] = screen;
+		a[5] =id;
+		printf("%c%c%c%c%c%c", a[0],a[1],a[2],a[3],a[4],a[5]);
+		printf("%s",data);
+		printf("%c%c%c%c",TFT480800STOP[0],TFT480800STOP[1],TFT480800STOP[2],TFT480800STOP[3] );
 }
 
+
+
+	//更新画面曲线
+void LCD_refresh_graph( unsigned char screen, unsigned char id, unsigned char data)
+{
+
+}

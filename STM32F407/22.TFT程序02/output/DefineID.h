@@ -37,13 +37,16 @@
 //画面connected的背景图片
 #define  _IMG_CONNECTED                                                        3
 
+//全局图片联机模式2.jpg
+#define  _IMG_联机模式2_JPG                                                        4
+
 #define  _BTN_CONNECTED_BUTTON1                                                1
 
 //画面offlinesetmode的背景图片
-#define  _IMG_OFFLINESETMODE                                                   4
+#define  _IMG_OFFLINESETMODE                                                   5
 
 //全局图片离线模式选择测量模式2.jpg
-#define  _IMG_离线模式选择测量模式2_JPG                                                  5
+#define  _IMG_离线模式选择测量模式2_JPG                                                  6
 
 #define  _BTN_OFFLINESETMODE_BUTTON1                                           1
 
@@ -58,20 +61,28 @@
 #define  _BTN_OFFLINESETMODE_BUTTON6                                           6
 
 //画面offlinesetnumber的背景图片
-#define  _IMG_OFFLINESETNUMBER                                                 6
+#define  _IMG_OFFLINESETNUMBER                                                 7
 
-#define  _SLIDER_OFFLINESETNUMBER_SLIDER1                                      1
-
-#define  _SLIDER_OFFLINESETNUMBER_SLIDER2                                      2
-
-#define  _SLIDER_OFFLINESETNUMBER_SLIDER3                                      3
-
-#define  _SLIDER_OFFLINESETNUMBER_SLIDER4                                      4
-
-#define  _SLIDER_OFFLINESETNUMBER_SLIDER5                                      5
-
-#define  _SLIDER_OFFLINESETNUMBER_SLIDER6                                      6
+#define  _BTN_OFFLINESETNUMBER_BUTTON1                                         1
 
 //画面offlinecontrl的背景图片
-#define  _IMG_OFFLINECONTRL                                                   19
+#define  _IMG_OFFLINECONTRL                                                    8
+
+//全局图片5.运行前提示2.jpg
+#define  _IMG_5.运行前提示2_JPG                                                     9
+
+#define  _BTN_OFFLINECONTRL_BUTTON1                                            1
+
+//画面offlinecontrl中按钮Button2按下时的图片
+#define  _IMG_OFFLINECONTRL_BUTTON2_DOWN                                      10
+
+#define  _BTN_OFFLINECONTRL_BUTTON2                                            2
+
+#define  _BTN_OFFLINECONTRL_BUTTON3                                            3
+
+#define  _TXT_DIS__OFFLINECONTRL_TEXT_DISPLAY1                                 4
+
+#define  _TXT_DIS__OFFLINECONTRL_TEXT_DISPLAY2                                 5
+
+#define  _GRAPH_OFFLINECONTRL_GRAPH1                                           6
 

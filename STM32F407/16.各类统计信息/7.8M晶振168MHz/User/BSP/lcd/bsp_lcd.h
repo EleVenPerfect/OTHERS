@@ -44,7 +44,8 @@ void LCD_valtage_show(void);
 void LCD_screen_show(unsigned char num);
 unsigned char str_compare( char a[], unsigned char b[], unsigned char num);
 void struct_print(ADC_SYS_CFG *adc);
-
+void LCD_refresh_text( unsigned char screen, unsigned char id, unsigned char data[]);
+void LCD_refresh_graph( unsigned char screen, unsigned char id, unsigned char data);
 
 
 #endif

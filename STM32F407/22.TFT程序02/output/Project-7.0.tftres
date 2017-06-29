@@ -11,23 +11,14 @@
         <image id="0" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\banner_tips_loading.gif" width="438" height="265" crop="0" effect_left="0" effect_top="0" effect_width="438" effect_height="265" size="4642800" delay="10" frameCount="20" />
         <image id="1" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\状态选择1.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
         <image id="2" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\状态选择2.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
-        <image id="3" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\联机模式.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
-        <image id="4" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\离线模式选择测量模式1.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
-        <image id="5" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\离线模式选择测量模式2.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
-        <image id="6" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\状态设置1.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
-        <image id="7" url="" width="409" height="48" crop="0" effect_left="0" effect_top="0" effect_width="409" effect_height="48" size="39264" />
-        <image id="8" url="" width="24" height="24" crop="0" effect_left="0" effect_top="0" effect_width="24" effect_height="24" size="1152" />
-        <image id="9" url="" width="409" height="48" crop="0" effect_left="0" effect_top="0" effect_width="409" effect_height="48" size="39264" />
-        <image id="10" url="" width="24" height="24" crop="0" effect_left="0" effect_top="0" effect_width="24" effect_height="24" size="1152" />
-        <image id="11" url="" width="409" height="48" crop="0" effect_left="0" effect_top="0" effect_width="409" effect_height="48" size="39264" />
-        <image id="12" url="" width="24" height="24" crop="0" effect_left="0" effect_top="0" effect_width="24" effect_height="24" size="1152" />
-        <image id="13" url="" width="409" height="48" crop="0" effect_left="0" effect_top="0" effect_width="409" effect_height="48" size="39264" />
-        <image id="14" url="" width="24" height="24" crop="0" effect_left="0" effect_top="0" effect_width="24" effect_height="24" size="1152" />
-        <image id="15" url="" width="409" height="48" crop="0" effect_left="0" effect_top="0" effect_width="409" effect_height="48" size="39264" />
-        <image id="16" url="" width="24" height="24" crop="0" effect_left="0" effect_top="0" effect_width="24" effect_height="24" size="1152" />
-        <image id="17" url="" width="409" height="48" crop="0" effect_left="0" effect_top="0" effect_width="409" effect_height="48" size="39264" />
-        <image id="18" url="" width="24" height="24" crop="0" effect_left="0" effect_top="0" effect_width="24" effect_height="24" size="1152" />
-        <image id="19" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\v2-fbbb97b977b5cebc66dc3cefab0ac981_r.png" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
+        <image id="3" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\联机模式1.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
+        <image id="4" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\联机模式2.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
+        <image id="5" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\离线模式选择测量模式1.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
+        <image id="6" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\离线模式选择测量模式2.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
+        <image id="7" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\状态设置1.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
+        <image id="8" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\5.运行前提示1.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
+        <image id="9" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\5.运行前提示2.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
+        <image id="10" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\5.运行前提示2.jpg" width="187" height="66" crop="0" effect_left="0" effect_top="0" effect_width="187" effect_height="66" size="24684" />
     </images>
     <waves />
 </Resource>

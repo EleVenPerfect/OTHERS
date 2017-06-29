@@ -245,25 +245,25 @@
 
 void  BSP_Init (void)
 {
-	EXTI_Pxy_Config();  //初始化按键
-	
-	LED_GPIO_Config (); //初始化 LED
-	
-	USARTx_Config ();   //初始化 USART1
-	
-	//NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//设置系统中断优先级分组2
-	Dac1_Init();		 		//DAC通道1初始化	
-	DAC_SetChannel1Data(DAC_Align_12b_R,0);//初始值为0	
-	
-	//NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//设置系统中断优先级分组2
-	Dac2_Init();		 		//DAC通道2初始化	
-	DAC_SetChannel2Data(DAC_Align_12b_R,0);//初始值为0	
-	
-	
-	//PrintfHardInfo();	/* 打印硬件接线信息 */
-	bsp_InitSPIBus();	/* 初始化SPI总线 */
-	g_tAD7606.Range = 1;	/* 10V */
-	bsp_spi_InitAD7606();	/* 配置AD7606所用的GPIO */
+		EXTI_Pxy_Config();  //初始化按键
+		
+		LED_GPIO_Config (); //初始化 LED
+		
+		USARTx_Config ();   //初始化 USART1
+		
+		//NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//设置系统中断优先级分组2
+		Dac1_Init();		 		//DAC通道1初始化	
+		DAC_SetChannel1Data(DAC_Align_12b_R,0);//初始值为0	
+		
+		//NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//设置系统中断优先级分组2
+		Dac2_Init();		 		//DAC通道2初始化	
+		DAC_SetChannel2Data(DAC_Align_12b_R,0);//初始值为0	
+		
+		
+		//PrintfHardInfo();	/* 打印硬件接线信息 */
+		bsp_InitSPIBus();	/* 初始化SPI总线 */
+		g_tAD7606.Range = 1;	/* 10V */
+		bsp_spi_InitAD7606();	/* 配置AD7606所用的GPIO */
 }
 
 

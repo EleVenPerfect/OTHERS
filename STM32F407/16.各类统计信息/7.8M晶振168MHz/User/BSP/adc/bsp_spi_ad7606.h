@@ -14,6 +14,59 @@
 #include "stm32f4xx.h"
 #include "bsp_spi_bus.h"
 
+
+
+/* SPI总线的SCK、MOSI、MISO 在 bsp_spi_bus.c中配置  */
+/* CSN片选 */
+#define RCC_CS 		RCC_AHB1Periph_GPIOE
+#define PORT_CS		GPIOE
+#define PIN_CS		GPIO_Pin_15
+
+/* RESET */
+#define RCC_RESET 	RCC_AHB1Periph_GPIOD
+#define PORT_RESET	GPIOD
+#define PIN_RESET	GPIO_Pin_9
+/* RANGE */		
+#define RCC_RANGE 	RCC_AHB1Periph_GPIOB
+#define PORT_RANGE 	GPIOB
+#define PIN_RANGE 	GPIO_Pin_0
+
+#define RESET_0()	GPIO_ResetBits(PORT_RESET, PIN_RESET)
+#define RESET_1()	GPIO_SetBits(PORT_RESET, PIN_RESET)
+
+/* CONVST */		
+#define RCC_CONVST 	RCC_AHB1Periph_GPIOD
+#define PORT_CONVST	GPIOD
+#define PIN_CONVST 	GPIO_Pin_10
+
+/* BUSY */
+#define RCC_BUSY 	RCC_AHB1Periph_GPIOE
+#define PORT_BUSY 	GPIOE
+#define PIN_BUSY 	GPIO_Pin_14
+
+#define BUSY_IS_LOW()				(GPIO_ReadInputDataBit(PORT_BUSY, PIN_BUSY) == Bit_RESET)
+
+
+/* OS0 */
+#define RCC_OS0 	RCC_AHB1Periph_GPIOE
+#define PORT_OS0 	GPIOE
+#define PIN_OS0 	GPIO_Pin_13			//临时用于VIO
+
+/* OS1 */
+#define RCC_OS1 	RCC_AHB1Periph_GPIOE
+#define PORT_OS1 	GPIOE
+#define PIN_OS1 	GPIO_Pin_2
+
+/* OS2 */
+#define RCC_OS2 	RCC_AHB1Periph_GPIOG
+#define PORT_OS2 	GPIOG
+#define PIN_OS2 	GPIO_Pin_15
+
+
+
+////////////////////////////////////////////////////
+
+
 /* 片选 */
 #define AD_CS_0()						GPIO_ResetBits(PORT_CS, PIN_CS)
 #define AD_CS_1()						GPIO_SetBits(PORT_CS, PIN_CS)
@@ -37,7 +90,7 @@
 
 
 
-#define CH_NUM			8				/* 采集2通道 */
+#define CH_NUM			8				/* 采集8通道 */
 
 
 typedef struct

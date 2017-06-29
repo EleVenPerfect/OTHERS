@@ -487,7 +487,7 @@ static  void  AppTaskUsart ( void * p_arg )
 								flag[2] = 0x0;
 								flag[3] = 0x0;	//先将状态清除
 					
-						printf("%s",cmd_dat);
+						//printf("%s",cmd_dat);
 						OSTaskQPost ((OS_TCB      *)&AppTaskCmdTCB,       //目标任务的控制块
 												 (void        *)cmd_dat,             				//消息内容的首地址
 												 (OS_MSG_SIZE  )ptr,                      //消息长度
@@ -770,7 +770,7 @@ static  void  AppTaskAdce ( void * p_arg )
   		OS_CRITICAL_EXIT();			
 			                               //退出临界段
 
-			OSTimeDly ( 1000, DEF_BIT_NONE, & err );
+			OSTimeDly ( 100, DEF_BIT_NONE, & err );
 		}
 }
 
