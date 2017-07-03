@@ -131,6 +131,7 @@ static void AD7606_ConfigGPIO(void)
 
 
 	ADC_OS0_ON	;			//临时用于VIO输出引脚
+	ADC_OS1_ON	;			//临时用于G12输出引脚
 	
 	/* 配置GPIO为浮动输入模式(实际上CPU复位后就是输入状态) */
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;		/* 设为输入口 */
@@ -442,7 +443,7 @@ void AD7606_Disp(void)
       printf(" CH%d = %6d,0x%04X ( %d.%d%d%d V) \r\n", i+1, s_dat[i], s_dat[i] , iTemp /1000, (iTemp%1000)/100, (iTemp%100)/10,iTemp%10);                    
 		}
 	}
-	//printf("\33[%dA", (int)CH_NUM);  /* 光标上移n行 */		
+	printf("\33[%dA", (int)CH_NUM);  /* 光标上移n行 */		
 }
 
 

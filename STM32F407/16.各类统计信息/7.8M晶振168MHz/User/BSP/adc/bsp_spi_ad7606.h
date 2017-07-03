@@ -53,9 +53,9 @@
 #define PIN_OS0 	GPIO_Pin_13			//临时用于VIO
 
 /* OS1 */
-#define RCC_OS1 	RCC_AHB1Periph_GPIOE
-#define PORT_OS1 	GPIOE
-#define PIN_OS1 	GPIO_Pin_2
+#define RCC_OS1 	RCC_AHB1Periph_GPIOG
+#define PORT_OS1 	GPIOG
+#define PIN_OS1 	GPIO_Pin_12			//临时用于输出G12地线
 
 /* OS2 */
 #define RCC_OS2 	RCC_AHB1Periph_GPIOG

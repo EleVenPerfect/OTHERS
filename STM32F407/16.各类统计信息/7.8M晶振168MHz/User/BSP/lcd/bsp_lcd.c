@@ -8,8 +8,9 @@ unsigned char TFT480800STOPUSER[4]	= {0xFF,0xFC,0xFF,0xAE};
 										//发送终止标志printf("%c%c%c%c",TFT480800STOP[0],TFT480800STOP[1],TFT480800STOP[2],TFT480800STOP[3] );
 
 
-ADC_SYS_CFG adc_sys_cfg;
-
+ADC_SYS_CFG adc_sys_cfg;	//配置信息
+OBJ_CFG obj_cfg;					//控件信息
+unsigned char display_data[50];
 
 /*自定义指令格式：
 起始标志： TFT480800START
@@ -101,27 +102,124 @@ void struct_print(ADC_SYS_CFG *adc)
 		printf("Sampling mercury delay: %d\r\n",adc->sys_sampling_mercury_delay);
 		printf("Samplinganalyse space time: %d\r\n",adc->sys_sampling_analyze_space_time);
 		printf("Sorption time: %d\r\n",adc->sys_sorption_time);
-		printf("Sorption flux: %d\r\n",adc->sys_sorption_flux);
+		printf("Sorption flux_h: %d\r\n",adc->sys_sorption_flux_h);
+		printf("Sorption flux_l: %d\r\n",adc->sys_sorption_flux_l);
 	}
 
 	
 	
 	//更新画面id文字画面
-void LCD_refresh_text( unsigned char screen, unsigned char id, unsigned char data[])
+void LCD_refresh_text( unsigned char screen, unsigned char id, unsigned int value_h, unsigned int value_l)
 {
 		unsigned char a[6] = { 0xB1, 0x10, 0x00, 0x00, 0x00, 0x00};
 		printf("%c",TFT480800START);
 		a[3] = screen;
 		a[5] =id;
 		printf("%c%c%c%c%c%c", a[0],a[1],a[2],a[3],a[4],a[5]);
-		printf("%s",data);
+		if(value_h!=0)
+		{
+				printf("%d",value_h);
+		}
+		printf("%d",value_l);	
 		printf("%c%c%c%c",TFT480800STOP[0],TFT480800STOP[1],TFT480800STOP[2],TFT480800STOP[3] );
+}
+
+/*
+*********************************************************************************************************
+*	函 数 名: AD7606_Disp
+*	功能说明: 显示采样后的数据
+*	形    参：无
+*	返 回 值: 无
+*********************************************************************************************************
+*/
+void AD7606_display_screen(unsigned int screen, unsigned int id, unsigned int ch)
+{
+	unsigned short int iTemp;
+	unsigned char a[6] = { 0xB1, 0x10, 0x00, 0x00, 0x00, 0x00};
+
+	/* 打印采集数据 */
+	printf("%c",TFT480800START);        
+  iTemp = s_volt[ch];	/* uV  */
+	a[3] = screen;
+	a[5] =id;
+	printf("%c%c%c%c%c%c", a[0],a[1],a[2],a[3],a[4],a[5]);
+		if (s_dat[ch] < 0)
+		{
+			iTemp = -iTemp;
+      printf("-%d.%d%d%d V", iTemp /1000, (iTemp%1000)/100, (iTemp%100)/10,iTemp%10);
+		}
+		else
+		{
+      printf("+%d.%d%d%d V", iTemp /1000, (iTemp%1000)/100, (iTemp%100)/10,iTemp%10);                    
+		}
+	printf("%c%c%c%c",TFT480800STOP[0],TFT480800STOP[1],TFT480800STOP[2],TFT480800STOP[3] );
 }
 
 
 
-	//更新画面曲线
-void LCD_refresh_graph( unsigned char screen, unsigned char id, unsigned char data)
-{
 
+
+
+unsigned char signedshoutint2unsignedchar (signed short int dat)
+{
+		unsigned char i,j;
+		if(dat < 0)
+		{
+				i = 0;
+				dat = -dat;
+		}
+		else 
+				i = 1;
+		j = 0xff/2;
+		if(i==0)
+		{
+				j -= (dat>>8);/////////////////////////////
+		}
+		else
+		{
+				j += (dat>>8);///////////////////////////////
+		}	
+		return j;
+}
+	//更新画面曲线
+void LCD_refresh_graph( unsigned char screen, unsigned char id, signed short int data)
+{
+		unsigned char a[9] = { 0xB1, 0x32, 0x00, 0x00, 0x00, 0x00,0,0,1};
+		unsigned char show_data;
+		printf("%c",TFT480800START);
+		a[3] = screen;
+		a[5] =id;
+		printf("%c%c%c%c%c%c%c%c%c", a[0],a[1],a[2],a[3],a[4],a[5],a[6],a[7],a[8]);
+		show_data = signedshoutint2unsignedchar(data);
+		printf("%c",show_data);
+		
+		printf("%c%c%c%c",TFT480800STOP[0],TFT480800STOP[1],TFT480800STOP[2],TFT480800STOP[3] );
+}
+
+
+	//更新画面文字控件
+OBJ_CFG LCD_get_slider_value( unsigned char data[])
+{
+		OBJ_CFG obj;
+	
+		obj.screenid = (data[3]<<8) +data[4];
+		obj.id			 = (data[5]<<8) +data[6];
+		obj.obj_type =  data[7];
+		obj.value_h  = (data[8]<<8) +data[9];
+		obj.value_l  = (data[10]<<8) +data[11];
+	
+		return obj;
+}
+
+unsigned char * convert_data(unsigned int value_h, unsigned int value_l)
+{
+		if(value_h==0)
+		{
+				
+		}
+		else
+		{
+		
+		}
+		return display_data;
 }

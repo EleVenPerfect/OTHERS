@@ -321,19 +321,19 @@ static  void  AppTaskStart (void *p_arg)
                  (OS_ERR     *)&err);
 
 		/* 创建 ADC extern 任务 */								 
-    OSTaskCreate((OS_TCB     *)&AppTaskAdceTCB,                /* Create the Led2 task                                */
-                 (CPU_CHAR   *)"App Task Adce",
-                 (OS_TASK_PTR ) AppTaskAdce,
-                 (void       *) 0,
-                 (OS_PRIO     ) APP_TASK_ADCE_PRIO,
-                 (CPU_STK    *)&AppTaskAdceStk[0],
-                 (CPU_STK_SIZE) APP_TASK_ADCE_STK_SIZE / 10,
-                 (CPU_STK_SIZE) APP_TASK_ADCE_STK_SIZE,
-                 (OS_MSG_QTY  ) 5u,
-                 (OS_TICK     ) 0u,
-                 (void       *) 0,
-                 (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
-                 (OS_ERR     *)&err);
+    //OSTaskCreate((OS_TCB     *)&AppTaskAdceTCB,                /* Create the Led2 task                                */
+    //             (CPU_CHAR   *)"App Task Adce",
+    //             (OS_TASK_PTR ) AppTaskAdce,
+    //             (void       *) 0,
+    //             (OS_PRIO     ) APP_TASK_ADCE_PRIO,
+    //             (CPU_STK    *)&AppTaskAdceStk[0],
+    //             (CPU_STK_SIZE) APP_TASK_ADCE_STK_SIZE / 10,
+    //             (CPU_STK_SIZE) APP_TASK_ADCE_STK_SIZE,
+    //             (OS_MSG_QTY  ) 5u,
+    //             (OS_TICK     ) 0u,
+    //             (void       *) 0,
+    //             (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+    //             (OS_ERR     *)&err);
 
 		/* 创建 CMD 任务 */								 
     OSTaskCreate((OS_TCB     *)&AppTaskCmdTCB,                /* Create the Led2 task                                */
@@ -766,11 +766,13 @@ static  void  AppTaskAdce ( void * p_arg )
 			g_tAD7606.Range = 1;	/* 10V */
 			AD7606_Scan();
 			AD7606_Mak();
-			//AD7606_Disp();//LCD_valtage_show();
+			AD7606_display_screen(5,5,0);//AD7606_Disp();//AD7606_display_screen(5,5,7);//LCD_valtage_show();
+			LCD_refresh_graph(5,6,s_volt[0]);
+			//AD7606_Disp();
   		OS_CRITICAL_EXIT();			
 			                               //退出临界段
 
-			OSTimeDly ( 100, DEF_BIT_NONE, & err );
+			OSTimeDly ( 10, DEF_BIT_NONE, & err );
 		}
 }
 
@@ -787,7 +789,7 @@ static  void  AppTaskCmd ( void * p_arg )
     OS_ERR      err;
 		char * pMsg;
 		OS_MSG_SIZE    msg_size;
-	
+
 		CPU_SR_ALLOC();
 		(void)p_arg;
 		
@@ -840,21 +842,70 @@ static  void  AppTaskCmd ( void * p_arg )
 					}
 					case 4:
 					{
-								if(pMsg[6] == 1)
-										adc_sys_cfg.sys_sampling_analyze_time =pMsg[11];
 								if(pMsg[6] == 2)
-										adc_sys_cfg.sys_sampling_space =pMsg[11];
-								if(pMsg[6] == 3)
-										adc_sys_cfg.sys_sampling_mercury_delay =pMsg[11];
+								{
+										adc_sys_cfg.sys_sampling_analyze_time = (pMsg[10]<<8) + pMsg[11];
+										LCD_refresh_text( 4, pMsg[6]+1, 0, adc_sys_cfg.sys_sampling_analyze_time);
+								}
 								if(pMsg[6] == 4)
-										adc_sys_cfg.sys_sampling_analyze_space_time =pMsg[11];
-								if(pMsg[6] == 5)
-										adc_sys_cfg.sys_sorption_time =pMsg[11];
+								{
+										adc_sys_cfg.sys_sampling_space = (pMsg[10]<<8) + pMsg[11];
+										LCD_refresh_text( 4, pMsg[6]+1, 0, adc_sys_cfg.sys_sampling_space);
+								}
 								if(pMsg[6] == 6)
-										adc_sys_cfg.sys_sorption_flux =pMsg[11];
+								{
+										adc_sys_cfg.sys_sampling_mercury_delay = (pMsg[10]<<8) + pMsg[11];
+										LCD_refresh_text( 4, pMsg[6]+1, 0,adc_sys_cfg.sys_sampling_mercury_delay);
+								}
+								if(pMsg[6] == 8)
+								{
+										adc_sys_cfg.sys_sampling_analyze_space_time = (pMsg[10]<<8) + pMsg[11];
+										LCD_refresh_text( 4, pMsg[6]+1, 0, adc_sys_cfg.sys_sampling_analyze_space_time);
+								}
+								if(pMsg[6] == 10)
+								{
+										adc_sys_cfg.sys_sorption_time = (pMsg[10]<<8) + pMsg[11];
+										LCD_refresh_text( 4, pMsg[6]+1, 0, adc_sys_cfg.sys_sorption_time );
+								}
+								if(pMsg[6] == 12)
+								{
+										adc_sys_cfg.sys_sorption_flux_l = (pMsg[10]<<8) + pMsg[11];
+										adc_sys_cfg.sys_sorption_flux_h = (pMsg[8]<<8)  + pMsg[9];
+										LCD_refresh_text( 4, pMsg[6]+1, adc_sys_cfg.sys_sorption_flux_h,adc_sys_cfg.sys_sorption_flux_l);						
+								}
+								
 								break;
 					}
 					case 5:
+					{
+								if(pMsg[6] == 0)
+								{
+										LCD_refresh_text(5,4,0,0);	
+										/* 创建 TEST 任务	*/					 
+										OSTaskCreate((OS_TCB     *)&AppTaskAdceTCB,                // Create the Led2 task 
+																 (CPU_CHAR   *)"App Task Adce",
+																 (OS_TASK_PTR ) AppTaskAdce,
+																 (void       *) 0,
+																 (OS_PRIO     ) APP_TASK_ADCE_PRIO,
+																 (CPU_STK    *)&AppTaskAdceStk[0],
+																 (CPU_STK_SIZE) APP_TASK_ADCE_STK_SIZE / 10,
+																 (CPU_STK_SIZE) APP_TASK_ADCE_STK_SIZE,
+																 (OS_MSG_QTY  ) 5u,
+																 (OS_TICK     ) 0u,
+																 (void       *) 0,
+																 (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+																 (OS_ERR     *)&err);
+								}
+								if(pMsg[6] == 1)
+								{
+										LCD_refresh_text(5,4,0,100);	
+										OSTaskDel ( (OS_TCB     *)&AppTaskAdceTCB, 
+																(OS_ERR     *)& err );                     //删除起始任务本身，该任务不再运行
+								}
+								
+								break;	
+					}
+					case 6:
 					{
 								/* 创建 TEST 任务	*/					 
 								OSTaskCreate((OS_TCB     *)&AppTaskWorkTCB,                // Create the Led2 task 

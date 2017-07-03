@@ -65,6 +65,20 @@
 
 #define  _BTN_OFFLINESETNUMBER_BUTTON1                                         1
 
+#define  _BTN_OFFLINESETNUMBER_BUTTON2                                        14
+
+#define  _TXT_DIS__OFFLINESETNUMBER_TEXT_DISPLAY1                              2
+
+#define  _TXT_DIS__OFFLINESETNUMBER_TEXT_DISPLAY2                              3
+
+#define  _TXT_DIS__OFFLINESETNUMBER_TEXT_DISPLAY3                              4
+
+#define  _TXT_DIS__OFFLINESETNUMBER_TEXT_DISPLAY4                              5
+
+#define  _TXT_DIS__OFFLINESETNUMBER_TEXT_DISPLAY5                              6
+
+#define  _TXT_DIS__OFFLINESETNUMBER_TEXT_DISPLAY6                              7
+
 //画面offlinecontrl的背景图片
 #define  _IMG_OFFLINECONTRL                                                    8
 
@@ -72,9 +86,6 @@
 #define  _IMG_5.运行前提示2_JPG                                                     9
 
 #define  _BTN_OFFLINECONTRL_BUTTON1                                            1
-
-//画面offlinecontrl中按钮Button2按下时的图片
-#define  _IMG_OFFLINECONTRL_BUTTON2_DOWN                                      10
 
 #define  _BTN_OFFLINECONTRL_BUTTON2                                            2
 

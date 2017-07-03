@@ -68,7 +68,7 @@
 #define  APP_TASK_DAC1_PRIO                         3u
 #define  APP_TASK_DAC2_PRIO                         3u
 
-#define  APP_TASK_ADCE_PRIO                         5u
+#define  APP_TASK_ADCE_PRIO                         6u
 
 #define  APP_TASK_WORK_PRIO                         4u
 

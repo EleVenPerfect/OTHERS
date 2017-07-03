@@ -18,7 +18,6 @@
         <image id="7" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\状态设置1.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
         <image id="8" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\5.运行前提示1.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
         <image id="9" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\5.运行前提示2.jpg" width="800" height="480" crop="0" effect_left="0" effect_top="0" effect_width="800" effect_height="480" size="768000" />
-        <image id="10" url="d:\atime\docs\github\others\stm32f407\22.tft程序02\5.运行前提示2.jpg" width="187" height="66" crop="0" effect_left="0" effect_top="0" effect_width="187" effect_height="66" size="24684" />
     </images>
     <waves />
 </Resource>
