@@ -1,0 +1,8 @@
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\串口实验\串口实验\bin\Debug\串口实验.exe
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\串口实验\串口实验\bin\Debug\串口实验.pdb
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\串口实验\串口实验\obj\Debug\串口实验.csprojResolveAssemblyReference.cache
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\串口实验\串口实验\obj\Debug\串口实验.Properties.Resources.resources
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\串口实验\串口实验\obj\Debug\串口实验.csproj.GenerateResource.Cache
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\串口实验\串口实验\obj\Debug\串口实验.exe
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\串口实验\串口实验\obj\Debug\串口实验.pdb
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\串口实验\串口实验\obj\Debug\串口实验.Form1.resources
