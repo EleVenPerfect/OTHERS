@@ -1,0 +1,8 @@
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\photo\photo\bin\Debug\photo.exe
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\photo\photo\bin\Debug\photo.pdb
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\photo\photo\obj\Debug\photo.csprojResolveAssemblyReference.cache
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\photo\photo\obj\Debug\photo.Form1.resources
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\photo\photo\obj\Debug\photo.Properties.Resources.resources
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\photo\photo\obj\Debug\photo.csproj.GenerateResource.Cache
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\photo\photo\obj\Debug\photo.exe
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\photo\photo\obj\Debug\photo.pdb
