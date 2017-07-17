@@ -74,7 +74,7 @@
             this.配置文件ToolStripMenuItem1,
             this.数据文件ToolStripMenuItem1});
             this.打开配置ToolStripMenuItem.Name = "打开配置ToolStripMenuItem";
-            this.打开配置ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.打开配置ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.打开配置ToolStripMenuItem.Text = "打开";
             this.打开配置ToolStripMenuItem.Click += new System.EventHandler(this.打开配置ToolStripMenuItem_Click);
             // 
@@ -96,7 +96,7 @@
             this.配置文件ToolStripMenuItem,
             this.数据文件ToolStripMenuItem});
             this.保存配置ToolStripMenuItem.Name = "保存配置ToolStripMenuItem";
-            this.保存配置ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.保存配置ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.保存配置ToolStripMenuItem.Text = "保存";
             // 
             // 配置文件ToolStripMenuItem
@@ -114,7 +114,7 @@
             // 保存数据ToolStripMenuItem
             // 
             this.保存数据ToolStripMenuItem.Name = "保存数据ToolStripMenuItem";
-            this.保存数据ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.保存数据ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.保存数据ToolStripMenuItem.Text = "关闭";
             // 
             // 编辑ToolStripMenuItem
@@ -129,13 +129,13 @@
             // 状态设置ToolStripMenuItem
             // 
             this.状态设置ToolStripMenuItem.Name = "状态设置ToolStripMenuItem";
-            this.状态设置ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.状态设置ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.状态设置ToolStripMenuItem.Text = "状态设置";
             // 
             // 采样模式ToolStripMenuItem
             // 
             this.采样模式ToolStripMenuItem.Name = "采样模式ToolStripMenuItem";
-            this.采样模式ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.采样模式ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.采样模式ToolStripMenuItem.Text = "采样模式";
             // 
             // 帮助ToolStripMenuItem
@@ -149,7 +149,7 @@
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.关于ToolStripMenuItem.Text = "关于";
             this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
             // 
@@ -291,7 +291,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "串口测试程序";
+            this.Text = "   ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -6,3 +6,5 @@ D:\ATIME\docs\GitHub\OTHERS\C#\20170706\串口实验\串口实验\obj\Debug\串�
 D:\ATIME\docs\GitHub\OTHERS\C#\20170706\串口实验\串口实验\obj\Debug\串口实验.exe
 D:\ATIME\docs\GitHub\OTHERS\C#\20170706\串口实验\串口实验\obj\Debug\串口实验.pdb
 D:\ATIME\docs\GitHub\OTHERS\C#\20170706\串口实验\串口实验\obj\Debug\串口实验.Form1.resources
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\1.串口实验\串口实验\obj\Debug\串口实验.exe
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\1.串口实验\串口实验\obj\Debug\串口实验.pdb

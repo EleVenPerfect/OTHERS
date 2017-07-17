@@ -1,0 +1,14 @@
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\3.NPOI\3.NPOI\bin\Debug\3.NPOI.exe
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\3.NPOI\3.NPOI\bin\Debug\3.NPOI.pdb
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\3.NPOI\3.NPOI\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\3.NPOI\3.NPOI\bin\Debug\NPOI.dll
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\3.NPOI\3.NPOI\bin\Debug\NPOI.OOXML.dll
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\3.NPOI\3.NPOI\bin\Debug\NPOI.OpenXml4Net.dll
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\3.NPOI\3.NPOI\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\3.NPOI\3.NPOI\bin\Debug\NPOI.xml
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\3.NPOI\3.NPOI\obj\Debug\3.NPOI.csprojResolveAssemblyReference.cache
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\3.NPOI\3.NPOI\obj\Debug\_3.NPOI.Properties.Resources.resources
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\3.NPOI\3.NPOI\obj\Debug\3.NPOI.csproj.GenerateResource.Cache
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\3.NPOI\3.NPOI\obj\Debug\3.NPOI.exe
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\3.NPOI\3.NPOI\obj\Debug\3.NPOI.pdb
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\3.NPOI\3.NPOI\obj\Debug\_3.NPOI.Form1.resources
