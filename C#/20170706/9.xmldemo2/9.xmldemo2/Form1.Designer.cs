@@ -1,4 +1,4 @@
-﻿namespace _8.xmldemo
+﻿namespace _9.xmldemo2
 {
     partial class Form1
     {

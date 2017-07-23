@@ -1,0 +1,8 @@
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\9.xmldemo2\9.xmldemo2\obj\Debug\9.xmldemo2.csprojResolveAssemblyReference.cache
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\9.xmldemo2\9.xmldemo2\obj\Debug\_9.xmldemo2.Form1.resources
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\9.xmldemo2\9.xmldemo2\obj\Debug\_9.xmldemo2.Properties.Resources.resources
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\9.xmldemo2\9.xmldemo2\obj\Debug\9.xmldemo2.csproj.GenerateResource.Cache
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\9.xmldemo2\9.xmldemo2\bin\Debug\9.xmldemo2.exe
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\9.xmldemo2\9.xmldemo2\bin\Debug\9.xmldemo2.pdb
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\9.xmldemo2\9.xmldemo2\obj\Debug\9.xmldemo2.exe
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\9.xmldemo2\9.xmldemo2\obj\Debug\9.xmldemo2.pdb
