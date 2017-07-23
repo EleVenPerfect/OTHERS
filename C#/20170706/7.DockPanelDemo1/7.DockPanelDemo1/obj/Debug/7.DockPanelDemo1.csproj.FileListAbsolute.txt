@@ -1,0 +1,10 @@
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\7.DockPanelDemo1\7.DockPanelDemo1\bin\Debug\7.DockPanelDemo1.exe
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\7.DockPanelDemo1\7.DockPanelDemo1\bin\Debug\7.DockPanelDemo1.pdb
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\7.DockPanelDemo1\7.DockPanelDemo1\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\7.DockPanelDemo1\7.DockPanelDemo1\obj\Debug\7.DockPanelDemo1.csprojResolveAssemblyReference.cache
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\7.DockPanelDemo1\7.DockPanelDemo1\obj\Debug\_7.DockPanelDemo1.Properties.Resources.resources
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\7.DockPanelDemo1\7.DockPanelDemo1\obj\Debug\7.DockPanelDemo1.csproj.GenerateResource.Cache
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\7.DockPanelDemo1\7.DockPanelDemo1\obj\Debug\7.DockPanelDemo1.exe
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\7.DockPanelDemo1\7.DockPanelDemo1\obj\Debug\7.DockPanelDemo1.pdb
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\7.DockPanelDemo1\7.DockPanelDemo1\obj\Debug\_7.DockPanelDemo1.Form1.resources
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\7.DockPanelDemo1\7.DockPanelDemo1\obj\Debug\_7.DockPanelDemo1.Form5.resources
