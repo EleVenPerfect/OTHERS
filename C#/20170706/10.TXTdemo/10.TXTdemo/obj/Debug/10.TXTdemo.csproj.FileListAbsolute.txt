@@ -1,0 +1,8 @@
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\10.TXTdemo\10.TXTdemo\bin\Debug\10.TXTdemo.exe
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\10.TXTdemo\10.TXTdemo\bin\Debug\10.TXTdemo.pdb
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\10.TXTdemo\10.TXTdemo\obj\Debug\10.TXTdemo.csprojResolveAssemblyReference.cache
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\10.TXTdemo\10.TXTdemo\obj\Debug\_10.TXTdemo.Form1.resources
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\10.TXTdemo\10.TXTdemo\obj\Debug\_10.TXTdemo.Properties.Resources.resources
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\10.TXTdemo\10.TXTdemo\obj\Debug\10.TXTdemo.csproj.GenerateResource.Cache
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\10.TXTdemo\10.TXTdemo\obj\Debug\10.TXTdemo.exe
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\10.TXTdemo\10.TXTdemo\obj\Debug\10.TXTdemo.pdb
