@@ -50,5 +50,15 @@ namespace _5.布局
         {
 
         }
+
+        private void 数据文件ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }
