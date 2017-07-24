@@ -1,0 +1,9 @@
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\11.Wizarddemo\11.Wizarddemo\bin\Debug\11.Wizarddemo.exe
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\11.Wizarddemo\11.Wizarddemo\bin\Debug\11.Wizarddemo.pdb
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\11.Wizarddemo\11.Wizarddemo\obj\Debug\11.Wizarddemo.csprojResolveAssemblyReference.cache
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\11.Wizarddemo\11.Wizarddemo\obj\Debug\_11.Wizarddemo.Properties.Resources.resources
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\11.Wizarddemo\11.Wizarddemo\obj\Debug\11.Wizarddemo.csproj.GenerateResource.Cache
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\11.Wizarddemo\11.Wizarddemo\obj\Debug\11.Wizarddemo.exe
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\11.Wizarddemo\11.Wizarddemo\obj\Debug\11.Wizarddemo.pdb
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\11.Wizarddemo\11.Wizarddemo\bin\Debug\WizardBase.dll
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\11.Wizarddemo\11.Wizarddemo\obj\Debug\_11.Wizarddemo.Form1.resources

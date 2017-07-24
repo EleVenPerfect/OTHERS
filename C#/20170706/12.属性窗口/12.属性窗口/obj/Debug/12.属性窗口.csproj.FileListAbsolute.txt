@@ -1,0 +1,8 @@
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\12.属性窗口\12.属性窗口\bin\Debug\12.属性窗口.exe
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\12.属性窗口\12.属性窗口\bin\Debug\12.属性窗口.pdb
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\12.属性窗口\12.属性窗口\obj\Debug\12.属性窗口.csprojResolveAssemblyReference.cache
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\12.属性窗口\12.属性窗口\obj\Debug\_12.属性窗口.Form1.resources
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\12.属性窗口\12.属性窗口\obj\Debug\_12.属性窗口.Properties.Resources.resources
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\12.属性窗口\12.属性窗口\obj\Debug\12.属性窗口.csproj.GenerateResource.Cache
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\12.属性窗口\12.属性窗口\obj\Debug\12.属性窗口.exe
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\12.属性窗口\12.属性窗口\obj\Debug\12.属性窗口.pdb

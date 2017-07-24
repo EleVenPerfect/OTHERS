@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.属性窗口2动态生成", "12.属性窗口2动态生成\12.属性窗口2动态生成.csproj", "{DDA4C759-7262-4050-9920-575656E8124E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDA4C759-7262-4050-9920-575656E8124E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA4C759-7262-4050-9920-575656E8124E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA4C759-7262-4050-9920-575656E8124E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA4C759-7262-4050-9920-575656E8124E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
