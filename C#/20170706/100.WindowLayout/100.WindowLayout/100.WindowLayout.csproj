@@ -97,6 +97,9 @@
     <EmbeddedResource Include="AppSetting.resx">
       <DependentUpon>AppSetting.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DataShow.resx">
+      <DependentUpon>DataShow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

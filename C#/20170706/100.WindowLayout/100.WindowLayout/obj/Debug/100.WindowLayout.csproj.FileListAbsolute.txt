@@ -16,3 +16,4 @@ D:\ATIME\docs\GitHub\OTHERS\C#\20170706\100.WindowLayout\100.WindowLayout\obj\De
 D:\ATIME\docs\GitHub\OTHERS\C#\20170706\100.WindowLayout\100.WindowLayout\obj\Debug\_100.WindowLayout.AppSetting.resources
 D:\ATIME\docs\GitHub\OTHERS\C#\20170706\100.WindowLayout\100.WindowLayout\obj\Debug\_100.WindowLayout.SerialInfo.resources
 D:\ATIME\docs\GitHub\OTHERS\C#\20170706\100.WindowLayout\100.WindowLayout\obj\Debug\_100.WindowLayout.ProjectTree.resources
+D:\ATIME\docs\GitHub\OTHERS\C#\20170706\100.WindowLayout\100.WindowLayout\obj\Debug\_100.WindowLayout.DataShow.resources

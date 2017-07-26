@@ -15,6 +15,7 @@ namespace _100.WindowLayout
         public SerialInfo()
         {
             InitializeComponent();
+            
         }
     }
 }

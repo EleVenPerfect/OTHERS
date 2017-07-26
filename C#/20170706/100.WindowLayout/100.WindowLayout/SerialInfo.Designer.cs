@@ -47,6 +47,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.richTextBox1);
             this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.HideOnClose = true;
             this.Name = "SerialInfo";
             this.Text = "SerialInfo";
             this.ResumeLayout(false);
@@ -55,6 +56,6 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        public System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

@@ -39,14 +39,15 @@
             this.treeView1.Size = new System.Drawing.Size(284, 261);
             this.treeView1.TabIndex = 0;
             // 
-            // PerjectTree
+            // ProjectTree
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.treeView1);
             this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Name = "PerjectTree";
+            this.HideOnClose = true;
+            this.Name = "ProjectTree";
             this.Text = "PerjectTree";
             this.ResumeLayout(false);
 

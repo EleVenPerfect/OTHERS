@@ -48,6 +48,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.propertyGrid1);
             this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.HideOnClose = true;
             this.Name = "AppSetting";
             this.Text = "AppSetting";
             this.ResumeLayout(false);
