@@ -4,9 +4,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Xml;
 using System.Windows.Forms;
+using NPOI.SS.UserModel;
+using NPOI.HSSF.UserModel;
+using NPOI.XSSF.UserModel;
 
 namespace _100.WindowLayout
 {
@@ -137,7 +141,19 @@ namespace _100.WindowLayout
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string SavePath = saveFileDialog1.FileName;
-                SerialInfo.richTextBox1.AppendText(SavePath + "\n");
+                try
+                {
+                    HSSFWorkbook workbook2003 = new HSSFWorkbook(); //新建xls工作簿
+                    FileStream file2003 = new FileStream(SavePath, FileMode.Create);
+                    workbook2003.Write(file2003);
+                    file2003.Close();  //关闭文件流  
+                    workbook2003.Close();
+                    SerialInfo.richTextBox1.AppendText("数据文件创建成功\n");
+                }
+                catch
+                {
+                    SerialInfo.richTextBox1.AppendText("数据文件创建失败\n");
+                }
             }
         }
 
@@ -147,7 +163,18 @@ namespace _100.WindowLayout
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string SavePath = saveFileDialog1.FileName;
-                SerialInfo.richTextBox1.AppendText(SavePath + "\n");
+                try
+                {
+                    XmlDocument myXmlDoc = new XmlDocument();
+                    XmlElement rootElement = myXmlDoc.CreateElement("Adjust");
+                    myXmlDoc.AppendChild(rootElement);
+                    myXmlDoc.Save(SavePath);
+                    SerialInfo.richTextBox1.AppendText("校准文件创建成功\n");
+                }
+                catch
+                {
+                    SerialInfo.richTextBox1.AppendText("校准文件创建失败\n");
+                }
             }
         }
 
@@ -159,12 +186,18 @@ namespace _100.WindowLayout
                 string SavePath = saveFileDialog1.FileName;
                 try
                 {
-                    
-                    SerialInfo.richTextBox1.AppendText("创建测试报告成功！");
+                    FileStream fs = new FileStream(SavePath, FileMode.Create);
+                    StreamWriter sw = new StreamWriter(fs);
+                    //清空缓冲区
+                    sw.Flush();
+                    //关闭流
+                    sw.Close();
+                    fs.Close();
+                    SerialInfo.richTextBox1.AppendText("创建测试报告成功\n");
                 }
                 catch
                 {
-                    SerialInfo.richTextBox1.AppendText("创建测试报告失败！");
+                    SerialInfo.richTextBox1.AppendText("创建测试报告失败\n");
                 }
             }
         }
