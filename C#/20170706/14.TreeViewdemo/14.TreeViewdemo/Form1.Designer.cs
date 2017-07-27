@@ -57,6 +57,7 @@
             treeNode4.Text = "节点6";
             treeNode5.Name = "节点7";
             treeNode5.Text = "节点7";
+            treeNode6.Checked = true;
             treeNode6.Name = "节点2";
             treeNode6.Text = "节点2";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {

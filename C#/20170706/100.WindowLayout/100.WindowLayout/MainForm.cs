@@ -201,5 +201,10 @@ namespace _100.WindowLayout
                 }
             }
         }
+
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();//需要添加判断是否保存
+        }
     }
 }
