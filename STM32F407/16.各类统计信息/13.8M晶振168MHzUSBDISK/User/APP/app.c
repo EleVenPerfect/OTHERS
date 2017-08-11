@@ -1277,33 +1277,12 @@ static  void  AppTaskWork ( void * p_arg )
 static  void  AppTaskTest ( void * p_arg )
 {
     OS_ERR      err;
-		int i = 0;
 		(void)p_arg;
 		
 	
 		while (DEF_TRUE) 
 		{
-				if(i==0)
-				{
-						file_list(file_list_addr);
-						for( i=0; i<7; i++)
-								if(file_list_addr[i]!=0x00)
-								{
-										file_info.file_first_addr = file_list_addr[i];
-										break;
-								}
-								
-						file_update();
-						file_read();
-						//printf("\r\n创建文件：%d",file_creat("ATIME"));
-						for(i=0;i<512;i++)
-								printf("\r\n读取数据：%d",file_info.file_block.block_data[i]);
-						//printf("\r\n删除文件：%d",file_delete());
-						
-						//printf("\r\n返回值: %d",file_delete(0x080A0000));
-						//printf("\r\n写入成功：%d",file_write(0x080A0000,1,temp_data));
-				}
-				i = 1;
+				
 				OSTimeDly ( 1000, OS_OPT_TIME_DLY, & err );
 		}
 }
