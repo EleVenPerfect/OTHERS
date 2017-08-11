@@ -242,50 +242,6 @@ signed char sector_erase(void)
 
 
 
-/************************************
-函数功能：写入文件1kb数据
-传递参数：
-返回值：
-注意：	
-***************************************/
-signed char sector_write_1kb(void)
-{
-		unsigned int i = 0;
-		uint32_t uwAddress = 0;
-		
-		uwAddress = file_info.file_block.block_addr;
-	
-		/* FLASH 解锁 ********************************/
-		/* 使能访问FLASH控制寄存器 */
-		FLASH_Unlock();
-			
-		/* 擦除用户区域 (用户区域指程序本身没有使用的空间，可以自定义)**/
-		/* 清除各种FLASH的标志位 */  
-		FLASH_ClearFlag(FLASH_FLAG_EOP | FLASH_FLAG_OPERR | FLASH_FLAG_WRPERR | 
-										FLASH_FLAG_PGAERR | FLASH_FLAG_PGPERR|FLASH_FLAG_PGSERR); 
-	
-	
-		while ( i<512 )
-		{
-				if (FLASH_ProgramHalfWord(uwAddress, file_info.file_block.block_data[i]) == FLASH_COMPLETE)
-				{
-						uwAddress = uwAddress + 2;
-						i++;
-				}
-				else
-				{ 
-						  /* 给FLASH上锁，防止内容被篡改*/
-							FLASH_Lock(); 
-							/*写入出错，返回，实际应用中可加入处理 */
-							return -1;
-				}
-		}
-		/* 给FLASH上锁，防止内容被篡改*/
-		FLASH_Lock(); 
-		return 0;
-}
-
-
 
 /************************************
 函数功能：扫描存储空间可用的第一个位置
@@ -402,7 +358,7 @@ void update_file_info_8byte_data( void)
 传递参数：文件结构体
 返回值：-1：FLASH写入失败
 			 -2：存储空间满
-注意：	
+注意：	只需要设置文件名称，无其他参数
 ***************************************/
 signed char file_creat( unsigned char file_name[])
 {
@@ -426,8 +382,8 @@ signed char file_creat( unsigned char file_name[])
 		file_info.file_block.block_addr = file_info.file_first_addr;
 		file_info.file_block.block_head_addr = file_info.file_first_addr;
 		file_info.file_block.block_number = 0;
-		file_info.file_block.block_next_number = 0;
-		file_info.file_block.block_prev_number = 0;
+		file_info.file_block.block_next_number = 0xff;
+		file_info.file_block.block_prev_number = 0xff;
 		file_info.file_block.block_state = 0xab;//表示文件单独不连接
 		generate_file_info_8byte_data(file_name);//更新文件头数据
 		
@@ -467,7 +423,7 @@ signed char file_creat( unsigned char file_name[])
 函数功能：删除文件
 传递参数：文件结构体
 返回值：处理结果
-注意：	
+注意：	需要设置文件首地址
 ***************************************/
 signed char file_delete(void)
 {
@@ -498,7 +454,7 @@ signed char file_delete(void)
 返回值：处理结果
 			-1:FLASH写入失败
 			-2：此文件存储空间满
-注意：	
+注意：	需要设置文件首地址、区块号、数据区
 ***************************************/
 signed char file_write( void)
 {
@@ -507,8 +463,8 @@ signed char file_write( void)
 		file_info.file_block.block_number += 1;
 		if(file_info.file_block.block_number >= 128)
 				return -2;
-		file_info.file_block.block_next_number = 0;
-		file_info.file_block.block_prev_number = 0;
+		file_info.file_block.block_next_number = 0xff;
+		file_info.file_block.block_prev_number = 0xff;
 		file_info.file_block.block_state = 0xab;//表示文件单独不连接
 		generate_block_info_8byte_data();//首先更新文件结构体数据
 		file_info.file_block.block_head_addr = file_info.file_first_addr + file_info.file_block.block_number*8;
@@ -529,14 +485,14 @@ signed char file_write( void)
 		{
 				if(FLASH_ProgramByte(file_info.file_block.block_head_addr + i, file_info.file_block.block_head_data[i]) != FLASH_COMPLETE)
 						return -1;//写入失败
-				printf("\r\n正在写入：0X%.8x",file_info.file_block.block_head_addr+i);
+				//printf("\r\n正在写入：0X%.8x",file_info.file_block.block_head_addr+i);
 		}
 		//写入区块头
 		for( i=0; i<512; i++)//写入对应位置
 		{
 				if(FLASH_ProgramHalfWord(file_info.file_block.block_addr + 2*i, file_info.file_block.block_data[i]) != FLASH_COMPLETE)
 						return -1;//写入失败
-				printf("\r\n正在写入：0X%.8x",file_info.file_block.block_addr + 2*i);
+				//printf("\r\n正在写入：0X%.8x",file_info.file_block.block_addr + 2*i);
 		}
 		//写入区块数据
 		FLASH_Lock();
@@ -554,7 +510,7 @@ signed char file_write( void)
 函数功能：读取指定文件
 传递参数：文件所在地址
 返回值：文件头结构体
-注意：	需要预先设置好首地址/序号
+注意：	需要预先设置好首地址、区块号
 ***************************************/
 signed char file_read( void)
 {
@@ -580,7 +536,7 @@ signed char file_read( void)
 				data32 = *(volatile unsigned int*)(file_info.file_block.block_head_addr+i);
 				data8  = 0xff&data32;
 				file_info.file_block.block_head_data[i] = data8;
-				printf("\r\n正在读取：0X%.8x",file_info.file_block.block_head_addr+i);
+				//printf("\r\n正在读取：0X%.8x",file_info.file_block.block_head_addr+i);
 		}//读数据块头
 		update_block_info_8byte_data();
 		
@@ -602,7 +558,7 @@ signed char file_read( void)
 传递参数：文件所在地址
 返回值：
 				-2：文件满
-注意：	
+注意：	从flash读取数据更新文件头，需要设置文件首地址
 ***************************************/
 signed char file_update( void)
 {
@@ -648,7 +604,7 @@ signed char file_update( void)
 函数功能：列出机内文件
 传递参数：数组，用于存储文件地址
 返回值：空
-注意：	
+注意：	通过数组存储已经存在的文件地址，位置和数组位置对应
 ***************************************/
 void file_list(unsigned int file_list[7])
 {
