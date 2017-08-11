@@ -56,9 +56,14 @@ signed char sector_erase(void);
 signed char file_creat( unsigned char file_name[]);
 signed char file_delete(void);
 signed char file_write( void);
+signed char file_read( void);
+signed char file_update( void);
+void file_list(unsigned int file_list[7]);
 
 extern struct FILE_INFO file_info;
+extern unsigned int file_list_addr[7];
 extern const unsigned int file_state_addr[];
+
 
 
 

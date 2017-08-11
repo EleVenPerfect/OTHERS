@@ -16,6 +16,7 @@
 /*准备写入的测试数据*/
 #define DATA_32                 ((unsigned int)0x12345678)
 struct FILE_INFO file_info;
+unsigned int file_list_addr[7];
 
 const unsigned int file_state_addr[7] = {
 						((uint32_t)0x08020007),((uint32_t)0x08040007),((uint32_t)0x08060007),
@@ -208,23 +209,6 @@ static unsigned int GetSector(unsigned int Address)
 
 
 /************************************
-函数功能：更新指定文件区块数据
-传递参数：文件结构体
-返回值：处理结果
-注意：	
-***************************************/
-signed char file_info_update(void)
-{
-		//计算区块地址
-		//计算区块头数据
-		//写入区块头
-		//写入区块数据
-		return 0;
-}
-	
-
-
-/************************************
 函数功能：擦出指定扇区
 传递参数：扇区地址
 返回值：擦除结果
@@ -373,6 +357,42 @@ void generate_file_info_8byte_data(unsigned char file_name[])
 		file_info.file_head_data[5] = '\0';
 		file_info.file_head_data[6]	= 0xff;
 		file_info.file_head_data[7] = 0xab;
+}
+
+
+
+
+/************************************
+函数功能：文件头数据更新信息
+传递参数：文件结构体
+返回值：处理结果
+注意：	
+***************************************/
+void update_block_info_8byte_data( void)
+{
+		file_info.file_block.block_number = file_info.file_block.block_head_data[0];
+		file_info.file_block.block_state  = file_info.file_block.block_head_data[1];
+		file_info.file_block.block_prev_number = file_info.file_block.block_head_data[2];
+		file_info.file_block.block_next_number = file_info.file_block.block_head_data[3];
+	
+		file_info.file_used = file_info.file_block.block_number;
+}
+
+
+/************************************
+函数功能：区块头数据更新信息
+传递参数：文件结构体
+返回值：处理结果
+注意：	
+***************************************/
+void update_file_info_8byte_data( void)
+{
+		file_info.file_name[0] = file_info.file_head_data[0];
+		file_info.file_name[1] = file_info.file_head_data[1];
+		file_info.file_name[2] = file_info.file_head_data[2];
+		file_info.file_name[3] = file_info.file_head_data[3];
+		file_info.file_name[4] = file_info.file_head_data[4];
+		file_info.file_state 	=	file_info.file_head_data[7];
 }
 
 
@@ -526,31 +546,103 @@ signed char file_write( void)
 
 
 
+
+
+
+
 /************************************
-函数功能：读取文件准备继续写入
+函数功能：读取指定文件
 传递参数：文件所在地址
 返回值：文件头结构体
-注意：	
+注意：	需要预先设置好首地址/序号
 ***************************************/
-signed char file_read( unsigned int addr)
+signed char file_read( void)
 {
+		unsigned int i;
+		volatile unsigned char  		data8;
+		volatile unsigned short int data16;
+		volatile unsigned int 			data32;
+		//首先根据首地址/文件序号获取文件头数据
+		file_info.file_block.block_head_addr = file_info.file_first_addr + file_info.file_block.block_number*8;
+		file_info.file_block.block_addr = file_info.file_first_addr+ file_info.file_block.block_number*1024;
+		//从该地址读取
+	
+		for( i=0; i<8; i++)
+		{
+				data32 = *(volatile unsigned int*)(file_info.file_first_addr+i);
+				data8  = 0xff&data32;
+				file_info.file_head_data[i] = data8;
+		}//读文件头
+		update_file_info_8byte_data();
 		
-		return -1;
+		for( i=0; i<8; i++)
+		{
+				data32 = *(volatile unsigned int*)(file_info.file_block.block_head_addr+i);
+				data8  = 0xff&data32;
+				file_info.file_block.block_head_data[i] = data8;
+				printf("\r\n正在读取：0X%.8x",file_info.file_block.block_head_addr+i);
+		}//读数据块头
+		update_block_info_8byte_data();
+		
+		for( i=0; i<512; i++)
+		{
+				data32 = *(volatile unsigned int*)(file_info.file_block.block_addr+i*2);
+				data16  = 0x0ffff&data32;
+				file_info.file_block.block_data[i] = data16;
+				//printf("\r\n正在读取：0X%.8x",file_info.file_block.block_addr+i*2);
+		}//读数据块
+		return 0;//成功读取
 }
+
 
 
 /************************************
-函数功能：根据文件名搜索文件
-传递参数：文件名
-返回值：文件结构体
+函数功能：根据FLASH内容，设置最新文件头信息
+					指针指向最后一个有数据的位置
+传递参数：文件所在地址
+返回值：
+				-2：文件满
 注意：	
 ***************************************/
-struct FILE_INFO file_search_by_name(unsigned char file_name[])
+signed char file_update( void)
 {
-		struct FILE_INFO file_info;
+		unsigned int i;
+		volatile unsigned char  		data8;
+		volatile unsigned short int data16;
+		volatile unsigned int 			data32;
 		
-		return file_info;
+		for( i=0; i<8; i++)
+		{
+				data32 = *(volatile unsigned int*)(file_info.file_first_addr+i);
+				data8  = 0xff&data32;
+				file_info.file_head_data[i] = data8;
+		}//读文件头
+		update_file_info_8byte_data();//更新文件头
+		
+		for( i=1; i<128; i++)
+		{
+				data32 = *(volatile unsigned int*)(file_info.file_first_addr+i*8);
+				data8  = 0xff&data32;
+				if( data8==0xff )
+				{
+						i -=1;
+						file_info.file_used = i;
+						file_info.file_block.block_number = i;
+						file_info.file_block.block_addr = file_info.file_first_addr + i*8;
+						file_info.file_block.block_head_addr = file_info.file_first_addr + i*1024;
+						break;
+				}
+		}
+		if(i == 128)
+		{
+				return -2;
+		}
+		//扫描当前FLASH空间占用
+		
+		return 0;//成功读取
 }
+
+
 
 /************************************
 函数功能：列出机内文件
@@ -560,9 +652,19 @@ struct FILE_INFO file_search_by_name(unsigned char file_name[])
 ***************************************/
 void file_list(unsigned int file_list[7])
 {
-		//扫描各个文件头删除标志位
+		unsigned char i;
+		volatile unsigned char  		data8;
+		volatile unsigned int 			data32;
+		for( i=0; i<7; i++)
+		{
+				data32 = *(volatile unsigned int*)(file_state_addr[i]);
+				data8  = 0xff&data32;
+				if(	data8==0xab )
+						file_list[i] = file_state_addr[i]-7;//扫描各个文件头删除标志位
+				else
+						file_list[i] = 0x00;
+		}
 		//若当前标志位没有删除标志，也没有占用标志，则将对应数组设置为0x0000
-		//若此块有文件存储，则将对应位置设置为地址
 }
 
 
