@@ -581,11 +581,6 @@ Section Cross References
     bsp_internalflash.o(i.sector_erase) refers to stm32f4xx_flash.o(i.FLASH_EraseSector) for FLASH_EraseSector
     bsp_internalflash.o(i.sector_erase) refers to stm32f4xx_flash.o(i.FLASH_Lock) for FLASH_Lock
     bsp_internalflash.o(i.sector_erase) refers to bsp_internalflash.o(.bss) for file_info
-    bsp_internalflash.o(i.sector_write_1kb) refers to stm32f4xx_flash.o(i.FLASH_Unlock) for FLASH_Unlock
-    bsp_internalflash.o(i.sector_write_1kb) refers to stm32f4xx_flash.o(i.FLASH_ClearFlag) for FLASH_ClearFlag
-    bsp_internalflash.o(i.sector_write_1kb) refers to stm32f4xx_flash.o(i.FLASH_ProgramHalfWord) for FLASH_ProgramHalfWord
-    bsp_internalflash.o(i.sector_write_1kb) refers to stm32f4xx_flash.o(i.FLASH_Lock) for FLASH_Lock
-    bsp_internalflash.o(i.sector_write_1kb) refers to bsp_internalflash.o(.bss) for file_info
     bsp_internalflash.o(i.update_block_info_8byte_data) refers to bsp_internalflash.o(.bss) for file_info
     bsp_internalflash.o(i.update_file_info_8byte_data) refers to bsp_internalflash.o(.bss) for file_info
     cpu_core.o(i.CPU_CntLeadZeros08) refers to cpu_a.o(.text) for CPU_CntLeadZeros
@@ -2647,7 +2642,6 @@ Removing Unused input sections from the image.
     Removing bsp_internalflash.o(i.generate_file_info_8byte_data), (44 bytes).
     Removing bsp_internalflash.o(i.search_available_sector), (92 bytes).
     Removing bsp_internalflash.o(i.sector_erase), (56 bytes).
-    Removing bsp_internalflash.o(i.sector_write_1kb), (76 bytes).
     Removing cpu_core.o(i.CPU_CntLeadZeros08), (18 bytes).
     Removing cpu_core.o(i.CPU_CntLeadZeros16), (18 bytes).
     Removing cpu_core.o(i.CPU_CntLeadZeros32), (18 bytes).
@@ -2807,7 +2801,7 @@ Removing Unused input sections from the image.
     Removing dfixul.o(.text), (48 bytes).
     Removing cdrcmple.o(.text), (48 bytes).
 
-974 unused section(s) (total 59895 bytes) removed from the image.
+973 unused section(s) (total 59819 bytes) removed from the image.
 
 ==============================================================================
 
@@ -3975,30 +3969,30 @@ Memory Map of the image
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x00000188   Data   RO            3    RESET               startup_stm32f40xx.o
-    0x08000188   0x00000000   Code   RO         7758  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000188   0x00000004   Code   RO         8036    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x0800018c   0x00000004   Code   RO         8039    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000190   0x00000000   Code   RO         8041    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000190   0x00000000   Code   RO         8043    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000190   0x00000008   Code   RO         8044    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x08000198   0x00000000   Code   RO         8046    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x08000198   0x00000000   Code   RO         8048    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x08000198   0x00000004   Code   RO         8037    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000188   0x00000000   Code   RO         7752  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000188   0x00000004   Code   RO         8030    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0800018c   0x00000004   Code   RO         8033    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000190   0x00000000   Code   RO         8035    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000190   0x00000000   Code   RO         8037    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000190   0x00000008   Code   RO         8038    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000198   0x00000000   Code   RO         8040    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000198   0x00000000   Code   RO         8042    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000198   0x00000004   Code   RO         8031    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x0800019c   0x0000004c   Code   RO            4    .text               startup_stm32f40xx.o
-    0x080001e8   0x00000034   Code   RO         5968    .text               cpu_a.o
-    0x0800021c   0x00000062   Code   RO         7761    .text               mc_w.l(uldiv.o)
-    0x0800027e   0x000000e4   Code   RO         8028    .text               mf_w.l(dmul.o)
-    0x08000362   0x000000de   Code   RO         8030    .text               mf_w.l(ddiv.o)
-    0x08000440   0x0000001a   Code   RO         8032    .text               mf_w.l(dfltui.o)
-    0x0800045a   0x00000032   Code   RO         8034    .text               mf_w.l(dfixui.o)
-    0x0800048c   0x0000001e   Code   RO         8053    .text               mc_w.l(llshl.o)
-    0x080004aa   0x00000020   Code   RO         8055    .text               mc_w.l(llushr.o)
-    0x080004ca   0x00000000   Code   RO         8057    .text               mc_w.l(iusefp.o)
-    0x080004ca   0x000000ba   Code   RO         8058    .text               mf_w.l(depilogue.o)
-    0x08000584   0x00000024   Code   RO         8066    .text               mc_w.l(init.o)
-    0x080005a8   0x00000056   Code   RO         8078    .text               mc_w.l(__dczerorl2.o)
+    0x080001e8   0x00000034   Code   RO         5962    .text               cpu_a.o
+    0x0800021c   0x00000062   Code   RO         7755    .text               mc_w.l(uldiv.o)
+    0x0800027e   0x000000e4   Code   RO         8022    .text               mf_w.l(dmul.o)
+    0x08000362   0x000000de   Code   RO         8024    .text               mf_w.l(ddiv.o)
+    0x08000440   0x0000001a   Code   RO         8026    .text               mf_w.l(dfltui.o)
+    0x0800045a   0x00000032   Code   RO         8028    .text               mf_w.l(dfixui.o)
+    0x0800048c   0x0000001e   Code   RO         8047    .text               mc_w.l(llshl.o)
+    0x080004aa   0x00000020   Code   RO         8049    .text               mc_w.l(llushr.o)
+    0x080004ca   0x00000000   Code   RO         8051    .text               mc_w.l(iusefp.o)
+    0x080004ca   0x000000ba   Code   RO         8052    .text               mf_w.l(depilogue.o)
+    0x08000584   0x00000024   Code   RO         8060    .text               mc_w.l(init.o)
+    0x080005a8   0x00000056   Code   RO         8072    .text               mc_w.l(__dczerorl2.o)
     0x080005fe   0x00000002   PAD
-    0x08000600   0x0000010c   Code   RO         7670    CODE                os_cpu_a.o
+    0x08000600   0x0000010c   Code   RO         7664    CODE                os_cpu_a.o
     0x0800070c   0x000000c4   Code   RO         5389    i.AD7606_ConfigGPIO  bsp_spi_ad7606.o
     0x080007d0   0x00000134   Code   RO         5390    i.AD7606_Disp       bsp_spi_ad7606.o
     0x08000904   0x000000b4   Code   RO         5391    i.AD7606_Mak        bsp_spi_ad7606.o
@@ -4026,19 +4020,19 @@ Memory Map of the image
     0x0800266e   0x0000000e   Code   RO         5175    i.BSP_CPU_ClkFreq   bsp.o
     0x0800267c   0x00000040   Code   RO         5176    i.BSP_Init          bsp.o
     0x080026bc   0x00000004   Code   RO         4765    i.BusFault_Handler  stm32f4xx_it.o
-    0x080026c0   0x00000010   Code   RO         5810    i.CPU_Init          cpu_core.o
-    0x080026d0   0x00000084   Code   RO         5811    i.CPU_IntDisMeasInit  cpu_core.o
-    0x08002754   0x0000001c   Code   RO         5812    i.CPU_IntDisMeasMaxCalc  cpu_core.o
-    0x08002770   0x0000002c   Code   RO         5813    i.CPU_IntDisMeasMaxCurGet  cpu_core.o
-    0x0800279c   0x0000002c   Code   RO         5814    i.CPU_IntDisMeasMaxCurReset  cpu_core.o
-    0x080027c8   0x0000002c   Code   RO         5815    i.CPU_IntDisMeasMaxGet  cpu_core.o
-    0x080027f4   0x00000034   Code   RO         5816    i.CPU_IntDisMeasStart  cpu_core.o
-    0x08002828   0x00000054   Code   RO         5817    i.CPU_IntDisMeasStop  cpu_core.o
-    0x0800287c   0x00000038   Code   RO         5818    i.CPU_NameClr       cpu_core.o
-    0x080028b4   0x00000008   Code   RO         5820    i.CPU_NameInit      cpu_core.o
-    0x080028bc   0x00000004   Code   RO         5822    i.CPU_SW_Exception  cpu_core.o
-    0x080028c0   0x00000014   Code   RO         5824    i.CPU_TS_Init       cpu_core.o
-    0x080028d4   0x0000000c   Code   RO         5826    i.CPU_TS_TmrFreqSet  cpu_core.o
+    0x080026c0   0x00000010   Code   RO         5804    i.CPU_Init          cpu_core.o
+    0x080026d0   0x00000084   Code   RO         5805    i.CPU_IntDisMeasInit  cpu_core.o
+    0x08002754   0x0000001c   Code   RO         5806    i.CPU_IntDisMeasMaxCalc  cpu_core.o
+    0x08002770   0x0000002c   Code   RO         5807    i.CPU_IntDisMeasMaxCurGet  cpu_core.o
+    0x0800279c   0x0000002c   Code   RO         5808    i.CPU_IntDisMeasMaxCurReset  cpu_core.o
+    0x080027c8   0x0000002c   Code   RO         5809    i.CPU_IntDisMeasMaxGet  cpu_core.o
+    0x080027f4   0x00000034   Code   RO         5810    i.CPU_IntDisMeasStart  cpu_core.o
+    0x08002828   0x00000054   Code   RO         5811    i.CPU_IntDisMeasStop  cpu_core.o
+    0x0800287c   0x00000038   Code   RO         5812    i.CPU_NameClr       cpu_core.o
+    0x080028b4   0x00000008   Code   RO         5814    i.CPU_NameInit      cpu_core.o
+    0x080028bc   0x00000004   Code   RO         5816    i.CPU_SW_Exception  cpu_core.o
+    0x080028c0   0x00000014   Code   RO         5818    i.CPU_TS_Init       cpu_core.o
+    0x080028d4   0x0000000c   Code   RO         5820    i.CPU_TS_TmrFreqSet  cpu_core.o
     0x080028e0   0x00000034   Code   RO         5179    i.CPU_TS_TmrInit    bsp.o
     0x08002914   0x0000000c   Code   RO         5180    i.CPU_TS_TmrRd      bsp.o
     0x08002920   0x00000028   Code   RO          937    i.DAC_Cmd           stm32f4xx_dac.o
@@ -4068,144 +4062,144 @@ Memory Map of the image
     0x08002f4c   0x0000006c   Code   RO         5575    i.LCD_screen_show   bsp_lcd.o
     0x08002fb8   0x00000054   Code   RO         5271    i.LED_GPIO_Config   bsp_led.o
     0x0800300c   0x00000004   Code   RO         4770    i.MemManage_Handler  stm32f4xx_it.o
-    0x08003010   0x00000012   Code   RO         6170    i.Mem_Clr           lib_mem.o
+    0x08003010   0x00000012   Code   RO         6164    i.Mem_Clr           lib_mem.o
     0x08003022   0x00000002   PAD
-    0x08003024   0x0000004c   Code   RO         6180    i.Mem_Init          lib_mem.o
-    0x08003070   0x00000052   Code   RO         6193    i.Mem_SegCreate     lib_mem.o
+    0x08003024   0x0000004c   Code   RO         6174    i.Mem_Init          lib_mem.o
+    0x08003070   0x00000052   Code   RO         6187    i.Mem_SegCreate     lib_mem.o
     0x080030c2   0x00000002   PAD
-    0x080030c4   0x00000020   Code   RO         6194    i.Mem_SegCreateCritical  lib_mem.o
-    0x080030e4   0x00000054   Code   RO         6197    i.Mem_Set           lib_mem.o
+    0x080030c4   0x00000020   Code   RO         6188    i.Mem_SegCreateCritical  lib_mem.o
+    0x080030e4   0x00000054   Code   RO         6191    i.Mem_Set           lib_mem.o
     0x08003138   0x00000002   Code   RO         4771    i.NMI_Handler       stm32f4xx_it.o
     0x0800313a   0x00000034   Code   RO         5243    i.NVIC_Configuration  bsp_exti.o
     0x0800316e   0x00000070   Code   RO         5298    i.NVIC_Configuration  bsp_usart.o
     0x080031de   0x00000002   PAD
     0x080031e0   0x00000078   Code   RO          155    i.NVIC_Init         misc.o
     0x08003258   0x00000014   Code   RO          156    i.NVIC_PriorityGroupConfig  misc.o
-    0x0800326c   0x00000002   Code   RO         6505    i.OSCfg_Init        os_cfg_app.o
+    0x0800326c   0x00000002   Code   RO         6499    i.OSCfg_Init        os_cfg_app.o
     0x0800326e   0x00000002   PAD
-    0x08003270   0x00000014   Code   RO         7673    i.OSIdleTaskHook    os_cpu_c.o
-    0x08003284   0x0000018c   Code   RO         6528    i.OSInit            os_core.o
-    0x08003410   0x00000028   Code   RO         7674    i.OSInitHook        os_cpu_c.o
-    0x08003438   0x0000002c   Code   RO         6529    i.OSIntEnter        os_core.o
-    0x08003464   0x000000dc   Code   RO         6530    i.OSIntExit         os_core.o
-    0x08003540   0x00000144   Code   RO         6897    i.OSMemCreate       os_mem.o
-    0x08003684   0x00000070   Code   RO         6898    i.OSMemGet          os_mem.o
-    0x080036f4   0x0000007c   Code   RO         6899    i.OSMemPut          os_mem.o
-    0x08003770   0x000000d0   Code   RO         6969    i.OSMutexCreate     os_mutex.o
-    0x08003840   0x00000244   Code   RO         6971    i.OSMutexPend       os_mutex.o
-    0x08003a84   0x000002b8   Code   RO         6973    i.OSMutexPost       os_mutex.o
-    0x08003d3c   0x000000a4   Code   RO         6531    i.OSSched           os_core.o
-    0x08003de0   0x00000068   Code   RO         6532    i.OSSchedLock       os_core.o
-    0x08003e48   0x0000006c   Code   RO         6533    i.OSSchedRoundRobinCfg  os_core.o
-    0x08003eb4   0x0000008c   Code   RO         6535    i.OSSchedUnlock     os_core.o
-    0x08003f40   0x00000068   Code   RO         6536    i.OSStart           os_core.o
-    0x08003fa8   0x00000168   Code   RO         7264    i.OSStatReset       os_stat.o
-    0x08004110   0x00000100   Code   RO         7265    i.OSStatTaskCPUUsageInit  os_stat.o
-    0x08004210   0x00000014   Code   RO         7675    i.OSStatTaskHook    os_cpu_c.o
-    0x08004224   0x00000280   Code   RO         7295    i.OSTaskCreate      os_task.o
-    0x080044a4   0x00000018   Code   RO         7676    i.OSTaskCreateHook  os_cpu_c.o
-    0x080044bc   0x00000268   Code   RO         7296    i.OSTaskDel         os_task.o
-    0x08004724   0x00000018   Code   RO         7677    i.OSTaskDelHook     os_cpu_c.o
-    0x0800473c   0x00000234   Code   RO         7298    i.OSTaskQPend       os_task.o
-    0x08004970   0x0000007c   Code   RO         7300    i.OSTaskQPost       os_task.o
-    0x080049ec   0x00000088   Code   RO         7304    i.OSTaskResume      os_task.o
-    0x08004a74   0x00000018   Code   RO         7678    i.OSTaskReturnHook  os_cpu_c.o
-    0x08004a8c   0x00000238   Code   RO         7305    i.OSTaskSemPend     os_task.o
-    0x08004cc4   0x0000006c   Code   RO         7307    i.OSTaskSemPost     os_task.o
-    0x08004d30   0x000000d0   Code   RO         7309    i.OSTaskStkChk      os_task.o
-    0x08004e00   0x000002c4   Code   RO         7679    i.OSTaskStkInit     os_cpu_c.o
-    0x080050c4   0x00000060   Code   RO         7310    i.OSTaskSuspend     os_task.o
-    0x08005124   0x000000d4   Code   RO         7680    i.OSTaskSwHook      os_cpu_c.o
-    0x080051f8   0x00000130   Code   RO         7520    i.OSTimeDly         os_time.o
-    0x08005328   0x00000044   Code   RO         7525    i.OSTimeTick        os_time.o
-    0x0800536c   0x00000014   Code   RO         7681    i.OSTimeTickHook    os_cpu_c.o
-    0x08005380   0x0000000c   Code   RO         6537    i.OSVersion         os_core.o
-    0x0800538c   0x00000040   Code   RO         7682    i.OS_CPU_SysTickHandler  os_cpu_c.o
-    0x080053cc   0x00000030   Code   RO         7683    i.OS_CPU_SysTickInit  os_cpu_c.o
-    0x080053fc   0x000001ac   Code   RO         6768    i.OS_Dbg_Init       os_dbg.o
-    0x080055a8   0x00000018   Code   RO         6793    i.OS_FlagInit       os_flag.o
-    0x080055c0   0x0000027c   Code   RO         6794    i.OS_FlagPost       os_flag.o
-    0x0800583c   0x00000064   Code   RO         6795    i.OS_FlagTaskRdy    os_flag.o
-    0x080058a0   0x0000004c   Code   RO         6538    i.OS_IdleTask       os_core.o
-    0x080058ec   0x00000070   Code   RO         6539    i.OS_IdleTaskInit   os_core.o
-    0x0800595c   0x00000104   Code   RO         6867    i.OS_IntQPost       os_int.o
-    0x08005a60   0x000001a4   Code   RO         6868    i.OS_IntQRePost     os_int.o
-    0x08005c04   0x000000c4   Code   RO         6869    i.OS_IntQTask       os_int.o
-    0x08005cc8   0x00000128   Code   RO         6870    i.OS_IntQTaskInit   os_int.o
-    0x08005df0   0x00000028   Code   RO         6900    i.OS_MemDbgListAdd  os_mem.o
-    0x08005e18   0x00000018   Code   RO         6901    i.OS_MemInit        os_mem.o
-    0x08005e30   0x0000007c   Code   RO         6933    i.OS_MsgPoolInit    os_msg.o
-    0x08005eac   0x00000044   Code   RO         6934    i.OS_MsgQFreeAll    os_msg.o
-    0x08005ef0   0x00000068   Code   RO         6935    i.OS_MsgQGet        os_msg.o
-    0x08005f58   0x0000000e   Code   RO         6936    i.OS_MsgQInit       os_msg.o
+    0x08003270   0x00000014   Code   RO         7667    i.OSIdleTaskHook    os_cpu_c.o
+    0x08003284   0x0000018c   Code   RO         6522    i.OSInit            os_core.o
+    0x08003410   0x00000028   Code   RO         7668    i.OSInitHook        os_cpu_c.o
+    0x08003438   0x0000002c   Code   RO         6523    i.OSIntEnter        os_core.o
+    0x08003464   0x000000dc   Code   RO         6524    i.OSIntExit         os_core.o
+    0x08003540   0x00000144   Code   RO         6891    i.OSMemCreate       os_mem.o
+    0x08003684   0x00000070   Code   RO         6892    i.OSMemGet          os_mem.o
+    0x080036f4   0x0000007c   Code   RO         6893    i.OSMemPut          os_mem.o
+    0x08003770   0x000000d0   Code   RO         6963    i.OSMutexCreate     os_mutex.o
+    0x08003840   0x00000244   Code   RO         6965    i.OSMutexPend       os_mutex.o
+    0x08003a84   0x000002b8   Code   RO         6967    i.OSMutexPost       os_mutex.o
+    0x08003d3c   0x000000a4   Code   RO         6525    i.OSSched           os_core.o
+    0x08003de0   0x00000068   Code   RO         6526    i.OSSchedLock       os_core.o
+    0x08003e48   0x0000006c   Code   RO         6527    i.OSSchedRoundRobinCfg  os_core.o
+    0x08003eb4   0x0000008c   Code   RO         6529    i.OSSchedUnlock     os_core.o
+    0x08003f40   0x00000068   Code   RO         6530    i.OSStart           os_core.o
+    0x08003fa8   0x00000168   Code   RO         7258    i.OSStatReset       os_stat.o
+    0x08004110   0x00000100   Code   RO         7259    i.OSStatTaskCPUUsageInit  os_stat.o
+    0x08004210   0x00000014   Code   RO         7669    i.OSStatTaskHook    os_cpu_c.o
+    0x08004224   0x00000280   Code   RO         7289    i.OSTaskCreate      os_task.o
+    0x080044a4   0x00000018   Code   RO         7670    i.OSTaskCreateHook  os_cpu_c.o
+    0x080044bc   0x00000268   Code   RO         7290    i.OSTaskDel         os_task.o
+    0x08004724   0x00000018   Code   RO         7671    i.OSTaskDelHook     os_cpu_c.o
+    0x0800473c   0x00000234   Code   RO         7292    i.OSTaskQPend       os_task.o
+    0x08004970   0x0000007c   Code   RO         7294    i.OSTaskQPost       os_task.o
+    0x080049ec   0x00000088   Code   RO         7298    i.OSTaskResume      os_task.o
+    0x08004a74   0x00000018   Code   RO         7672    i.OSTaskReturnHook  os_cpu_c.o
+    0x08004a8c   0x00000238   Code   RO         7299    i.OSTaskSemPend     os_task.o
+    0x08004cc4   0x0000006c   Code   RO         7301    i.OSTaskSemPost     os_task.o
+    0x08004d30   0x000000d0   Code   RO         7303    i.OSTaskStkChk      os_task.o
+    0x08004e00   0x000002c4   Code   RO         7673    i.OSTaskStkInit     os_cpu_c.o
+    0x080050c4   0x00000060   Code   RO         7304    i.OSTaskSuspend     os_task.o
+    0x08005124   0x000000d4   Code   RO         7674    i.OSTaskSwHook      os_cpu_c.o
+    0x080051f8   0x00000130   Code   RO         7514    i.OSTimeDly         os_time.o
+    0x08005328   0x00000044   Code   RO         7519    i.OSTimeTick        os_time.o
+    0x0800536c   0x00000014   Code   RO         7675    i.OSTimeTickHook    os_cpu_c.o
+    0x08005380   0x0000000c   Code   RO         6531    i.OSVersion         os_core.o
+    0x0800538c   0x00000040   Code   RO         7676    i.OS_CPU_SysTickHandler  os_cpu_c.o
+    0x080053cc   0x00000030   Code   RO         7677    i.OS_CPU_SysTickInit  os_cpu_c.o
+    0x080053fc   0x000001ac   Code   RO         6762    i.OS_Dbg_Init       os_dbg.o
+    0x080055a8   0x00000018   Code   RO         6787    i.OS_FlagInit       os_flag.o
+    0x080055c0   0x0000027c   Code   RO         6788    i.OS_FlagPost       os_flag.o
+    0x0800583c   0x00000064   Code   RO         6789    i.OS_FlagTaskRdy    os_flag.o
+    0x080058a0   0x0000004c   Code   RO         6532    i.OS_IdleTask       os_core.o
+    0x080058ec   0x00000070   Code   RO         6533    i.OS_IdleTaskInit   os_core.o
+    0x0800595c   0x00000104   Code   RO         6861    i.OS_IntQPost       os_int.o
+    0x08005a60   0x000001a4   Code   RO         6862    i.OS_IntQRePost     os_int.o
+    0x08005c04   0x000000c4   Code   RO         6863    i.OS_IntQTask       os_int.o
+    0x08005cc8   0x00000128   Code   RO         6864    i.OS_IntQTaskInit   os_int.o
+    0x08005df0   0x00000028   Code   RO         6894    i.OS_MemDbgListAdd  os_mem.o
+    0x08005e18   0x00000018   Code   RO         6895    i.OS_MemInit        os_mem.o
+    0x08005e30   0x0000007c   Code   RO         6927    i.OS_MsgPoolInit    os_msg.o
+    0x08005eac   0x00000044   Code   RO         6928    i.OS_MsgQFreeAll    os_msg.o
+    0x08005ef0   0x00000068   Code   RO         6929    i.OS_MsgQGet        os_msg.o
+    0x08005f58   0x0000000e   Code   RO         6930    i.OS_MsgQInit       os_msg.o
     0x08005f66   0x00000002   PAD
-    0x08005f68   0x00000104   Code   RO         6937    i.OS_MsgQPut        os_msg.o
-    0x0800606c   0x00000030   Code   RO         6975    i.OS_MutexDbgListAdd  os_mutex.o
-    0x0800609c   0x00000008   Code   RO         6977    i.OS_MutexGrpAdd    os_mutex.o
-    0x080060a4   0x00000060   Code   RO         6978    i.OS_MutexGrpPostAll  os_mutex.o
-    0x08006104   0x0000002c   Code   RO         6979    i.OS_MutexGrpPrioFindHighest  os_mutex.o
-    0x08006130   0x0000001c   Code   RO         6980    i.OS_MutexGrpRemove  os_mutex.o
-    0x0800614c   0x00000018   Code   RO         6981    i.OS_MutexInit      os_mutex.o
-    0x08006164   0x00000068   Code   RO         6540    i.OS_Pend           os_core.o
-    0x080061cc   0x00000028   Code   RO         6543    i.OS_PendDataInit   os_core.o
-    0x080061f4   0x0000005c   Code   RO         6544    i.OS_PendDbgNameAdd  os_core.o
-    0x08006250   0x00000024   Code   RO         6545    i.OS_PendDbgNameRemove  os_core.o
-    0x08006274   0x0000003a   Code   RO         6546    i.OS_PendListChangePrio  os_core.o
-    0x080062ae   0x0000000a   Code   RO         6547    i.OS_PendListInit   os_core.o
-    0x080062b8   0x00000066   Code   RO         6549    i.OS_PendListInsertPrio  os_core.o
-    0x0800631e   0x00000034   Code   RO         6550    i.OS_PendListRemove  os_core.o
-    0x08006352   0x00000042   Code   RO         6551    i.OS_PendListRemove1  os_core.o
-    0x08006394   0x000000d6   Code   RO         6554    i.OS_Post           os_core.o
-    0x0800646a   0x0000002c   Code   RO         6555    i.OS_Post1          os_core.o
+    0x08005f68   0x00000104   Code   RO         6931    i.OS_MsgQPut        os_msg.o
+    0x0800606c   0x00000030   Code   RO         6969    i.OS_MutexDbgListAdd  os_mutex.o
+    0x0800609c   0x00000008   Code   RO         6971    i.OS_MutexGrpAdd    os_mutex.o
+    0x080060a4   0x00000060   Code   RO         6972    i.OS_MutexGrpPostAll  os_mutex.o
+    0x08006104   0x0000002c   Code   RO         6973    i.OS_MutexGrpPrioFindHighest  os_mutex.o
+    0x08006130   0x0000001c   Code   RO         6974    i.OS_MutexGrpRemove  os_mutex.o
+    0x0800614c   0x00000018   Code   RO         6975    i.OS_MutexInit      os_mutex.o
+    0x08006164   0x00000068   Code   RO         6534    i.OS_Pend           os_core.o
+    0x080061cc   0x00000028   Code   RO         6537    i.OS_PendDataInit   os_core.o
+    0x080061f4   0x0000005c   Code   RO         6538    i.OS_PendDbgNameAdd  os_core.o
+    0x08006250   0x00000024   Code   RO         6539    i.OS_PendDbgNameRemove  os_core.o
+    0x08006274   0x0000003a   Code   RO         6540    i.OS_PendListChangePrio  os_core.o
+    0x080062ae   0x0000000a   Code   RO         6541    i.OS_PendListInit   os_core.o
+    0x080062b8   0x00000066   Code   RO         6543    i.OS_PendListInsertPrio  os_core.o
+    0x0800631e   0x00000034   Code   RO         6544    i.OS_PendListRemove  os_core.o
+    0x08006352   0x00000042   Code   RO         6545    i.OS_PendListRemove1  os_core.o
+    0x08006394   0x000000d6   Code   RO         6548    i.OS_Post           os_core.o
+    0x0800646a   0x0000002c   Code   RO         6549    i.OS_Post1          os_core.o
     0x08006496   0x00000002   PAD
-    0x08006498   0x00000028   Code   RO         7083    i.OS_PrioGetHighest  os_prio.o
-    0x080064c0   0x00000018   Code   RO         7084    i.OS_PrioInit       os_prio.o
-    0x080064d8   0x00000024   Code   RO         7085    i.OS_PrioInsert     os_prio.o
-    0x080064fc   0x00000024   Code   RO         7086    i.OS_PrioRemove     os_prio.o
-    0x08006520   0x00000018   Code   RO         7129    i.OS_QInit          os_q.o
-    0x08006538   0x00000188   Code   RO         7130    i.OS_QPost          os_q.o
-    0x080066c0   0x00000024   Code   RO         6556    i.OS_RdyListInit    os_core.o
-    0x080066e4   0x0000002c   Code   RO         6557    i.OS_RdyListInsert  os_core.o
-    0x08006710   0x00000040   Code   RO         6558    i.OS_RdyListInsertHead  os_core.o
-    0x08006750   0x0000003c   Code   RO         6559    i.OS_RdyListInsertTail  os_core.o
-    0x0800678c   0x00000044   Code   RO         6560    i.OS_RdyListMoveHeadToTail  os_core.o
-    0x080067d0   0x0000005c   Code   RO         6561    i.OS_RdyListRemove  os_core.o
-    0x0800682c   0x00000054   Code   RO         6562    i.OS_Sched0         os_core.o
-    0x08006880   0x0000001c   Code   RO         6563    i.OS_SchedLockTimeMeasStart  os_core.o
-    0x0800689c   0x0000003c   Code   RO         6564    i.OS_SchedLockTimeMeasStop  os_core.o
-    0x080068d8   0x000000ec   Code   RO         6565    i.OS_SchedRoundRobin  os_core.o
-    0x080069c4   0x00000018   Code   RO         7201    i.OS_SemInit        os_sem.o
-    0x080069dc   0x00000198   Code   RO         7202    i.OS_SemPost        os_sem.o
-    0x08006b74   0x000003b4   Code   RO         7266    i.OS_StatTask       os_stat.o
-    0x08006f28   0x000000cc   Code   RO         7267    i.OS_StatTaskInit   os_stat.o
-    0x08006ff4   0x0000002c   Code   RO         6566    i.OS_TaskBlock      os_core.o
-    0x08007020   0x000000ec   Code   RO         7312    i.OS_TaskChangePrio  os_task.o
-    0x0800710c   0x00000030   Code   RO         7313    i.OS_TaskDbgListAdd  os_task.o
-    0x0800713c   0x00000044   Code   RO         7314    i.OS_TaskDbgListRemove  os_task.o
-    0x08007180   0x00000020   Code   RO         7315    i.OS_TaskInit       os_task.o
-    0x080071a0   0x000000d0   Code   RO         7316    i.OS_TaskInitTCB    os_task.o
-    0x08007270   0x0000026c   Code   RO         7317    i.OS_TaskQPost      os_task.o
-    0x080074dc   0x0000017c   Code   RO         7318    i.OS_TaskResume     os_task.o
-    0x08007658   0x00000018   Code   RO         7319    i.OS_TaskReturn     os_task.o
-    0x08007670   0x000005a8   Code   RO         7320    i.OS_TaskSemPost    os_task.o
-    0x08007c18   0x00000190   Code   RO         7321    i.OS_TaskSuspend    os_task.o
-    0x08007da8   0x00000086   Code   RO         7468    i.OS_TickListInsert  os_tick.o
+    0x08006498   0x00000028   Code   RO         7077    i.OS_PrioGetHighest  os_prio.o
+    0x080064c0   0x00000018   Code   RO         7078    i.OS_PrioInit       os_prio.o
+    0x080064d8   0x00000024   Code   RO         7079    i.OS_PrioInsert     os_prio.o
+    0x080064fc   0x00000024   Code   RO         7080    i.OS_PrioRemove     os_prio.o
+    0x08006520   0x00000018   Code   RO         7123    i.OS_QInit          os_q.o
+    0x08006538   0x00000188   Code   RO         7124    i.OS_QPost          os_q.o
+    0x080066c0   0x00000024   Code   RO         6550    i.OS_RdyListInit    os_core.o
+    0x080066e4   0x0000002c   Code   RO         6551    i.OS_RdyListInsert  os_core.o
+    0x08006710   0x00000040   Code   RO         6552    i.OS_RdyListInsertHead  os_core.o
+    0x08006750   0x0000003c   Code   RO         6553    i.OS_RdyListInsertTail  os_core.o
+    0x0800678c   0x00000044   Code   RO         6554    i.OS_RdyListMoveHeadToTail  os_core.o
+    0x080067d0   0x0000005c   Code   RO         6555    i.OS_RdyListRemove  os_core.o
+    0x0800682c   0x00000054   Code   RO         6556    i.OS_Sched0         os_core.o
+    0x08006880   0x0000001c   Code   RO         6557    i.OS_SchedLockTimeMeasStart  os_core.o
+    0x0800689c   0x0000003c   Code   RO         6558    i.OS_SchedLockTimeMeasStop  os_core.o
+    0x080068d8   0x000000ec   Code   RO         6559    i.OS_SchedRoundRobin  os_core.o
+    0x080069c4   0x00000018   Code   RO         7195    i.OS_SemInit        os_sem.o
+    0x080069dc   0x00000198   Code   RO         7196    i.OS_SemPost        os_sem.o
+    0x08006b74   0x000003b4   Code   RO         7260    i.OS_StatTask       os_stat.o
+    0x08006f28   0x000000cc   Code   RO         7261    i.OS_StatTaskInit   os_stat.o
+    0x08006ff4   0x0000002c   Code   RO         6560    i.OS_TaskBlock      os_core.o
+    0x08007020   0x000000ec   Code   RO         7306    i.OS_TaskChangePrio  os_task.o
+    0x0800710c   0x00000030   Code   RO         7307    i.OS_TaskDbgListAdd  os_task.o
+    0x0800713c   0x00000044   Code   RO         7308    i.OS_TaskDbgListRemove  os_task.o
+    0x08007180   0x00000020   Code   RO         7309    i.OS_TaskInit       os_task.o
+    0x080071a0   0x000000d0   Code   RO         7310    i.OS_TaskInitTCB    os_task.o
+    0x08007270   0x0000026c   Code   RO         7311    i.OS_TaskQPost      os_task.o
+    0x080074dc   0x0000017c   Code   RO         7312    i.OS_TaskResume     os_task.o
+    0x08007658   0x00000018   Code   RO         7313    i.OS_TaskReturn     os_task.o
+    0x08007670   0x000005a8   Code   RO         7314    i.OS_TaskSemPost    os_task.o
+    0x08007c18   0x00000190   Code   RO         7315    i.OS_TaskSuspend    os_task.o
+    0x08007da8   0x00000086   Code   RO         7462    i.OS_TickListInsert  os_tick.o
     0x08007e2e   0x00000002   PAD
-    0x08007e30   0x000000bc   Code   RO         7469    i.OS_TickListInsertDly  os_tick.o
-    0x08007eec   0x00000058   Code   RO         7470    i.OS_TickListRemove  os_tick.o
-    0x08007f44   0x00000002   Code   RO         7471    i.OS_TickListResetPeak  os_tick.o
+    0x08007e30   0x000000bc   Code   RO         7463    i.OS_TickListInsertDly  os_tick.o
+    0x08007eec   0x00000058   Code   RO         7464    i.OS_TickListRemove  os_tick.o
+    0x08007f44   0x00000002   Code   RO         7465    i.OS_TickListResetPeak  os_tick.o
     0x08007f46   0x00000002   PAD
-    0x08007f48   0x00000130   Code   RO         7472    i.OS_TickListUpdateDly  os_tick.o
-    0x08008078   0x000001ac   Code   RO         7473    i.OS_TickListUpdateTimeout  os_tick.o
-    0x08008224   0x000000fc   Code   RO         7474    i.OS_TickTask       os_tick.o
-    0x08008320   0x000000c8   Code   RO         7475    i.OS_TickTaskInit   os_tick.o
-    0x080083e8   0x00000134   Code   RO         7571    i.OS_TmrInit        os_tmr.o
-    0x0800851c   0x00000018   Code   RO         7572    i.OS_TmrLock        os_tmr.o
-    0x08008534   0x00000002   Code   RO         7573    i.OS_TmrResetPeak   os_tmr.o
+    0x08007f48   0x00000130   Code   RO         7466    i.OS_TickListUpdateDly  os_tick.o
+    0x08008078   0x000001ac   Code   RO         7467    i.OS_TickListUpdateTimeout  os_tick.o
+    0x08008224   0x000000fc   Code   RO         7468    i.OS_TickTask       os_tick.o
+    0x08008320   0x000000c8   Code   RO         7469    i.OS_TickTaskInit   os_tick.o
+    0x080083e8   0x00000134   Code   RO         7565    i.OS_TmrInit        os_tmr.o
+    0x0800851c   0x00000018   Code   RO         7566    i.OS_TmrLock        os_tmr.o
+    0x08008534   0x00000002   Code   RO         7567    i.OS_TmrResetPeak   os_tmr.o
     0x08008536   0x00000002   PAD
-    0x08008538   0x00000094   Code   RO         7574    i.OS_TmrTask        os_tmr.o
-    0x080085cc   0x00000044   Code   RO         7575    i.OS_TmrUnlink      os_tmr.o
-    0x08008610   0x00000014   Code   RO         7576    i.OS_TmrUnlock      os_tmr.o
+    0x08008538   0x00000094   Code   RO         7568    i.OS_TmrTask        os_tmr.o
+    0x080085cc   0x00000044   Code   RO         7569    i.OS_TmrUnlink      os_tmr.o
+    0x08008610   0x00000014   Code   RO         7570    i.OS_TmrUnlock      os_tmr.o
     0x08008624   0x00000020   Code   RO         2561    i.RCC_AHB1PeriphClockCmd  stm32f4xx_rcc.o
     0x08008644   0x00000020   Code   RO         2570    i.RCC_APB1PeriphClockCmd  stm32f4xx_rcc.o
     0x08008664   0x00000020   Code   RO         2573    i.RCC_APB2PeriphClockCmd  stm32f4xx_rcc.o
@@ -4239,14 +4233,14 @@ Memory Map of the image
     0x08008d0a   0x00000002   PAD
     0x08008d0c   0x000001e4   Code   RO         5299    i.USARTx_Config     bsp_usart.o
     0x08008ef0   0x00000004   Code   RO         4779    i.UsageFault_Handler  stm32f4xx_it.o
-    0x08008ef4   0x00000020   Code   RO         7974    i.__0printf$8       mc_w.l(printf8.o)
-    0x08008f14   0x0000000e   Code   RO         8072    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08008f22   0x00000002   Code   RO         8073    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08008f24   0x0000000e   Code   RO         8074    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08008ef4   0x00000020   Code   RO         7968    i.__0printf$8       mc_w.l(printf8.o)
+    0x08008f14   0x0000000e   Code   RO         8066    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08008f22   0x00000002   Code   RO         8067    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08008f24   0x0000000e   Code   RO         8068    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x08008f32   0x00000002   PAD
-    0x08008f34   0x00000410   Code   RO         7981    i._printf_core      mc_w.l(printf8.o)
-    0x08009344   0x00000024   Code   RO         7982    i._printf_post_padding  mc_w.l(printf8.o)
-    0x08009368   0x0000002e   Code   RO         7983    i._printf_pre_padding  mc_w.l(printf8.o)
+    0x08008f34   0x00000410   Code   RO         7975    i._printf_core      mc_w.l(printf8.o)
+    0x08009344   0x00000024   Code   RO         7976    i._printf_post_padding  mc_w.l(printf8.o)
+    0x08009368   0x0000002e   Code   RO         7977    i._printf_pre_padding  mc_w.l(printf8.o)
     0x08009396   0x00000002   PAD
     0x08009398   0x00000064   Code   RO         5481    i.bsp_InitSPIBus    bsp_spi_bus.o
     0x080093fc   0x0000000c   Code   RO         5487    i.bsp_spiDelay      bsp_spi_bus.o
@@ -4259,13 +4253,13 @@ Memory Map of the image
     0x08009674   0x00000064   Code   RO         4996    i.main              app.o
     0x080096d8   0x00000024   Code   RO         5578    i.signedshoutint2unsignedchar  bsp_lcd.o
     0x080096fc   0x0000014c   Code   RO         5580    i.struct_print      bsp_lcd.o
-    0x08009848   0x0000002c   Code   RO         5704    i.update_block_info_8byte_data  bsp_internalflash.o
-    0x08009874   0x0000002c   Code   RO         5705    i.update_file_info_8byte_data  bsp_internalflash.o
+    0x08009848   0x0000002c   Code   RO         5703    i.update_block_info_8byte_data  bsp_internalflash.o
+    0x08009874   0x0000002c   Code   RO         5704    i.update_file_info_8byte_data  bsp_internalflash.o
     0x080098a0   0x00000004   Data   RO         5582    .constdata          bsp_lcd.o
-    0x080098a4   0x0000001c   Data   RO         5707    .constdata          bsp_internalflash.o
-    0x080098c0   0x00000094   Data   RO         6507    .constdata          os_cfg_app.o
-    0x08009954   0x0000016c   Data   RO         6769    .constdata          os_dbg.o
-    0x08009ac0   0x00000020   Data   RO         8070    Region$$Table       anon$$obj.o
+    0x080098a4   0x0000001c   Data   RO         5706    .constdata          bsp_internalflash.o
+    0x080098c0   0x00000094   Data   RO         6501    .constdata          os_cfg_app.o
+    0x08009954   0x0000016c   Data   RO         6763    .constdata          os_dbg.o
+    0x08009ac0   0x00000020   Data   RO         8064    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x0000a030, Max: 0x00020000, ABSOLUTE, COMPRESSED[0x0000001c])
@@ -4276,21 +4270,21 @@ Memory Map of the image
     0x20000010   0x00000001   Data   RW         5400    .data               bsp_spi_ad7606.o
     0x20000011   0x0000000d   Data   RW         5583    .data               bsp_lcd.o
     0x2000001e   0x00000002   PAD
-    0x20000020   0x0000001c   Data   RW         5830    .data               cpu_core.o
-    0x2000003c   0x00000004   Data   RW         6199    .data               lib_mem.o
-    0x20000040   0x00000008   Data   RW         7087    .data               os_prio.o
-    0x20000048   0x000000e8   Data   RW         7657    .data               os_var.o
-    0x20000130   0x00000004   Data   RW         7684    .data               os_cpu_c.o
-    0x20000134   0x00000004   Data   RW         8050    .data               mc_w.l(stdout.o)
+    0x20000020   0x0000001c   Data   RW         5824    .data               cpu_core.o
+    0x2000003c   0x00000004   Data   RW         6193    .data               lib_mem.o
+    0x20000040   0x00000008   Data   RW         7081    .data               os_prio.o
+    0x20000048   0x000000e8   Data   RW         7651    .data               os_var.o
+    0x20000130   0x00000004   Data   RW         7678    .data               os_cpu_c.o
+    0x20000134   0x00000004   Data   RW         8044    .data               mc_w.l(stdout.o)
     0x20000138   0x00006660   Zero   RW         4997    .bss                app.o
     0x20006798   0x00000030   Zero   RW         5399    .bss                bsp_spi_ad7606.o
     0x200067c8   0x0000006e   Zero   RW         5581    .bss                bsp_lcd.o
     0x20006836   0x00000002   PAD
-    0x20006838   0x00000448   Zero   RW         5706    .bss                bsp_internalflash.o
-    0x20006c80   0x00000010   Zero   RW         5828    .bss                cpu_core.o
-    0x20006c90   0x00000c14   Zero   RW         6198    .bss                lib_mem.o
-    0x200078a4   0x00001050   Zero   RW         6506    .bss                os_cfg_app.o
-    0x200088f4   0x00000738   Zero   RW         7656    .bss                os_var.o
+    0x20006838   0x00000448   Zero   RW         5705    .bss                bsp_internalflash.o
+    0x20006c80   0x00000010   Zero   RW         5822    .bss                cpu_core.o
+    0x20006c90   0x00000c14   Zero   RW         6192    .bss                lib_mem.o
+    0x200078a4   0x00001050   Zero   RW         6500    .bss                os_cfg_app.o
+    0x200088f4   0x00000738   Zero   RW         7650    .bss                os_var.o
     0x2000902c   0x00000004   PAD
     0x20009030   0x00001000   Zero   RW            1    STACK               startup_stm32f40xx.o
 
