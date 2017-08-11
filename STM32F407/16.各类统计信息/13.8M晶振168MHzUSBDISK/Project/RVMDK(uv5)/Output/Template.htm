@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Output\Template.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Output\Template.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Fri Aug 11 15:51:56 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Fri Aug 11 16:28:48 2017
 <BR><P>
 <H3>Maximum Stack Usage =        272 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -440,11 +440,9 @@ Global Symbols
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskAdce
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemGet
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_SegCreate
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameClr
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurGet
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasInit
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPend
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexCreate
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
@@ -461,6 +459,7 @@ Global Symbols
 <LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
 <LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
 <LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_SegCreate
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SysTickHandler
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickTask
 <LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdateTimeout
@@ -469,6 +468,7 @@ Global Symbols
 <LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
 <LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 </UL>
 
 <P><STRONG><a name="[95]"></a>CPU_SR_Restore</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text))
@@ -490,11 +490,9 @@ Global Symbols
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskAdce
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemGet
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_SegCreate
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameClr
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurGet
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasInit
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPend
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexCreate
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
@@ -511,6 +509,7 @@ Global Symbols
 <LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
 <LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
 <LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_SegCreate
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SysTickHandler
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickTask
 <LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdateTimeout
@@ -519,6 +518,7 @@ Global Symbols
 <LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
 <LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 </UL>
 
 <P><STRONG><a name="[15f]"></a>CPU_WaitForInt</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text), UNUSED)
@@ -816,10 +816,8 @@ Global Symbols
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskCmdLcd
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskAdce
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemGet
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_SegCreate
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameClr
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasInit
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPend
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexCreate
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
@@ -835,6 +833,7 @@ Global Symbols
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IdleTask
 <LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
 <LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_SegCreate
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SysTickHandler
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickTask
 <LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdateTimeout
@@ -843,6 +842,7 @@ Global Symbols
 <LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
 <LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 </UL>
 
 <P><STRONG><a name="[94]"></a>CPU_IntDisMeasStop</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, cpu_core.o(i.CPU_IntDisMeasStop))
@@ -864,10 +864,8 @@ Global Symbols
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskCmdLcd
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskAdce
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemGet
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_SegCreate
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameClr
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasInit
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPend
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexCreate
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
@@ -883,6 +881,7 @@ Global Symbols
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IdleTask
 <LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
 <LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_SegCreate
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SysTickHandler
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickTask
 <LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdateTimeout
@@ -891,6 +890,7 @@ Global Symbols
 <LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
 <LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 </UL>
 
 <P><STRONG><a name="[c6]"></a>CPU_NameClr</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, cpu_core.o(i.CPU_NameClr))
@@ -932,8 +932,6 @@ Global Symbols
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPost
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPost
-<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpPostAll
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQTask
 <LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSwHook
@@ -944,6 +942,8 @@ Global Symbols
 <LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskInitTCB
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
 <LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpPostAll
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 </UL>
 
 <P><STRONG><a name="[cc]"></a>DAC_Cmd</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, stm32f4xx_dac.o(i.DAC_Cmd))
@@ -1171,8 +1171,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 76 + Unknown Stack Size
 <LI>Call Chain = Mem_Init &rArr; Mem_SegCreate &rArr; Mem_SegCreateCritical
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_SegCreate
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SW_Exception
+<BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SW_Exception
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_SegCreate
 </UL>
 <BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
 </UL>
@@ -1332,8 +1332,8 @@ Global Symbols
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexDbgListAdd
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListInit
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexDbgListAdd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrInit
 </UL>
@@ -1348,10 +1348,10 @@ Global Symbols
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskChangePrio
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpAdd
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Pend
 <LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskChangePrio
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpAdd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrLock
 </UL>
@@ -1368,14 +1368,14 @@ Global Symbols
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpRemove
-<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpPrioFindHighest
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpAdd
 <LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioInsert
 <LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListRemove
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsertTail
 <LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
 <LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpRemove
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpPrioFindHighest
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpAdd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrUnlock
 </UL>
@@ -1394,7 +1394,6 @@ Global Symbols
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPend
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
 <LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
@@ -1405,6 +1404,7 @@ Global Symbols
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQTask
 <LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
 <LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 </UL>
 
 <P><STRONG><a name="[104]"></a>OSSchedLock</STRONG> (Thumb, 96 bytes, Stack size 16 bytes, os_core.o(i.OSSchedLock))
@@ -1539,9 +1539,6 @@ Global Symbols
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskChangePrio
-<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpPrioFindHighest
-<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpPostAll
 <LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MsgQFreeAll
 <LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListRemove
 <LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListRemove
@@ -1550,6 +1547,9 @@ Global Symbols
 <LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDelHook
 <LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskInitTCB
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskDbgListRemove
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskChangePrio
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpPrioFindHighest
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpPostAll
 </UL>
 <BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskCmdLcd
@@ -1910,18 +1910,18 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[f8]"></a>OS_MutexGrpAdd</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, os_mutex.o(i.OS_MutexGrpAdd))
-<BR><BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpPostAll
+<BR><BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPend
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpPostAll
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
-<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPend
 </UL>
 
 <P><STRONG><a name="[114]"></a>OS_MutexGrpPostAll</STRONG> (Thumb, 96 bytes, Stack size 32 bytes, os_mutex.o(i.OS_MutexGrpPostAll))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = OS_MutexGrpPostAll &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpRemove
 <LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpAdd
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 </UL>
@@ -1930,9 +1930,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = OS_MutexGrpPrioFindHighest
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdateTimeout
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskChangePrio
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
-<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdateTimeout
 </UL>
 
 <P><STRONG><a name="[fd]"></a>OS_MutexGrpRemove</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, os_mutex.o(i.OS_MutexGrpRemove))
@@ -2022,12 +2022,12 @@ Global Symbols
 <LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListRemove
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendDbgNameRemove
 </UL>
-<BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpPostAll
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
-<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
+<BR>[Called By]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
 <LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
 <LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
 <LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpPostAll
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 </UL>
 
 <P><STRONG><a name="[133]"></a>OS_Post1</STRONG> (Thumb, 44 bytes, Stack size 20 bytes, os_core.o(i.OS_Post1))
@@ -2055,10 +2055,10 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = OS_PrioInsert
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
-<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskChangePrio
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
 <LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsert
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskChangePrio
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 </UL>
 
 <P><STRONG><a name="[12c]"></a>OS_PrioRemove</STRONG> (Thumb, 32 bytes, Stack size 12 bytes, os_prio.o(i.OS_PrioRemove))
@@ -2111,17 +2111,17 @@ Global Symbols
 <P><STRONG><a name="[137]"></a>OS_RdyListInsertHead</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, os_core.o(i.OS_RdyListInsertHead))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OS_RdyListInsertHead
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskChangePrio
-<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsert
+<BR>[Called By]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsert
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskChangePrio
 </UL>
 
 <P><STRONG><a name="[101]"></a>OS_RdyListInsertTail</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, os_core.o(i.OS_RdyListInsertTail))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OS_RdyListInsertTail
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
+<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsert
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskChangePrio
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
-<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsert
 </UL>
 
 <P><STRONG><a name="[138]"></a>OS_RdyListMoveHeadToTail</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, os_core.o(i.OS_RdyListMoveHeadToTail))
@@ -2137,10 +2137,10 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
-<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskChangePrio
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
 <LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskBlock
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskChangePrio
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 </UL>
 
 <P><STRONG><a name="[98]"></a>OS_Sched0</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, os_core.o(i.OS_Sched0))
@@ -2157,7 +2157,6 @@ Global Symbols
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskKey1
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskCmdLcd
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskAdce
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 <LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
 <LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
 <LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
@@ -2166,6 +2165,7 @@ Global Symbols
 <LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdateTimeout
 <LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdateDly
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 </UL>
 
 <P><STRONG><a name="[93]"></a>OS_SchedLockTimeMeasStart</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, os_core.o(i.OS_SchedLockTimeMeasStart))
@@ -2183,7 +2183,6 @@ Global Symbols
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskKey1
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskCmdLcd
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskAdce
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPend
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexCreate
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
@@ -2198,6 +2197,7 @@ Global Symbols
 <LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdateTimeout
 <LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdateDly
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 </UL>
 
 <P><STRONG><a name="[97]"></a>OS_SchedLockTimeMeasStop</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, os_core.o(i.OS_SchedLockTimeMeasStop))
@@ -2215,7 +2215,6 @@ Global Symbols
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskKey1
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskCmdLcd
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskAdce
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPend
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexCreate
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
@@ -2230,6 +2229,7 @@ Global Symbols
 <LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdateTimeout
 <LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdateDly
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPost
 </UL>
 
 <P><STRONG><a name="[12b]"></a>OS_SchedRoundRobin</STRONG> (Thumb, 218 bytes, Stack size 16 bytes, os_core.o(i.OS_SchedRoundRobin))
@@ -2306,12 +2306,12 @@ Global Symbols
 <P><STRONG><a name="[f9]"></a>OS_TaskChangePrio</STRONG> (Thumb, 232 bytes, Stack size 24 bytes, os_task.o(i.OS_TaskChangePrio))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = OS_TaskChangePrio &rArr; OS_PendListChangePrio &rArr; OS_PendListInsertPrio
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpPrioFindHighest
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioInsert
+<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioInsert
 <LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListRemove
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsertTail
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsertHead
 <LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListChangePrio
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpPrioFindHighest
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMutexPend
@@ -2707,7 +2707,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;struct_print
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;file_read
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_screen_show
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_refresh_text
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_refresh_graph
@@ -2767,12 +2766,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskTest
 </UL>
 
-<P><STRONG><a name="[b1]"></a>file_read</STRONG> (Thumb, 160 bytes, Stack size 24 bytes, bsp_internalflash.o(i.file_read))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = file_read &rArr; __2printf
+<P><STRONG><a name="[b1]"></a>file_read</STRONG> (Thumb, 148 bytes, Stack size 16 bytes, bsp_internalflash.o(i.file_read))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = file_read
 </UL>
 <BR>[Calls]<UL><LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_file_info_8byte_data
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_block_info_8byte_data
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskTest
 </UL>
@@ -3131,10 +3129,10 @@ Local Symbols
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskChangePrio
-<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpPrioFindHighest
 <LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsert
 <LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListRemove
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskChangePrio
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexGrpPrioFindHighest
 </UL>
 <BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickTask
 </UL>

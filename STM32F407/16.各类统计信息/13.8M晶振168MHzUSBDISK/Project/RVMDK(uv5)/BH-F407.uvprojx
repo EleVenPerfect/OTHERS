@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER,</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\Libraries\CMSIS\Include;..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include;..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc;..\..\User;..\..\User\APP;..\..\User\BSP;..\..\User\BSP\Key;..\..\User\BSP\led;..\..\User\BSP\usart;..\..\User\uC-CPU;..\..\User\uC-CPU\ARM-Cortex-M4\RealView;..\..\User\uC-LIB;..\..\User\uCOS-III\Source;..\..\User\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView;..\..\User\BSP\dac;..\..\User\BSP\adc;..\..\User\BSP\spi;..\..\User\BSP\lcd;..\..\User\BSP\timer;..\..\User\BSP\flash</IncludePath>
+              <IncludePath>..\..\Libraries\CMSIS\Include;..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include;..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc;..\..\User;..\..\User\APP;..\..\User\BSP;..\..\User\BSP\Key;..\..\User\BSP\led;..\..\User\BSP\usart;..\..\User\uC-CPU;..\..\User\uC-CPU\ARM-Cortex-M4\RealView;..\..\User\uC-LIB;..\..\User\uCOS-III\Source;..\..\User\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView;..\..\User\BSP\dac;..\..\User\BSP\adc;..\..\User\BSP\spi;..\..\User\BSP\lcd;..\..\User\BSP\timer;..\..\User\BSP\flash;..\..\User\BSP\usb</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -886,6 +886,11 @@
               <FileName>bsp_internalFlash.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\BSP\flash\bsp_internalFlash.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_usbdisk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\BSP\usb\bsp_usbdisk.c</FilePath>
             </File>
           </Files>
         </Group>

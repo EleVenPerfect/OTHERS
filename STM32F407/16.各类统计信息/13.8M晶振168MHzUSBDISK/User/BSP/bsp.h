@@ -84,6 +84,7 @@
 #include "bsp_lcd.h"
 #include "bsp_timer.h"
 #include "bsp_internalFlash.h"  
+#include "bsp_usbdisk.h" 
 
 /*
 *********************************************************************************************************

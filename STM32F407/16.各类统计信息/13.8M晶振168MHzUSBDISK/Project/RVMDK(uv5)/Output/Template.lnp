@@ -51,6 +51,7 @@
 ".\output\bsp_lcd.o"
 ".\output\bsp_timer.o"
 ".\output\bsp_internalflash.o"
+".\output\bsp_usbdisk.o"
 ".\output\cpu_core.o"
 ".\output\cpu_a.o"
 ".\output\cpu_c.o"
