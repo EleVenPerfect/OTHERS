@@ -71,7 +71,7 @@
 
 void                USARTx_Config                           ( void );
 
-
+void uart3putchar(unsigned char data);
 
 #endif /* __USART1_H */
 

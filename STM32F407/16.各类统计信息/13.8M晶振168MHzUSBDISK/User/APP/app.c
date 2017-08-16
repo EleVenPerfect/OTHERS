@@ -1263,7 +1263,7 @@ static  void  AppTaskWork ( void * p_arg )
 	
 		while (DEF_TRUE) 
 		{
-				
+
 				OSTimeDly ( 1000, OS_OPT_TIME_DLY, & err );
 		}
 }
@@ -1277,12 +1277,32 @@ static  void  AppTaskWork ( void * p_arg )
 static  void  AppTaskTest ( void * p_arg )
 {
     OS_ERR      err;
+		unsigned char temp;
+		unsigned char name[6] = {"ATIME"};
+	
+		CPU_SR_ALLOC();
 		(void)p_arg;
 		
 	
 		while (DEF_TRUE) 
 		{
-				
+
+				OS_CRITICAL_ENTER();
+				usb_disk_init();
+				temp = usb_disk_connect();
+				if( temp== USB_INT_SUCCESS	 )
+				{
+						temp = usb_disk_delete_file(name);
+						if(temp==USB_INT_SUCCESS	)
+								printf("FILECREATED!\r\n");
+						else
+								printf("ERROR!\r\n");
+				}
+				else
+				{
+					printf("\r\nDISCONNECT!\r\nCODE: %02X\r\n",temp);
+				}
+				OS_CRITICAL_EXIT();     
 				OSTimeDly ( 1000, OS_OPT_TIME_DLY, & err );
 		}
 }

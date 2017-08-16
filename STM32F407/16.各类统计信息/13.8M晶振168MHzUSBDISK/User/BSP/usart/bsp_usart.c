@@ -169,7 +169,7 @@ void USARTx_Config(void)
   GPIO_InitStructure.GPIO_Pin = USART3_RX_PIN;
   GPIO_Init(USART3_RX_PORT, &GPIO_InitStructure);	
 
-	/* USART1 mode config */
+	/* USART3 mode config */
 	USART_InitStructure.USART_BaudRate = USART3_BAUD_RATE;
 	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
 	USART_InitStructure.USART_StopBits = USART_StopBits_1;
@@ -180,7 +180,7 @@ void USARTx_Config(void)
 	
 	/* 使能串口2接收中断 */
 	NVIC_Configuration();
-	USART_ITConfig(USART3x, USART_IT_RXNE, ENABLE);
+	//USART_ITConfig(USART3x, USART_IT_RXNE, ENABLE);
 	
 	USART_Cmd(USART3x, ENABLE);
 }
@@ -207,6 +207,15 @@ int fgetc(FILE *f)
 		return (int)USART_ReceiveData(USARTx);
 }
 
+
+
+void uart3putchar(unsigned char data)
+{
+		printf("\n\rTX:%02X",data);//调试用
+		USART_SendData( USART3x, data);
+		/* 等待发送完毕 */
+		while (USART_GetFlagStatus(USART3x, USART_FLAG_TXE) == RESET);		
+}
 /*********************************************END OF FILE**********************/
 
 

@@ -255,31 +255,34 @@ void USART2_INT_FUN(void)
   */	
 void USART3_INT_FUN(void)
 {
-	OS_ERR   err;
-	
-	char *   p_mem_blk;
+	//OS_ERR   err;
+	//char *   p_mem_blk;
 	
 	OSIntEnter(); 	                                     //进入中断
 	
 	/* 从内存分区 mem 获取一个内存块 */
-	p_mem_blk = OSMemGet((OS_MEM      *)&mem,
-										   (OS_ERR      *)&err);
+	//p_mem_blk = OSMemGet((OS_MEM      *)&mem,
+	//									   (OS_ERR      *)&err);
 	
-	if ( USART_GetITStatus ( USART3x, USART_IT_RXNE ) != RESET )
-	{
-		* p_mem_blk = USART_ReceiveData ( USART3x );     //获取接收到的数据
+	//if ( USART_GetITStatus ( USART3x, USART_IT_RXNE ) != RESET )
+	//{
+			//uart3_data = USART_ReceiveData( USART3x );
+			//printf("\n\rRX:%02X",uart3_data);//调试用
+			//uart3_data_state = 1;//+= 1;//采用直接置1的方式，不用队列
+		
+		//* p_mem_blk = USART_ReceiveData ( USART3x );     //获取接收到的数据
 		
 		//USART_SendData(USART3x, (uint8_t) p_mem_blk[0]);
 		//while (USART_GetFlagStatus(USART3x, USART_FLAG_TXE) == RESET);
 		
     /* 发布任务消息到任务 AppTaskUsart */
-		OSTaskQPost ((OS_TCB      *)&AppTaskUsart3TCB,      //目标任务的控制块
-								 (void        *)p_mem_blk,             //消息内容的首地址
-								 (OS_MSG_SIZE  )1,                     //消息长度
-								 (OS_OPT       )OS_OPT_POST_FIFO,      //发布到任务消息队列的入口端
-								 (OS_ERR      *)&err);                 //返回错误类型
+		//OSTaskQPost ((OS_TCB      *)&AppTaskUsart3TCB,      //目标任务的控制块
+		//						 (void        *)p_mem_blk,             //消息内容的首地址
+		//						 (OS_MSG_SIZE  )1,                     //消息长度
+		//						 (OS_OPT       )OS_OPT_POST_FIFO,      //发布到任务消息队列的入口端
+		//						 (OS_ERR      *)&err);                 //返回错误类型
 		
-	}
+	//}
 	
 	OSIntExit();	                                       //退出中断
 	

@@ -13,6 +13,68 @@
   
 #include "./usb/bsp_usbdisk.h"   
 
+unsigned char uart3_data;
+unsigned char uart3_data_state;
+
+
+/************************************
+函数功能：发送一条指令
+传递参数：
+返回值：
+注意：	
+***************************************/
+void usb_uart_send_cmd( unsigned char cmd)
+{
+		uart3putchar(0x57);
+		uart3putchar(0xab);
+		uart3putchar(cmd);
+}
+
+
+
+/************************************
+函数功能：发送一条数据
+传递参数：
+返回值：
+注意：	
+***************************************/
+void usb_uart_send_data( unsigned char data)
+{
+		uart3putchar(data);
+}
+
+
+
+/************************************
+函数功能：获取串口返回值
+传递参数：
+返回值：
+注意：	
+***************************************/
+unsigned char usb_uart_get_data( void)
+{
+		unsigned char data;
+	
+		while( USART_GetFlagStatus ( USART3x, USART_IT_RXNE ) == RESET );
+		data = USART_ReceiveData ( USART3x );     //获取接收到的数据
+		printf("\n\rRX:%02X\r\n",data);//调试用
+		return data;
+}
+
+
+
+
+/************************************
+函数功能：U盘是否连接
+传递参数：
+返回值：
+注意：	
+***************************************/
+unsigned char usb_get_status(void)
+{
+		usb_uart_send_cmd(CMD_GET_STATE);
+		return usb_uart_get_data();
+}
 
 
 
@@ -20,14 +82,12 @@
 函数功能：U盘复位
 传递参数：
 返回值：
-注意：	
+注意：	此函数执行后需要手动延时35ms等待
 ***************************************/
-signed char usb_disk_reset(void)
+void usb_disk_reset( void)
 {
-		return 0;
+		usb_uart_send_cmd(CMD_RESET_ALL);
 }
-
-
 
 
 
@@ -38,17 +98,98 @@ signed char usb_disk_reset(void)
 返回值：
 注意：	
 ***************************************/
-signed char usb_disk_init(void)
+unsigned char usb_disk_init(void)
 {
+		usb_uart_send_cmd(CMD_CHECK_CHIP_EXIST);
+		usb_uart_send_data(~CMD_RET_SUCCESS);
+		if(usb_uart_get_data()!=CMD_RET_SUCCESS)
+		{
+				//printf("%02X",0xdd);
+				return GET_UART_DATA_TIMEOUT;
+		}
+		usb_uart_send_cmd(CMD_SET_USB_MODE);
+		usb_uart_send_data(CMD_SET_USB_MODE_DATA);
+		if(usb_uart_get_data()!=CMD_RET_SUCCESS)
+		{
+				//printf("%02X",0xee);
+				return GET_UART_DATA_TIMEOUT;
+		}
+		//printf("%02X",0xaa);
 		return 0;
+}
+
+
+
+/************************************
+函数功能：U盘是否连接
+传递参数：
+返回值：
+注意：	
+***************************************/
+unsigned char usb_disk_connect(void)
+{
+		unsigned char temp;
+	
+		usb_uart_send_cmd(CMD_DISK_CONNECT);
+		temp = usb_uart_get_data();
+		//printf("\r\n%02X",temp);
+	
+		if(temp !=CMD_RET_SUCCESS && temp !=USB_INT_SUCCESS && temp !=USB_INT_CONNECT)
+		{
+				//printf("%02X",temp);
+				return GET_UART_DATA_TIMEOUT;
+		}//若连接U盘成功，则挂载U盘
+		temp = usb_get_status();
+		if(temp !=USB_INT_SUCCESS && temp !=USB_INT_CONNECT)
+		{
+				//printf("%02X",temp);
+				return GET_UART_DATA_TIMEOUT;
+		}//若连接U盘成功，则挂载U盘
+		usb_uart_send_cmd(CMD_DISK_MOUNT);
+		temp = usb_uart_get_data();
+		if(temp !=USB_INT_SUCCESS && temp !=USB_INT_CONNECT)
+		{
+				//printf("%02X",temp);
+				return GET_UART_DATA_TIMEOUT;
+		}//U盘初始化不成功，则退出
+		
+		temp = usb_get_status();
+		if(temp !=USB_INT_SUCCESS && temp !=USB_INT_CONNECT)
+		{
+				//printf("%02X",temp);
+				return GET_UART_DATA_TIMEOUT;
+		}//若连接U盘成功，则挂载U盘
+		
+		return temp;
 }
 
 
 
 
 
-
-
+/************************************
+函数功能：设置操作文件
+传递参数：
+返回值：
+注意：	默认设置为保存在根目录，文件后缀.TXT
+***************************************/
+void usb_set_file_name(unsigned char name[8])
+{
+		unsigned char i;
+		usb_uart_send_cmd(CMD_SET_FILE_NAME);
+		usb_uart_send_data('\\');
+		for( i=0; name[i]!='\0'; i++)//需要再修改，确定结束标识符
+		{
+				if(i>7)
+						break;
+				usb_uart_send_data(name[i]);	
+		}
+		usb_uart_send_data('.');
+		usb_uart_send_data('T');
+		usb_uart_send_data('X');
+		usb_uart_send_data('T');
+		usb_uart_send_data('\0');
+}
 
 
 
@@ -59,11 +200,13 @@ signed char usb_disk_init(void)
 函数功能：创建文件
 传递参数：
 返回值：
-注意：	
+注意：	默认设置为保存在根目录，文件后缀.TXT
 ***************************************/
-signed char usb_disk_creat_file(unsigned char file_name[5])
+unsigned char usb_disk_creat_file(unsigned char file_name[8])
 {
-		return 0;
+		usb_set_file_name(file_name);
+		usb_uart_send_cmd(CMD_FILE_CREATE);
+		return usb_get_status();
 }
 
 
@@ -77,9 +220,11 @@ signed char usb_disk_creat_file(unsigned char file_name[5])
 返回值：
 注意：	
 ***************************************/
-signed char usb_disk_open_file(unsigned char file_name[5])
+unsigned char usb_disk_open_file(unsigned char file_name[8])
 {
-		return 0;
+		usb_set_file_name(file_name);
+		usb_uart_send_cmd(CMD_FILE_OPEN);
+		return usb_get_status();
 }
 
 
@@ -93,9 +238,36 @@ signed char usb_disk_open_file(unsigned char file_name[5])
 返回值：
 注意：	
 ***************************************/
-signed char usb_disk_write_file(unsigned char file_name[5])
+unsigned char usb_disk_write_file(unsigned char file_name[8],unsigned int data_number,unsigned char data[])
 {
-		return 0;
+		unsigned char temp;
+		unsigned int i;
+		usb_disk_open_file(file_name);
+		usb_uart_send_cmd(CMD_BYTE_FILE_WRITE);
+		usb_uart_send_data((data_number>>8)&0xff);
+		usb_uart_send_data(data_number&0xff);
+		temp = usb_get_status();
+		if( temp == USB_INT_DISK_WRITE)
+		{
+				usb_uart_send_cmd(CMD_WR_REQ_DATA);
+				for( i=0; i<data_number; i++)
+				{
+							usb_uart_send_data(data[i]);
+				}
+				//temp = usb_uart_get_data();
+				//if(data_number>255)
+				//		temp = usb_uart_get_data();
+				
+				usb_uart_send_cmd(CMD_BYTE_WR_GO);
+				
+				usb_uart_send_cmd(CMD_FILE_CLOSE);
+				temp = usb_get_status();
+		}
+		else
+		{
+				return GET_UART_DATA_TIMEOUT;
+		}
+		return temp-1;
 }
 
 
@@ -112,9 +284,13 @@ signed char usb_disk_write_file(unsigned char file_name[5])
 返回值：
 注意：	
 ***************************************/
-signed char usb_disk_delete_file(unsigned char file_name[5])
+unsigned char usb_disk_delete_file(unsigned char file_name[8])
 {
-		return 0;
+		unsigned char temp;
+		usb_disk_open_file(file_name);
+		usb_uart_send_cmd(0x35);
+		temp = usb_get_status();
+		return temp;
 }
 
 
