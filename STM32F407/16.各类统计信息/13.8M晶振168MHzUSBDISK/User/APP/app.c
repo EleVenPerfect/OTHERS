@@ -1278,7 +1278,8 @@ static  void  AppTaskTest ( void * p_arg )
 {
     OS_ERR      err;
 		unsigned char temp;
-		unsigned char name[6] = {"ATIME"};
+		unsigned char name[6] = {"TIME"};
+		unsigned char data[400] = {"ATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIME"};
 	
 		CPU_SR_ALLOC();
 		(void)p_arg;
@@ -1292,7 +1293,9 @@ static  void  AppTaskTest ( void * p_arg )
 				temp = usb_disk_connect();
 				if( temp== USB_INT_SUCCESS	 )
 				{
-						temp = usb_disk_delete_file(name);
+						usb_disk_creat_file(name);
+						temp = usb_disk_write_file(name,0,256,data);
+						temp = usb_disk_write_file(name,256,256,data);
 						if(temp==USB_INT_SUCCESS	)
 								printf("FILECREATED!\r\n");
 						else
@@ -1303,7 +1306,7 @@ static  void  AppTaskTest ( void * p_arg )
 					printf("\r\nDISCONNECT!\r\nCODE: %02X\r\n",temp);
 				}
 				OS_CRITICAL_EXIT();     
-				OSTimeDly ( 1000, OS_OPT_TIME_DLY, & err );
+				OSTimeDly ( 100000, OS_OPT_TIME_DLY, & err );
 		}
 }
 

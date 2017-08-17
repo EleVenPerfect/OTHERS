@@ -194,6 +194,22 @@ void usb_set_file_name(unsigned char name[8])
 
 
 
+/************************************
+函数功能：设置文件偏移
+传递参数：
+返回值：
+***************************************/
+unsigned char usb_set_file_locate(unsigned int locate)
+{
+		usb_uart_send_cmd(CMD_BYTE_LOCATE);
+		usb_uart_send_data(locate&0xff);
+		usb_uart_send_data((locate>>8)&0xff);
+		usb_uart_send_data((locate>>16)&0xff);
+		usb_uart_send_data((locate>>24)&0xff);
+		usb_get_status();
+		return usb_get_status();
+}
+
 
 
 /************************************
@@ -236,16 +252,19 @@ unsigned char usb_disk_open_file(unsigned char file_name[8])
 函数功能：写入文件
 传递参数：
 返回值：
-注意：	
+注意：	一次最多写256个数据
 ***************************************/
-unsigned char usb_disk_write_file(unsigned char file_name[8],unsigned int data_number,unsigned char data[])
+unsigned char usb_disk_write_file(unsigned char file_name[8],unsigned int locate,unsigned int data_number,unsigned char data[])
 {
 		unsigned char temp;
 		unsigned int i;
 		usb_disk_open_file(file_name);
+		usb_set_file_locate(locate);
 		usb_uart_send_cmd(CMD_BYTE_FILE_WRITE);
-		usb_uart_send_data((data_number>>8)&0xff);
 		usb_uart_send_data(data_number&0xff);
+		usb_uart_send_data((data_number>>8)&0xff);
+		usb_uart_send_data(0x00);
+		temp = usb_get_status();
 		temp = usb_get_status();
 		if( temp == USB_INT_DISK_WRITE)
 		{
@@ -254,20 +273,31 @@ unsigned char usb_disk_write_file(unsigned char file_name[8],unsigned int data_n
 				{
 							usb_uart_send_data(data[i]);
 				}
+				usb_uart_send_data('\0');
 				//temp = usb_uart_get_data();
 				//if(data_number>255)
 				//		temp = usb_uart_get_data();
 				
 				usb_uart_send_cmd(CMD_BYTE_WR_GO);
-				
+				for( i=0; i<data_number; i++)
+				{
+							usb_uart_send_data(data[i]);
+				}
+				usb_uart_send_data('\0');
+				usb_uart_send_cmd(CMD_BYTE_WR_GO);
+				temp = usb_get_status();
+				temp = usb_get_status();
+				temp = usb_get_status();
+				//usb_set_file_name(file_name);
 				usb_uart_send_cmd(CMD_FILE_CLOSE);
+				usb_uart_send_data(CMD_FILE_CLOSE_DATA);
 				temp = usb_get_status();
 		}
 		else
 		{
 				return GET_UART_DATA_TIMEOUT;
 		}
-		return temp-1;
+		return temp;
 }
 
 

@@ -21,6 +21,8 @@
 #define CMD_WR_REQ_DATA						0x2D		//写入文件提示
 #define CMD_BYTE_WR_GO						0x3D		//继续写入文件
 #define CMD_FILE_CLOSE						0x36		//关闭文件
+#define CMD_FILE_CLOSE_DATA				0x01		//关闭文件数据
+#define CMD_BYTE_LOCATE 					0x39		//设置文件偏移
 
 #define CMD_RET_SUCCESS						0x51		//操作成功
 #define CMD_RET_ABORT 						0x5F		//操作失败
@@ -30,6 +32,7 @@
 #define	USB_INT_DISCONNECT				0x16		// 检测到USB设备断开事件 
 #define	USB_INT_BUF_OVER					0x17		// USB传输的数据有误或者数据太多缓冲区溢出 
 #define	USB_INT_USB_READY					0x18		// USB设备已经被初始化(已经分配USB地址) 
+#define USB_ERR_MISS_FILE  				0x42		// USB未找到文件
 #define	USB_INT_DISK_READ					0x1D		// USB存储器请求数据读出 
 #define	USB_INT_DISK_WRITE				0x1E		// USB存储器请求数据写入 
 #define	USB_INT_DISK_ERR					0x1F		// USB存储器操作失败 
@@ -45,7 +48,7 @@ unsigned char usb_disk_connect(void);
 void usb_set_file_name(unsigned char name[8]);
 unsigned char usb_disk_creat_file	(unsigned char file_name[8]);
 unsigned char usb_disk_open_file	(unsigned char file_name[8]);
-unsigned char usb_disk_write_file(unsigned char file_name[8],unsigned int data_number,unsigned char data[]);
+unsigned char usb_disk_write_file(unsigned char file_name[8],unsigned int locate,unsigned int data_number,unsigned char data[]);
 unsigned char usb_disk_delete_file(unsigned char file_name[8]);
 
 
