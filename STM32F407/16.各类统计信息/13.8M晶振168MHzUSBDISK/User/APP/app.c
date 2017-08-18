@@ -1280,7 +1280,9 @@ static  void  AppTaskTest ( void * p_arg )
 		unsigned char temp;
 		unsigned char name[6] = {"TIME"};
 		unsigned char data[400] = {"ATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIME"};
-	
+		unsigned char data1[1] = {" "};
+			
+		
 		CPU_SR_ALLOC();
 		(void)p_arg;
 		
@@ -1294,8 +1296,16 @@ static  void  AppTaskTest ( void * p_arg )
 				if( temp== USB_INT_SUCCESS	 )
 				{
 						usb_disk_creat_file(name);
-						temp = usb_disk_write_file(name,0,256,data);
-						temp = usb_disk_write_file(name,256,256,data);
+						usb_disk_write_file(name,0,1,data1);
+						temp = usb_disk_add_file(name,2,txt_data3);
+						//OSTimeDly ( 1000, OS_OPT_TIME_DLY, & err );
+						temp = usb_disk_add_file(name,get_string_length(txt_data2),txt_data2);
+						temp = usb_disk_add_file(name,2,txt_data3);
+						temp = usb_disk_add_file(name,255,data);
+						temp = usb_disk_add_file(name,2,txt_data3);
+						temp = usb_disk_add_file(name,255,data);
+						temp = usb_disk_add_file(name,2,txt_data3);
+						temp = usb_disk_add_file(name,get_string_length(txt_data1),txt_data1);
 						if(temp==USB_INT_SUCCESS	)
 								printf("FILECREATED!\r\n");
 						else
