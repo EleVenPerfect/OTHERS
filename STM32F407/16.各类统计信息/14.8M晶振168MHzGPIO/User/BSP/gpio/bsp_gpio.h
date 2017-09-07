@@ -7,21 +7,21 @@
 
 
 #define GPIO1_PIN                  GPIO_Pin_0                 
-#define GPIO1_GPIO_PORT            GPIOC                      
-#define GPIO1_GPIO_CLK             RCC_AHB1Periph_GPIOC
+#define GPIO1_GPIO_PORT            GPIOG                      
+#define GPIO1_GPIO_CLK             RCC_AHB1Periph_GPIOG
 
 #define GPIO2_PIN                  GPIO_Pin_0                 
-#define GPIO2_GPIO_PORT            GPIOC                      
-#define GPIO2_GPIO_CLK             RCC_AHB1Periph_GPIOC
+#define GPIO2_GPIO_PORT            GPIOG                      
+#define GPIO2_GPIO_CLK             RCC_AHB1Periph_GPIOG
 
 #define GPIO3_PIN                  GPIO_Pin_0                 
-#define GPIO3_GPIO_PORT            GPIOC                      
-#define GPIO3_GPIO_CLK             RCC_AHB1Periph_GPIOC
+#define GPIO3_GPIO_PORT            GPIOG                     
+#define GPIO3_GPIO_CLK             RCC_AHB1Periph_GPIOG
 
 
 #define GPIO4_PIN                  GPIO_Pin_0                 
-#define GPIO4_GPIO_PORT            GPIOC                      
-#define GPIO4_GPIO_CLK             RCC_AHB1Periph_GPIOC
+#define GPIO4_GPIO_PORT            GPIOG                      
+#define GPIO4_GPIO_CLK             RCC_AHB1Periph_GPIOG
 
 void CTL_GPIO_Config(void);
 
