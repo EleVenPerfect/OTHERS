@@ -1276,7 +1276,12 @@ static  void  AppTaskWork ( void * p_arg )
 */
 static  void  AppTaskTest ( void * p_arg )
 {
-    OS_ERR      err;			
+    OS_ERR      err;
+		unsigned char temp;
+		unsigned char name[6] = {"TIME"};
+		unsigned char data[400] = {"ATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIMEATIME"};
+		unsigned char data1[1] = {" "};
+			
 		
 		CPU_SR_ALLOC();
 		(void)p_arg;
@@ -1286,9 +1291,32 @@ static  void  AppTaskTest ( void * p_arg )
 		{
 
 				OS_CRITICAL_ENTER();
-				
+				usb_disk_init();
+				temp = usb_disk_connect();
+				if( temp== USB_INT_SUCCESS	 )
+				{
+						usb_disk_creat_file(name);
+						usb_disk_write_file(name,0,1,data1);
+						temp = usb_disk_add_file(name,2,txt_data3);
+						//OSTimeDly ( 1000, OS_OPT_TIME_DLY, & err );
+						temp = usb_disk_add_file(name,get_string_length(txt_data2),txt_data2);
+						temp = usb_disk_add_file(name,2,txt_data3);
+						temp = usb_disk_add_file(name,255,data);
+						temp = usb_disk_add_file(name,2,txt_data3);
+						temp = usb_disk_add_file(name,255,data);
+						temp = usb_disk_add_file(name,2,txt_data3);
+						temp = usb_disk_add_file(name,get_string_length(txt_data1),txt_data1);
+						if(temp==USB_INT_SUCCESS	)
+								printf("FILECREATED!\r\n");
+						else
+								printf("ERROR!\r\n");
+				}
+				else
+				{
+					printf("\r\nDISCONNECT!\r\nCODE: %02X\r\n",temp);
+				}
 				OS_CRITICAL_EXIT();     
-				OSTimeDly ( 100, OS_OPT_TIME_DLY, & err );
+				OSTimeDly ( 100000, OS_OPT_TIME_DLY, & err );
 		}
 }
 
