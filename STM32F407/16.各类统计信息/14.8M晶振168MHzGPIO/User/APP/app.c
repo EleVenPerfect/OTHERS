@@ -600,7 +600,7 @@ static  void  AppTaskUsart2 ( void * p_arg )
 											  (OS_ERR        *)&err);                //返回错误类型
 
 		//printf("%c",pMsg[0]);                                      //进入临界段，避免串口打印被打断
-		if(pMsg[0] == TFT480800START )
+		if( pMsg[0] == TFT480800START )
 		{
 				state = 1;
 		}												//如果是起始信号，准备接受新的指令
