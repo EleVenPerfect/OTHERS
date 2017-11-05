@@ -29,6 +29,8 @@ Verilog/ch8os4in55kbps/incremental_db
 Verilog/ch8os4in55kbps/output_files
 Verilog/ch8os4in55kbps/simulation
 Verilog/ch8os4in55kbps/.qsys_edit
+STM32F407/31.PProject/AD_Library
+STM32F407/31.PProject/PCB_Project1/AD_Library
 *.o
 *.d
 *.crf
