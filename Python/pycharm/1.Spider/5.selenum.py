@@ -4,7 +4,6 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from pyquery import PyQuery as pq
 #from config import *
 #import pymongo
 SERVICE_ARGS = ['--load-images=false', '--disk-cache=true']

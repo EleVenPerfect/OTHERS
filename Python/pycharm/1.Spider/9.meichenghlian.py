@@ -16,16 +16,16 @@ price_data = {
             "name": ".com",
             "price_list": {
                 "new": {
-                        "price": "138",
-                        "real_price": "22"
+                        "price": "8888",
+                        "real_price": "8888"
                 },
                 "renew": {
-                        "price": "138",
-                        "real_price": "22"
+                        "price": "8888",
+                        "real_price": "8888"
                 },
                 "tran": {
-                        "price": "138",
-                        "real_price": "22"
+                        "price": "8888",
+                        "real_price": "8888"
                 }
             }
         },
@@ -33,16 +33,16 @@ price_data = {
             "name": ".cn",
             "price_list": {
                 "new": {
-                    "price": "138",
-                    "real_price": "22"
+                    "price": "8888",
+                    "real_price": "8888"
                 },
                 "renew": {
-                    "price": "138",
-                    "real_price": "22"
+                    "price": "8888",
+                    "real_price": "8888"
                 },
                 "tran": {
-                    "price": "138",
-                    "real_price": "22"
+                    "price": "8888",
+                    "real_price": "8888"
                 }
             }
         },
@@ -50,16 +50,16 @@ price_data = {
             "name": ".net",
             "price_list": {
                 "new": {
-                    "price": "138",
-                    "real_price": "22"
+                    "price": "8888",
+                    "real_price": "8888"
                 },
                 "renew": {
-                    "price": "138",
-                    "real_price": "22"
+                    "price": "8888",
+                    "real_price": "8888"
                 },
                 "tran": {
-                    "price": "138",
-                    "real_price": "22"
+                    "price": "8888",
+                    "real_price": "8888"
                 }
             }
         },
@@ -67,16 +67,16 @@ price_data = {
             "name": ".org",
             "price_list": {
                 "new": {
-                    "price": "138",
-                    "real_price": "22"
+                    "price": "8888",
+                    "real_price": "8888"
                 },
                 "renew": {
-                    "price": "138",
-                    "real_price": "22"
+                    "price": "8888",
+                    "real_price": "8888"
                 },
                 "tran": {
-                    "price": "138",
-                    "real_price": "22"
+                    "price": "8888",
+                    "real_price": "8888"
                 }
             }
         },
@@ -84,16 +84,16 @@ price_data = {
             "name": ".cc",
             "price_list": {
                 "new": {
-                    "price": "138",
-                    "real_price": "22"
+                    "price": "8888",
+                    "real_price": "8888"
                 },
                 "renew": {
-                    "price": "138",
-                    "real_price": "22"
+                    "price": "8888",
+                    "real_price": "8888"
                 },
                 "tran": {
-                    "price": "138",
-                    "real_price": "22"
+                    "price": "8888",
+                    "real_price": "8888"
                 }
             }
         },
@@ -101,16 +101,16 @@ price_data = {
             "name": ".xyz",
             "price_list": {
                 "new": {
-                    "price": "138",
-                    "real_price": "22"
+                    "price": "8888",
+                    "real_price": "8888"
                 },
                 "renew": {
-                    "price": "138",
-                    "real_price": "22"
+                    "price": "8888",
+                    "real_price": "8888"
                 },
                 "tran": {
-                    "price": "138",
-                    "real_price": "22"
+                    "price": "8888",
+                    "real_price": "8888"
                 }
             }
         }
