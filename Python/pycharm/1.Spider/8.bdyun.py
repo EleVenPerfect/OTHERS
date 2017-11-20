@@ -20,7 +20,7 @@ def get_one_page():
 def main():
     json_result = get_one_page()
     print(json_result)
-    line = json.dumps(json_result , ensure_ascii=False)
+    line = json.dumps(json_result, ensure_ascii=False)
     line.encode('gb2312')
     with open('bdyun.json', 'w') as fp:
         fp.write(line)
