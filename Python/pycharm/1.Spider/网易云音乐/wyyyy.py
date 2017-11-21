@@ -4,7 +4,7 @@
 # @License  : Apache Licence
 # @Contact  : atime2008@atime.org.cn   
 # @Time     : 2017/11/21 10:33
-# @File     : wyyyy.py  
+# @File     : wyyyy.py
 # @Version  : Python2.7.14
 
 import re
@@ -30,7 +30,7 @@ class Netease(object):
         # self.second_param = "010001"
         # self.third_param = "00e0b509f6259df8642dbc35662901477df22677ec152b5ff68ace615bb7b725152b3ab17a876aea8a5aa76d2e417629ec4ee341f56135fccf695280104e0312ecbda92557c93870114af6c9d05c4f7f0c3685b7a46bee255932575cce10b424d813cfe4875d3e82047b97ddef52741d546b8e289dc6935b3ece0462db0a22b8e7"
         # self.forth_param = "0CoJUm6Qyw8W8jud"
-        self.csrf_token = '1c51dc5cedf74268eaedb744f431f27b'
+        # self.csrf_token = '1c51dc5cedf74268eaedb744f431f27b'
         self.header = {
             "Referer": 'http://music.163.com/',
             'Cookie': 'appver=1.5.0.75771;',
@@ -80,6 +80,10 @@ class Netease(object):
         h_encText = self.AES_encrypt(h_encText, second_key, iv)
         return h_encText
 
+    def get_csrf_token(self):
+        csrf_token = '1c51dc5cedf74268eaedb744f431f27b'
+        return csrf_token
+
     def get_encSecKey(self):
         encSecKey = "257348aecb5e556c066de214e531faadd1c55d814f9be95fd06d6bff9f4c7a41f831f6394d5a3fd2e3881736d94a02ca919d952872e7d0a50ebfa1769a7a62d512f5f1ca21aec60bc3819a9c3ffca5eca9a0dba6d6f7249b06f5965ecfff3695b54e1c28f3f624750ed39e7de08fc8493242e26dbc4484a01c76f739e135637c"
         return encSecKey
@@ -111,7 +115,7 @@ class Netease(object):
 
     def set_title(self):
         global FILE_NAME
-        with codecs.open(FILE_NAME, 'a', 'utf-8') as fp:  # 写入Unicode字符
+        with codecs.open(FILE_NAME, 'w', 'utf-8') as fp:  # 写入Unicode字符
             fp.write(u'## 网易云音乐热门评论')
 
     def save_title(self, song_name):
@@ -143,7 +147,7 @@ class Netease(object):
             song_name = self.get_title(url)
             self.save_title(song_name)
             print(song_name)
-            csrf_token = self.csrf_token
+            csrf_token = self.get_csrf_token()
             params = self.get_params()
             encSecKey = self.get_encSecKey()
             json_data = self.get_json(song_id, csrf_token, params, encSecKey)
