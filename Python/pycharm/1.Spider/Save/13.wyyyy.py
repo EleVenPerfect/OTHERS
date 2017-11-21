@@ -132,7 +132,7 @@ def save_comment(json_data):
         # print(hot_comment[i]['content'])
 
 
-def craw_wyyyy(url_list):
+def claw_wyyyy(url_list):
     for url in url_list:
         song_id = get_id(url)
         song_name = get_title(url)
@@ -147,7 +147,7 @@ def craw_wyyyy(url_list):
 
 
 def main():
-    craw_wyyyy(URL163)
+    claw_wyyyy(URL163)
 
 if __name__ == '__main__':
     main()
