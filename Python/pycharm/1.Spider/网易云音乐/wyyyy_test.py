@@ -4,7 +4,7 @@
 # @License  : GNU General Public License
 # @Contact  : atime2008@atime.org.cn   
 # @Time     : 2017/11/21 10:33
-# @File     : wyyyy.py
+# @File     : wyyyy_test.py
 # @Version  : Python2.7.14
 
 import re
@@ -157,8 +157,8 @@ class Netease(object):
 
 def main():
     netease = Netease()
-    netease.claw(URL163)
-
+    # netease.claw(URL163)
+    print(netease.get_html(URL163[0]))
 
 if __name__ == "__main__":
     main()  
