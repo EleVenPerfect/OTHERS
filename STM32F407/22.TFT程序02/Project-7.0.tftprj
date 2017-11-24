@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<VisualTFT Name="Project-7.0" OutputDirectory="output\" StartupPage="boot" StartupAction="" StartupActionLoop="1" DeviceType="12004" DeviceEnableControl="1" DeviceEnableTouchPane="1" DeviceEnableBuzzer="2" DeviceEnableCRC="0" DeviceBaudRate="7" DeviceCoordinateUpdateMode="4" DeviceControlNotify="1" DeviceScreenNotify="0" DeviceScreenRvs="0" DeviceBacklightAutoControl="0" DeviceBacklightTime="10" DeviceBacklightOn="200" DeviceBacklightOff="50" Version="1.0" BacklightAutoControl="0" DeviceEnableSlidingScreen="2" BacklightNotify="0" DeviceStartupVoice="0" DeviceVoiceVolume="0" DeviceLockConfig="1" StandbyPage="" FastRefreshScreen="0">
-	<Pages><Page RelativePath="boot.tft"/><Page RelativePath="selectmode.tft"/><Page RelativePath="connected.tft"/><Page RelativePath="offlinesetmode.tft"/><Page RelativePath="offlinesetnumber.tft"/><Page RelativePath="offlinecontrl.tft"/></Pages>
-	<Images><Image RelativePath="banner_tips_loading.gif" Download="0"/><Image RelativePath="请选择模式.jpg" Download="0"/></Images>
-	<Waves/>
-</VisualTFT>
