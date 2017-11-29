@@ -127,7 +127,7 @@ class Netease(object):
     def save_comment(self, json_data):
         global FILE_NAME
         hot_comment = json_data['hotComments']
-        print(len(hot_comment))
+        print("total:", len(hot_comment))
         for i in range(len(hot_comment)):
             with codecs.open(FILE_NAME, 'a', 'utf-8') as fp:  # 写入Unicode字符
                 fp.write('\n@( ')

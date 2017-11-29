@@ -38,7 +38,7 @@
     <SUITE FILE_PATH="coverage/1.Spider$13_wyyyy.coverage" NAME="13.wyyyy Coverage Results" MODIFIED="1511186023022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/1.Spider$10_qczj.coverage" NAME="10.qczj Coverage Results" MODIFIED="1509181035401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/1.Spider$HelloWord.coverage" NAME="HelloWord Coverage Results" MODIFIED="1507809707882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/1.Spider$wyyyy.coverage" NAME="wyyyy Coverage Results" MODIFIED="1511831417317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/网易云音乐" />
+    <SUITE FILE_PATH="coverage/1.Spider$wyyyy.coverage" NAME="wyyyy Coverage Results" MODIFIED="1511922952946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/网易云音乐" />
     <SUITE FILE_PATH="coverage/1.Spider$8_bdyun.coverage" NAME="8.bdyun Coverage Results" MODIFIED="1511142532203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -50,11 +50,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="wyyyy.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="wyyyy.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/网易云音乐/wyyyy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="163" selection-end-column="12" />
+            <state relative-caret-position="112">
+              <caret line="26" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="163" selection-end-column="12" />
               <folding>
                 <element signature="e#229#238#0" expanded="true" />
               </folding>
@@ -62,21 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="xxys_lzw_decode.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Save/xxys_lzw_decode.py">
+      <file leaf-file-name="wyyyy.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/网易云音乐/wyyyy.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="xxys_lzw.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Save/xxys_lzw.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            <state relative-caret-position="132">
+              <caret line="6" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -128,11 +118,11 @@
         <option value="$PROJECT_DIR$/Save/13.wyyyy.py" />
         <option value="$PROJECT_DIR$/网易云音乐/netease.conf" />
         <option value="$PROJECT_DIR$/网易云音乐/wyyyy.md" />
-        <option value="$PROJECT_DIR$/网易云音乐/wyyyy.py" />
         <option value="$PROJECT_DIR$/网易云音乐/wyyyy_test.py" />
         <option value="$PROJECT_DIR$/Save/LZW_decode.py" />
         <option value="$PROJECT_DIR$/Save/xxys_lzw.py" />
         <option value="$PROJECT_DIR$/Save/xxys_lzw_decode.py" />
+        <option value="$PROJECT_DIR$/网易云音乐/wyyyy.py" />
       </list>
     </option>
   </component>
@@ -143,10 +133,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1358" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1456" />
-    <option name="height" value="876" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -201,7 +191,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -234,22 +223,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="1.Spider" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="1.Spider" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Save" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -264,7 +240,7 @@
       <recent name="D:\ATIME\Github\OTHERS\Python\pycharm\1.Spider\网易云音乐" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.xxys_lzw_decode">
+  <component name="RunManager" selected="Python.wyyyy">
     <configuration default="false" name="13.wyyyy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -572,9 +548,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.xxys_lzw_decode" />
-        <item index="1" class="java.lang.String" itemvalue="Python.xxys_lzw" />
-        <item index="2" class="java.lang.String" itemvalue="Python.wyyyy" />
+        <item index="0" class="java.lang.String" itemvalue="Python.wyyyy" />
+        <item index="1" class="java.lang.String" itemvalue="Python.xxys_lzw_decode" />
+        <item index="2" class="java.lang.String" itemvalue="Python.xxys_lzw" />
         <item index="3" class="java.lang.String" itemvalue="Python.wyyyy_test" />
         <item index="4" class="java.lang.String" itemvalue="Python.13.wyyyy" />
       </list>
@@ -606,19 +582,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21458334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21449487" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32405892" sideWeight="0.6580938" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25195822" sideWeight="0.25625" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42113563" sideWeight="0.26061493" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.46066564" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5408472" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25195822" sideWeight="0.74375" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42113563" sideWeight="0.73938507" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -712,13 +688,6 @@
     <entry file="file://$PROJECT_DIR$/Save/13.wyyyy.py" />
     <entry file="file://$PROJECT_DIR$/Save/core.js" />
     <entry file="file://$PROJECT_DIR$/网易云音乐/wyyyy_test.py" />
-    <entry file="file://$PROJECT_DIR$/网易云音乐/wyyyy.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/网易云音乐/core.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -730,28 +699,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Save/LZW_decode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/网易云音乐/wyyyy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="163" selection-end-column="12" />
-          <folding>
-            <element signature="e#229#238#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Save/LZW_decode.py" />
     <entry file="file://$PROJECT_DIR$/Save/xxys_lzw.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -762,9 +713,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Save/xxys_lzw_decode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
+        <state relative-caret-position="0">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/网易云音乐/wyyyy.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/网易云音乐/wyyyy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="26" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="163" selection-end-column="12" />
+          <folding>
+            <element signature="e#229#238#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
