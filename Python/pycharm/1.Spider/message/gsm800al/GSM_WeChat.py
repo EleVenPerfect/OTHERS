@@ -34,7 +34,7 @@ def Sim800_run():
         sms_list = sim.list_all_sms()
         sms_listlen = len(sms_list)
         if sms_listlen != 0:
-            print("总共接收到" + str(sms_listlen) + "条信息：")
+            print("收到" + str(sms_listlen) + "条新信息：")
             itchat.send("总共接收到" + str(sms_listlen) + "条信息：", 'filehelper')
             for i in sms_list:
                 sms = gsm.Sms().decode_in(i)
