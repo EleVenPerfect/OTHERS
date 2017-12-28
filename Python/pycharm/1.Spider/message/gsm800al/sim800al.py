@@ -12,21 +12,16 @@ import codecs
 import serial
 import ul_gsm as gsm
 
-price_data = {
-    'sender'    :0,
-    'time'      :0,
-    'message'   :0
-}
-
-
 
 class Sim800al(object):
 
     def __init__(self):
         self.FILE_NAME = time.strftime("%Y-%m-%d", time.localtime(time.time()))
+        self.FILE_NAME_SMS = self.FILE_NAME + str(".bak")
+        print(self.FILE_NAME_SMS)
         self.ser = serial.Serial()
         self.ser.baudrate = 115200
-        self.serial_num = 4#input("请输入串口号：")
+        self.serial_num = input("请输入串口号：")
         self.ser.port = 'COM'+ str(self.serial_num)
         print(self.ser.port)
         try:
@@ -125,12 +120,15 @@ class Sim800al(object):
         # print(response)
         pattern = re.compile('[0-9a-fA-F]+', re.S)
         feature = re.findall(pattern, response)
-        print(feature)
-        smsdata = []
+        # print(feature)
+        print(response)
+        smsdata = [] #需要考虑删除前面短信，后面列表不连续情况
         for i in range(0, int(len(feature)/5)):
             smsdata.append(feature[i*5+4])
+            if i == 0:
+                self.save_to_file_bak(response)
         for i in range(0, int(len(feature)/5)):
-            self.delete_sms(i*5+1)
+            self.delete_sms(feature[i*5+1])
             print("删除短信"+str(i+1))
         return smsdata
 
@@ -140,6 +138,8 @@ class Sim800al(object):
         return response
 
     def delete_sms(self, num):
+        self.check_model()
+        self.set_pdu_mode()
         response = self.send_order("+CMGD="+str(num)+",0", 2)
         return response
 
@@ -181,6 +181,12 @@ class Sim800al(object):
     def save_to_file(self, song_name):
         global FILE_NAME
         with codecs.open(self.FILE_NAME, 'a', 'utf-8') as fp:  # 写入Unicode字符
+            # fp.write('\n')
+            fp.write(song_name)
+
+    def save_to_file_bak(self, song_name):
+        global FILE_NAME
+        with codecs.open(self.FILE_NAME_SMS, 'a', 'utf-8') as fp:  # 写入Unicode字符
             # fp.write('\n')
             fp.write(song_name)
 
