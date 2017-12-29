@@ -11,6 +11,12 @@ import itchat
 import threading
 import ul_gsm as gsm
 from sim800al import Sim800al
+from instapush import Instapush, App
+
+
+app = App(appid='5a387736a4c48a6e16fc3061', secret='a3aad896c2f71175cb64b6f515bd7624')
+app.add_event(event_name='newmessage', trackers=['email'], message='{email} 收到新信息')
+
 
 
 def WechatSend():
@@ -36,6 +42,7 @@ def Sim800_run():
         if sms_listlen != 0:
             print("收到" + str(sms_listlen) + "条新信息：")
             itchat.send("总共接收到" + str(sms_listlen) + "条信息：", 'filehelper')
+            app.notify(event_name='newmessage', trackers={'email': 'jinzhuceyong@qq.com'})
             for i in sms_list:
                 sms = gsm.Sms().decode_in(i)
                 sms_reform1 = str(sms.year)+'年'+str(sms.month)+'月'+str(sms.date)+'日'+str(sms.hour)+':'+str(sms.minute)+':'+str(sms.minute)
@@ -51,9 +58,9 @@ def Sim800_run():
 
 def main():
     p1 = threading.Thread(target=WechatSend, args=())
-    p1.start()
     p2 = threading.Thread(target=Sim800_run, args=())
     p2.start()
+    p1.start()
 
     # sim = Sim800al()
     # sms_list = sim.list_all_sms()
