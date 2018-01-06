@@ -5,7 +5,7 @@
 # @Contact  : atime2008@atime.org.cn   
 # @Time     : 2018/1/5 20:41
 # @File     : 1.ajjl.py
-# @Version  : Python2.7.14
+# @Version  : Python3.6
 import time
 import codecs
 import requests
@@ -31,6 +31,10 @@ def get_next_page(response_text):
     button_url = click_button.parent
     a_url = button_url.get('href')
     next_url = "http://zy.anjian.com/index.php" + a_url
+    if next_url == "http://zy.anjian.com/index.php?action-category-catid-193":
+        next_url = "http://zy.anjian.com/index.php?action-viewnews-itemid-139"#跳过脚本实验室
+    if next_url == "http://zy.anjian.com/index.php?action-category-catid-218":
+        next_url = "http://zy.anjian.com/index.php?action-viewnews-itemid-129"#跳过网页精灵，多线程，脚本通用性，其他
     # print(next_url)
     return next_url
 
@@ -79,13 +83,6 @@ def main():
             html_cont = get_content(response_text)
             save_2_html(html_cont)
             next_url = "http://zy.anjian.com/index.php?action-viewnews-itemid-232"
-
-        if next_url == "http://zy.anjian.com/index.php?action-category-catid-193":
-            next_url = "http://zy.anjian.com/index.php?action-category-catid-200"
-
-        if next_url == "http://zy.anjian.com/index.php?action-category-catid-218":
-            next_url = "http://zy.anjian.com/index.php?action-category-catid-184"
-
 
         if next_url == stop_url:
             break
