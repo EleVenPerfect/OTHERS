@@ -78,7 +78,7 @@ class Sim800al(object):
 
     def wait_creg(self):
         while True:
-            response, state = self.send_order('+CREG?',1)
+            response, state = self.send_order('+CREG?', 1)
             # print(response)
             pattern = re.compile('1,1', re.S)
             feature = re.findall(pattern, response)
