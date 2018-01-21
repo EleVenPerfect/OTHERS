@@ -1,25 +1,5 @@
 /**********************************************************************************
-   STM32F103C8T6  
-	 
-	 GSM 短信控制
-	 
- * 硬件连接说明
-	 使用单片串口2与GPRS模块通信  注：使用串口2可以避免下载和通信不会冲突
-	 STM32      GPRS模块
-	 PA3 (RXD2)->RXD
-	 PA2 (TXD2)->TXD
-	 GND	      ->GND
 
-   PA9 PA10 串口1
-	 
-   PB5 LED1 指示灯1
-   PB6 LED2 指示灯2	 
-	 
-	 指令： 发送短信到模块 
-	 led1on   --- LED1  打开
-	 led1off  --- LED1  关闭
-	 led2on   --- LED2  打开
-	 led2off  --- LED2  关闭
 **********************************************************************************/
 
 #include "stm32f10x.h"
@@ -86,6 +66,7 @@ int main(void)
 	UART1_SendString("设置成功，短信模式：TEXT\r\n");
 
 	UART1_SendString("初始化完成\r\n");
+	UART1_SendString("开始接收短信\r\n");
 	LED_ALL_OFF();
 	while(1)
 	{
@@ -299,9 +280,11 @@ void Wait_CREG(void)
 		CLR_Buf2();        
 		UART2_SendString("AT+CREG?");
 		UART2_SendLR();
-		Delay_nMs(5000);  						
+//		Delay_nMs(5000);  
+			Delay_nMs(500);  
 	    for(k=0;k<Buf2_Max;k++)      			
     	{
+				UART1_SendString("准备.....\r\n");
 			if(Uart2_Buf[k] == ':')
 			{
 				if((Uart2_Buf[k+4] == '1')||(Uart2_Buf[k+4] == '5'))
