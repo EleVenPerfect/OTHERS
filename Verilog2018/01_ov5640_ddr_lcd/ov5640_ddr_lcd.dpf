@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="vga_blue[4]" source="Pin Planner" >
+		</pin>
+		<pin name="vga_blue[3]" source="Pin Planner" >
+		</pin>
+		<pin name="vga_blue[2]" source="Pin Planner" >
+		</pin>
+		<pin name="vga_blue[1]" source="Pin Planner" >
+		</pin>
+		<pin name="vga_blue[0]" source="Pin Planner" >
+		</pin>
+		<pin name="vga_green[5]" source="Pin Planner" >
+		</pin>
+		<pin name="vga_green[4]" source="Pin Planner" >
+		</pin>
+		<pin name="vga_green[3]" source="Pin Planner" >
+		</pin>
+		<pin name="vga_green[2]" source="Pin Planner" >
+		</pin>
+		<pin name="vga_green[1]" source="Pin Planner" >
+		</pin>
+		<pin name="vga_green[0]" source="Pin Planner" >
+		</pin>
+		<pin name="vga_hs" source="Pin Planner" >
+		</pin>
+		<pin name="vga_red[4]" source="Pin Planner" >
+		</pin>
+		<pin name="vga_red[3]" source="Pin Planner" >
+		</pin>
+		<pin name="vga_red[2]" source="Pin Planner" >
+		</pin>
+		<pin name="vga_red[1]" source="Pin Planner" >
+		</pin>
+		<pin name="vga_red[0]" source="Pin Planner" >
+		</pin>
+		<pin name="vga_vs" source="Pin Planner" >
+		</pin>
+		<pin name="SD_clk" source="Pin Planner" >
+		</pin>
+		<pin name="SD_cs" source="Pin Planner" >
+		</pin>
+		<pin name="SD_datain" source="Pin Planner" >
+		</pin>
+		<pin name="SD_dataout" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

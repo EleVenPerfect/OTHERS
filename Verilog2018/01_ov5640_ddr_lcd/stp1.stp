@@ -1,0 +1,1366 @@
+<session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: EP3C16/EP4CE15 (0x020F20DD)" sof_file="output_files/ov5640_ddr_lcd.sof" top_level_entity="top">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+      <single attribute="data horizontal scroll position" value="22"/>
+      <single attribute="data vertical scroll position" value="5"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
+      <single attribute="setup vertical scroll position" value="0"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom level numerator" value="2"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="65024"/>
+    </position_info>
+    <signal_set global_temp="1" name="signal_set: 2015/08/28 22:03:00  #0">
+      <clock name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|phy_clk" polarity="posedge" tap_mode="classic"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="1024" trigger_in_enable="no" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire name="camera_capture:camera_capture_inst|camera_pclk" tap_mode="classic" type="combinatorial"/>
+          <wire name="camera_data[0]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[1]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[2]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[3]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[4]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[5]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[6]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[7]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_href" tap_mode="classic" type="input pin"/>
+          <wire name="camera_vsync" tap_mode="classic" type="input pin"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|bank_switch:bank_switch_inst|frame_write_done" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|bank_switch:bank_switch_inst|rd_load" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|bank_switch:bank_switch_inst|wr_load" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wr_ack" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wr_finish" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wr_req" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|local_ready" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[0]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[1]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[2]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[3]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[4]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[5]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[6]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[7]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[8]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[9]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data_valid" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_finish" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_req" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[0]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[1]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[2]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[3]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[4]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[5]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[6]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[7]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[8]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[9]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|state.MEM_READ" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|state.MEM_READ_WAIT" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|frame_read_done" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_rd" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_we" tap_mode="classic" type="combinatorial"/>
+          <wire name="lcd_disp:lcd_disp_inst|lcd_dclk" tap_mode="classic" type="combinatorial"/>
+          <wire name="lcd_disp:lcd_disp_inst|lcd_de" tap_mode="classic" type="combinatorial"/>
+          <wire name="lcd_disp:lcd_disp_inst|lcd_hsync" tap_mode="classic" type="combinatorial"/>
+          <wire name="lcd_disp:lcd_disp_inst|lcd_vsync" tap_mode="classic" type="combinatorial"/>
+          <wire name="reg_config:reg_config_inst|camera_rstn" tap_mode="classic" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire name="camera_capture:camera_capture_inst|camera_pclk" tap_mode="classic" type="combinatorial"/>
+          <wire name="camera_data[0]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[1]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[2]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[3]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[4]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[5]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[6]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[7]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_href" tap_mode="classic" type="input pin"/>
+          <wire name="camera_vsync" tap_mode="classic" type="input pin"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|bank_switch:bank_switch_inst|frame_write_done" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|bank_switch:bank_switch_inst|rd_load" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wr_ack" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wr_finish" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wr_req" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|local_ready" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[0]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[1]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[2]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[3]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[4]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[5]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[6]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[7]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[8]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[9]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data_valid" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_finish" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_req" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[0]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[1]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[2]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[3]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[4]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[5]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[6]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[7]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[8]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[9]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|state.MEM_READ" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|state.MEM_READ_WAIT" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|frame_read_done" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_rd" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_we" tap_mode="classic" type="combinatorial"/>
+          <wire name="lcd_disp:lcd_disp_inst|lcd_dclk" tap_mode="classic" type="combinatorial"/>
+          <wire name="lcd_disp:lcd_disp_inst|lcd_de" tap_mode="classic" type="combinatorial"/>
+          <wire name="lcd_disp:lcd_disp_inst|lcd_hsync" tap_mode="classic" type="combinatorial"/>
+          <wire name="lcd_disp:lcd_disp_inst|lcd_vsync" tap_mode="classic" type="combinatorial"/>
+          <wire name="reg_config:reg_config_inst|camera_rstn" tap_mode="classic" type="combinatorial"/>
+        </data_input_vec>
+        <storage_qualifier_input_vec>
+          <wire name="camera_capture:camera_capture_inst|camera_pclk" tap_mode="classic" type="combinatorial"/>
+          <wire name="camera_data[0]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[1]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[2]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[3]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[4]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[5]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[6]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_data[7]" tap_mode="classic" type="input pin"/>
+          <wire name="camera_href" tap_mode="classic" type="input pin"/>
+          <wire name="camera_vsync" tap_mode="classic" type="input pin"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|bank_switch:bank_switch_inst|frame_write_done" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|bank_switch:bank_switch_inst|rd_load" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|bank_switch:bank_switch_inst|wr_load" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wr_ack" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wr_finish" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wr_req" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|local_ready" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[0]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[1]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[2]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[3]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[4]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[5]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[6]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[7]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[8]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[9]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data_valid" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_finish" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_req" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[0]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[1]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[2]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[3]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[4]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[5]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[6]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[7]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[8]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[9]" tap_mode="classic" type="register"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|state.MEM_READ" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|state.MEM_READ_WAIT" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|frame_read_done" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_rd" tap_mode="classic" type="combinatorial"/>
+          <wire name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_we" tap_mode="classic" type="combinatorial"/>
+          <wire name="lcd_disp:lcd_disp_inst|lcd_dclk" tap_mode="classic" type="combinatorial"/>
+          <wire name="lcd_disp:lcd_disp_inst|lcd_de" tap_mode="classic" type="combinatorial"/>
+          <wire name="lcd_disp:lcd_disp_inst|lcd_hsync" tap_mode="classic" type="combinatorial"/>
+          <wire name="lcd_disp:lcd_disp_inst|lcd_vsync" tap_mode="classic" type="combinatorial"/>
+          <wire name="reg_config:reg_config_inst|camera_rstn" tap_mode="classic" type="combinatorial"/>
+        </storage_qualifier_input_vec>
+      </signal_vec>
+      <presentation>
+        <data_view>
+          <net is_signal_inverted="no" name="camera_href"/>
+          <net is_signal_inverted="no" name="camera_vsync"/>
+          <net is_signal_inverted="no" name="camera_capture:camera_capture_inst|camera_pclk"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_we"/>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[31]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[30]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[29]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[28]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[27]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[26]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[25]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[24]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[23]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[22]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[21]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[20]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[19]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[18]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[17]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[16]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[15]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[14]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[13]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[12]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[11]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[10]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[9]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[31]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[30]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[29]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[28]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[27]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[26]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[25]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[24]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[23]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[22]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[21]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[20]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[19]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[18]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[17]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[16]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[15]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[14]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[13]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[12]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[11]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[10]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[9]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_rd"/>
+          <net is_signal_inverted="no" name="lcd_disp:lcd_disp_inst|lcd_dclk"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_finish"/>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[9]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_req"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|local_ready"/>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[9..0]" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[9]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data_valid"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|state.MEM_READ"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|state.MEM_READ_WAIT"/>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[24]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[23]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[22]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[21]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[20]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[19]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[18]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[17]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[16]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[15]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[14]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[13]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[12]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[11]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[10]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[9]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[9]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[31]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[30]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[29]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[28]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[27]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[26]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[25]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[24]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[23]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[22]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[21]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[20]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[19]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[18]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[17]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[16]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[15]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[14]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[13]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[12]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[11]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[10]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[9]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="camera_data" order="msb_to_lsb" radix="hex" state="collapse" type="input pin">
+            <net is_signal_inverted="no" name="camera_data[7]"/>
+            <net is_signal_inverted="no" name="camera_data[6]"/>
+            <net is_signal_inverted="no" name="camera_data[5]"/>
+            <net is_signal_inverted="no" name="camera_data[4]"/>
+            <net is_signal_inverted="no" name="camera_data[3]"/>
+            <net is_signal_inverted="no" name="camera_data[2]"/>
+            <net is_signal_inverted="no" name="camera_data[1]"/>
+            <net is_signal_inverted="no" name="camera_data[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|bank_switch:bank_switch_inst|rd_load"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|frame_read_done"/>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[31]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[30]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[29]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[28]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[27]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[26]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[25]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[24]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[23]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[22]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[21]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[20]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[19]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[18]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[17]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[16]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[15]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[14]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[13]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[12]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[11]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[10]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[9]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wr_req"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wr_ack"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wr_finish"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|bank_switch:bank_switch_inst|frame_write_done"/>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[24]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[23]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[22]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[21]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[20]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[19]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[18]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[17]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[16]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[15]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[14]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[13]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[12]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[11]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[10]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[9]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="reg_config:reg_config_inst|camera_rstn"/>
+          <net is_signal_inverted="no" name="lcd_disp:lcd_disp_inst|lcd_hsync"/>
+          <net is_signal_inverted="no" name="lcd_disp:lcd_disp_inst|lcd_vsync"/>
+          <net is_signal_inverted="no" name="lcd_disp:lcd_disp_inst|lcd_de"/>
+        </data_view>
+        <setup_view>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_rd"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_we"/>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[31]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[30]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[29]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[28]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[27]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[26]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[25]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[24]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[23]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[22]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[21]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[20]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[19]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[18]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[17]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[16]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[15]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[14]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[13]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[12]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[11]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[10]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[9]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_out[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[31]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[30]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[29]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[28]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[27]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[26]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[25]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[24]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[23]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[22]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[21]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[20]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[19]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[18]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[17]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[16]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[15]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[14]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[13]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[12]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[11]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[10]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[9]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|sys_data_in[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[9..0]" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[9]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_addr_cnt[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data_valid"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_finish"/>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[9]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_len[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_req"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|state.MEM_READ"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|state.MEM_READ_WAIT"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|local_ready"/>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[24]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[23]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[22]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[21]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[20]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[19]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[18]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[17]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[16]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[15]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[14]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[13]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[12]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[11]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[10]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[9]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_addr[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[9]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_data_cnt[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[31]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[30]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[29]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[28]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[27]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[26]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[25]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[24]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[23]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[22]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[21]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[20]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[19]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[18]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[17]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[16]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[15]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[14]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[13]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[12]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[11]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[10]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[9]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|mem_burst_v2:mem_burst_m0|rd_burst_data[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="camera_data" order="msb_to_lsb" radix="hex" state="collapse" type="input pin">
+            <net is_signal_inverted="no" name="camera_data[7]"/>
+            <net is_signal_inverted="no" name="camera_data[6]"/>
+            <net is_signal_inverted="no" name="camera_data[5]"/>
+            <net is_signal_inverted="no" name="camera_data[4]"/>
+            <net is_signal_inverted="no" name="camera_data[3]"/>
+            <net is_signal_inverted="no" name="camera_data[2]"/>
+            <net is_signal_inverted="no" name="camera_data[1]"/>
+            <net is_signal_inverted="no" name="camera_data[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="camera_href"/>
+          <net is_signal_inverted="no" name="camera_vsync"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|bank_switch:bank_switch_inst|rd_load"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|bank_switch:bank_switch_inst|wr_load"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|frame_read_done"/>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[31]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[30]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[29]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[28]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[27]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[26]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[25]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[24]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[23]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[22]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[21]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[20]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[19]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[18]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[17]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[16]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[15]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[14]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[13]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[12]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[11]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[10]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[9]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_din[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wr_req"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wr_ack"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wr_finish"/>
+          <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|bank_switch:bank_switch_inst|frame_write_done"/>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[24]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[23]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[22]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[21]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[20]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[19]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[18]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[17]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[16]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[15]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[14]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[13]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[12]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[11]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[10]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[9]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|ddr_wraddr[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="reg_config:reg_config_inst|camera_rstn"/>
+          <net is_signal_inverted="no" name="camera_capture:camera_capture_inst|camera_pclk"/>
+          <bus is_signal_inverted="no" link="all" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[8]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[7]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[6]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[5]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[4]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[3]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[2]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[1]"/>
+            <net is_signal_inverted="no" name="ddr_2fifo_top:ddr_2fifo_top_inst|dcfifo_ctrl:dcfifo_ctrl_inst|wrfifo:u_wrfifo|rdusedw[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="lcd_disp:lcd_disp_inst|lcd_dclk"/>
+          <net is_signal_inverted="no" name="lcd_disp:lcd_disp_inst|lcd_hsync"/>
+          <net is_signal_inverted="no" name="lcd_disp:lcd_disp_inst|lcd_vsync"/>
+          <net is_signal_inverted="no" name="lcd_disp:lcd_disp_inst|lcd_de"/>
+        </setup_view>
+      </presentation>
+      <trigger attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2015/08/28 22:03:00  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1024" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+        <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="dont_care" trigger_out="active high"/>
+        <events use_custom_flow_control="no">
+          <level enabled="yes" name="condition1" type="basic">
+            <power_up enabled="yes">
+            </power_up>
+            <op_node/>
+          </level>
+        </events>
+        <storage_qualifier_events>
+          <transitional>00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+            <pwr_up_transitional>00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</pwr_up_transitional>
+          </transitional>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+        </storage_qualifier_events>
+      </trigger>
+    </signal_set>
+  </instance>
+  <mnemonics/>
+  <static_plugin_mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <single attribute="config widget visible" value="1"/>
+    <single attribute="data log widget visible" value="1"/>
+    <single attribute="hierarchy widget height" value="174"/>
+    <single attribute="hierarchy widget visible" value="1"/>
+    <single attribute="instance widget visible" value="1"/>
+    <single attribute="jtag widget visible" value="1"/>
+    <single attribute="lock mode" value="36110"/>
+    <multi attribute="column width" size="23" value="34,34,549,74,51,70,88,88,98,98,88,88,110,101,101,101,101,101,101,101,101,107,78"/>
+    <multi attribute="frame size" size="2" value="1920,1033"/>
+    <multi attribute="jtag widget size" size="2" value="398,181"/>
+    <multi attribute="window position" size="9" value="1432,781,398,124,0,50,124,0,0"/>
+  </global_info>
+</session>

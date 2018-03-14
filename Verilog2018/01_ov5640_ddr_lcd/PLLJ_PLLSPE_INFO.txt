@@ -1,0 +1,10 @@
+PLL_Name	ddr_2fifo_top:ddr_2fifo_top_inst|ddr_ctrl:ddr_ctrl_inst|ddr2:ddr_m0|ddr2_controller_phy:ddr2_controller_phy_inst|ddr2_phy:ddr2_phy_inst|ddr2_phy_alt_mem_phy:ddr2_phy_alt_mem_phy_inst|ddr2_phy_alt_mem_phy_clk_reset:clk|ddr2_phy_alt_mem_phy_pll:pll|altpll:altpll_component|altpll_2il3:auto_generated|pll1
+PLLJITTER	21
+PLLSPEmax	84
+PLLSPEmin	-53
+
+PLL_Name	system_ctrl:u_system_ctrl|pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|pll1
+PLLJITTER	49
+PLLSPEmax	84
+PLLSPEmin	-53
+

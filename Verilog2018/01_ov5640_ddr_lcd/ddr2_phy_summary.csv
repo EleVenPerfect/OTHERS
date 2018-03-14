@@ -1,0 +1,25 @@
+#Core: ddr2_phy - Instance: ddr_2fifo_top_inst|ddr_ctrl_inst|ddr_m0|ddr2_controller_phy_inst|ddr2_phy_inst
+#Path, Setup Margin, Hold Margin
+"Address Command (Slow 1200mV 85C Model)",2.597,1.141
+"DQS vs CK (Slow 1200mV 85C Model)",1.068,1.084
+"Mimic (Slow 1200mV 85C Model)",0.533,
+"Phy (Slow 1200mV 85C Model)",-0.831,0.406
+"Phy Reset (Slow 1200mV 85C Model)",2.479,1.145
+"Read Capture (Slow 1200mV 85C Model)",0.043,0.058
+"Write (Slow 1200mV 85C Model)",0.043,0.347
+ 
+"Address Command (Slow 1200mV 0C Model)",2.752,1.066
+"DQS vs CK (Slow 1200mV 0C Model)",1.087,1.098
+"Mimic (Slow 1200mV 0C Model)",0.506,
+"Phy (Slow 1200mV 0C Model)",-0.448,0.389
+"Phy Reset (Slow 1200mV 0C Model)",2.630,1.049
+"Read Capture (Slow 1200mV 0C Model)",-0.001,0.014
+"Write (Slow 1200mV 0C Model)",0.063,0.366
+ 
+"Address Command (Fast 1200mV 0C Model)",3.169,0.959
+"DQS vs CK (Fast 1200mV 0C Model)",1.254,1.208
+"Mimic (Fast 1200mV 0C Model)",1.513,
+"Phy (Fast 1200mV 0C Model)",1.513,0.141
+"Phy Reset (Fast 1200mV 0C Model)",3.581,0.487
+"Read Capture (Fast 1200mV 0C Model)",0.303,0.308
+"Write (Fast 1200mV 0C Model)",0.207,0.514
