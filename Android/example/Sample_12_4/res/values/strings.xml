@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Sample_12_4!</string>
+    <string name="app_name">VIiot</string>
+    <string name="et">请输入网址</string>
+    
+   
+     <string name="message">请确保您的手机处于联网状态，点击查看相应场所人数</string>
+    
+      <string name="canten">食堂</string>
+       <string name="shower">浴室</string>
+        <string name="library">图书馆</string>
+         <string name="all">所有场所</string>
+        <string name="website">http://www.chenlinglonghehe.sinaapp.com/Num/num1.php</string>
+       <string name="website_shower">http://www.chenlinglonghehe.sinaapp.com/Num/num2.php</string>
+        <string name="website_library">http://www.chenlinglonghehe.sinaapp.com/Num/num3.php</string>
+         <string name="website_all">http://www.chenlinglonghehe.sinaapp.com/Num</string>
+
+
+   
+</resources>
