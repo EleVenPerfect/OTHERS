@@ -1,0 +1,18 @@
+1.工程架构：安卓工程包括布局文件xml、控制文件java、注册文件AndroidManifest.xml和资源文件夹values，其余的文件或文件夹为
+安卓系统文件。
+2.详细介绍：
+（1）布局文件xml:位于Sample_12_4\res\layout中，其中first.xml是程序主界面的布局文件；main.xml是显示食堂人数的网页所在的
+     界面；shower.xml是显示浴室人数的网页所在的界面；library.xml是显示图书馆人数的网页所在的界面；all.xml是显示所有场所
+     人数的网页所在的界面。
+     进入退出界面的布局文件：位于Sample_12_4\res\anim中，其中zoomin.xml是切换界面时进入文件；zoomout.xml是切换界面时的
+     退出文件
+（2）控制文件java：位于Sample_12_4\src\com\bn\tw中，其中FirstActivity是用来控制主界面的相关操作，包括点击按键、点击返
+     回键时程序的相应反应；Sample_12_4.java是用来控制食堂所在的网页的相关操作，包括刷新网页，返回上一个网页，进入下一个
+     网页等；Shower.java是用来控制浴室所在的网页的相关操作，包括刷新网页，返回上一个网页，进入下一个网页等；Library是用
+     来控制图书馆所在的网页的相关操作，包括刷新网页，返回上一个网页，进入下一个网页等；All.Java是用来控制所有场所所在的
+     网页的相关操作，包括刷新网页，返回上一个网页，进入下一个网页等；
+（3）注册文件AndroidManifest.xml：注册（2）中的四个Activity，允许程序使用安卓系统的联网功能，申明主Activity。
+（4）资源文件夹values:位于Sample_12_4\res中，主要是布局文件需要调用的一些字符串的申明和赋值。
+3.使用方法：
+打开eclipse，选择file-->import载入工程即可
+或者在Sample_12_4\bin目录下，将apk文件复制粘贴到手机中，安装后即可使用
