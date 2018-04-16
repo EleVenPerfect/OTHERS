@@ -38,6 +38,35 @@ class Welcome extends CI_Controller {
 			$arr['aqjg'] ="客厅温度异常！";
 		if($data['ktwd']>=50&&$data['snwd']>=50)
 			$arr['aqjg'] ="室内、客厅温度异常！";
-		echo json_encode($arr);
+
+		$json_data = array(
+			array(
+				"userId"=> 1,
+    			"id"=> "室内温度",
+    			"title"=> $data['snwd'].' ℃'
+				),
+			array(
+				"userId"=> 2,
+    			"id"=> "室内湿度",
+    			"title"=> $data['snsd'].' %'
+				),
+			array(
+				"userId"=> 3,
+    			"id"=> "客厅温度",
+    			"title"=> $data['ktwd'].' ℃'
+				),
+			array(
+				"userId"=> 4,
+    			"id"=> "客厅湿度",
+    			"title"=> $data['ktsd'].' %'
+				),
+			array(
+				"userId"=> 5,
+    			"id"=> "安全信息",
+    			"title"=> "无"
+				)
+			);
+		$json_data[4]["title"] = $arr['aqjg'];
+		echo json_encode($json_data);
 	}
 }
