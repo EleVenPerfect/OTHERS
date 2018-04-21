@@ -1,0 +1,7 @@
+目前情况：
+app开启后自动拉取数据并显示出来，
+下拉功能没有实现部分，只有动画效果。
+
+下拉刷新使用的库：
+这步不会：在 Activity 或者 Fragment 中添加代码
+https://github.com/scwang90/SmartRefreshLayout
