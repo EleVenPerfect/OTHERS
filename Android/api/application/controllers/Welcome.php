@@ -62,11 +62,26 @@ class Welcome extends CI_Controller {
 				),
 			array(
 				"userId"=> 5,
+    			"id"=> "煤气报警",
+    			"title"=> $data['mqbj']
+				),
+			array(
+				"userId"=> 6,
+    			"id"=> "红外防盗(客厅)",
+    			"title"=> $data['hwfd1']
+				),
+			array(
+				"userId"=> 7,
+    			"id"=> "红外防盗(卧室)",
+    			"title"=> $data['hwfd2']
+				),
+			array(
+				"userId"=> 8,
     			"id"=> "安全信息",
     			"title"=> "无"
 				)
 			);
-		$json_data[4]["title"] = $arr['aqjg'];
+		$json_data[8]["title"] = $arr['aqjg'];
 		echo json_encode($json_data);
 	}
 }

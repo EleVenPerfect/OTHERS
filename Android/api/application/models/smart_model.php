@@ -14,7 +14,10 @@ class smart_model extends CI_Model{
 				'snwd'=>$msid[0]['snwd'],
 				'snsd'=>$msid[0]['snsd'],
 				'ktwd'=>$msid[0]['ktwd'],
-				'ktsd'=>$msid[0]['ktsd']
+				'ktsd'=>$msid[0]['ktsd'],
+				'mqbj'=>$msid[0]['mqbj'],
+				'hwfd1'=>$msid[0]['hwfd1'],
+				'hwfd2'=>$msid[0]['hwfd2']
 			);
 		return $data;
 	}
