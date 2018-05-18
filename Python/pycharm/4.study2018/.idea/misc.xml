@@ -16,5 +16,5 @@
     <ConfirmationsSetting value="0" id="添加" />
     <ConfirmationsSetting value="0" id="移除" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6.3 (C:\ProgramData\Anaconda3\python.exe)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Remote Python 3.4.2 (ssh://pi@192.168.2.103:22/usr/bin/python3)" project-jdk-type="Python SDK" />
 </project>
