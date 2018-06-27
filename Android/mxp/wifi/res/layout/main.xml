@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="Wifi连接信息：">
+	</TextView>
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:id="@+id/TextView1">
+	</TextView>
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">		
+		<Button android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/open"
+			android:text="打开wifi">
+		</Button>
+		<Button android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/Scan"
+			android:text="扫描可用的Wifi连接">
+		</Button>		
+		<Button android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/connection"
+			android:text="连接wifi">
+		</Button>
+	</LinearLayout>
+	<ListView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:id="@+id/listview"></ListView>
+</LinearLayout>

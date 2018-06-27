@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Ex_wifi_managerActivity!</string>
+    <string name="app_name">Ex_wifi_manager</string>
+</resources>

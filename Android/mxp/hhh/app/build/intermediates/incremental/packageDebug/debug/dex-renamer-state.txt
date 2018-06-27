@@ -1,0 +1,4 @@
+#Thu May 24 17:19:39 CST 2018
+base.0=D\:\\ATIME\\Github\\OTHERS\\Android\\mxp\\hhh\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

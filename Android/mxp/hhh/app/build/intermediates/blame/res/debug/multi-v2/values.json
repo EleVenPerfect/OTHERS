@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\ATIME\\Github\\OTHERS\\Android\\mxp\\hhh\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "map": [
+                {
+                    "source": "D:\\ATIME\\Github\\OTHERS\\Android\\mxp\\hhh\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "3,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "127,55",
+                        "endColumns": "52,71",
+                        "endOffsets": "175,122"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,108",
+                        "endColumns": "52,71",
+                        "endOffsets": "103,175"
+                    }
+                }
+            ]
+        }
+    ]
+}
